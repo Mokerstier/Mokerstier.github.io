@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="229" height="212" viewBox="0 0 229 212">
+  <defs>
+    <rect id="colors-a" width="229" height="20" y="120"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="229" height="20" y="72" fill="#FCD900"/>
+    <rect width="229" height="20" y="96" fill="#E7772B"/>
+    <use fill="#F8F8F7" fill-opacity=".2" xlink:href="#colors-a"/>
+    <rect width="228" height="19" x=".5" y="120.5" stroke="#AFA9A2"/>
+    <rect width="229" height="20" y="144" fill="#F1F1F1"/>
+    <rect width="229" height="20" y="168" fill="#D6CEC6"/>
+    <rect width="229" height="20" y="192" fill="#F7F4F1"/>
+    <rect width="229" height="20" fill="#675C53"/>
+    <path stroke="#AFA9A2" d="M0.5,43 L227.5,43"/>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/rSlider.css">
+    <title>Verhalensite</title>
+</head>
+
+<body>
+    <header id="top">
+        <a href="index.html" id="logo"><img src="img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
+        <button class="login">login</button>
+    </header>
+        <form action="resultaten.html">
+        <header>
+            <h5>
+                Wat voor verhaal zoek je
+            </h5>
+        </header>
+        <fieldset class="sfeer">
+            <legend>Zoek op sfeer</legend>
+            <div class="flex-container">
+                <div class="sfeer-1">
+                    <input onchange="enable()" class="check" type="checkbox" id="duister"><label class="checkbox" for="duister">Duister</label>
+                    <input onchange="enable()" class="check" type="checkbox" id="druk"><label class="checkbox" for="druk">Druk</label>
+                    <input onchange="enable()" class="check" type="checkbox" id="rustig"><label class="checkbox" for="rustig">Rustig</label>
+                </div>
+                <div class="sfeer-2">
+                    <input onchange="enable()" class="check" type="checkbox" id="simpel"><label class="checkbox" for="simpel">Simpel</label>
+                    <input onchange="enable()" class="check" type="checkbox" id="verdrietig"><label class="checkbox" for="verdrietig">Verdrietig</label>
+                    <input onchange="enable()" class="check" type="checkbox" id="vrolijk"><label class="checkbox" for="vrolijk">Vrolijk</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="slider">
+           <legend>Leestijd</legend>
+            <input type="text" id="sampleSlider" />
+        </fieldset>
+        <fieldset class="reistijd">
+            <legend>Aansluitend aan reistijd</legend>
+            <input id="reischeck" type="checkbox"><label for="reischeck">Laat verhalen zien die passen bij mijn rit</label>
+
+        </fieldset>
+        <footer>
+            <input id="zoek" type="submit" class="inactive" value="Zoek verhalen" disabled="disabled">
+        </footer>
+    </form >
+    <section class="random"><a href="resultaten.html">Geef me een willekeurig verhaal <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></a></section>
+    <form id="sort" action="#">
+            
+            <input type="radio" name="sorteer" id="sfeer" >
+            <label for="sfeer">Sfeer</label>
+            
+            <input type="radio"  name="sorteer" id="duimpjes">
+            <label for="duimpjes"><img src="img/icon/thumbs-up.svg" alt="meeste stemmen"></label>
+            
+            <input type="radio" name="sorteer" id="leesduur">
+            <label for="leesduur"><img src="img/icon/klok.svg" alt="leesduur"></label>
+        </form>
+       <main>
+        
+        <article>
+            <footer>
+                <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+            </footer>
+            <header>
+                <ul>
+                   <li><h3>Vergezocht</h3></li>
+                    <li><img src="img/icon/klok.svg" alt="klokje">35:00
+                    </li>
+                    <li><a href="#">Lees nu</a></li>
+                    
+                    <li>
+                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
+                    </li>
+                    <li>71
+                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
+                    </li>
+                </ul>
+            </header>
+        </article>
+        
+        <article>
+            <footer>
+                <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+            </footer>
+            <header>
+                
+                <ul>
+                   <li><h3>Vergezocht</h3></li>
+                    <li><img src="img/icon/klok.svg" alt="klokje">35:00
+                    </li>
+                    <li><a href="#">Lees nu</a></li>
+                    
+                    <li>
+                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
+                    </li>
+                    <li>71
+                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
+                    </li>
+                </ul>
+            </header>
+        </article>
+    </main>
+    <script src="script.js"></script>
+    <script src="js/rSlider.js"></script>
+</body>
+
+</html>
