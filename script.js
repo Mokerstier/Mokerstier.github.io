@@ -11,10 +11,23 @@ var checkBox4 = document.getElementsByClassName('check')[3];
 var checkBox5 = document.getElementsByClassName('check')[4];
 var checkBox6 = document.getElementsByClassName('check')[5];
 
+//var checkBox = document.querySelectorAll('input');
+//console.log(checkBox);
+//for(var i = 0; i < checkBox.length -1; i++){
+//    if(checkBox[i].checked==true){
+//        disabled.removeAttribute('disabled');
+//    disabled.classList.remove('inactive');
+//    disabled.classList.add('active');
+//    }else{
+//        disabled.classList.add('inactive');
+//    disabled.classList.remove('active');
+//    disabled.disabled = disabled;
+//    }
+//}
 function enable() {
-  // Get the checkbox
-  //var checkBox = document.getElementsByClassName("check");
-  // Get the output text
+   //Get the checkbox
+  var checkBox = document.getElementsByClassName("check");
+   //Get the output text
   console.log(checkBox1);
 
   if (((((((checkBox1.checked)||(checkBox2.checked))||(checkBox3.checked))||(checkBox4.checked))||(checkBox5.checked))||(checkBox6.checked)) == true){
