@@ -77,7 +77,6 @@ h5 {
     color: transparent;
     border-color: transparent;
 }
-
 @media  only screen and (min-width: 600px){
     .login {
         margin-left: 40%;
@@ -356,9 +355,9 @@ form footer:first-of-type {
     background-color: #D6CEC6;
 }
 
-/*=====Populair Slider=====*/
+/*=====Populair carousel=====*/
 
-.slider {
+.carous {
     background-color: inherit;
     margin-top: 3em;
   width: 80%;
@@ -373,27 +372,27 @@ form footer:first-of-type {
       -ms-scroll-snap-type: mandatory;
           scroll-snap-type: mandatory;
 }
-.slider article {
+.carous article {
   width: 300px;
   flex-shrink: 0;
   height: 100%;
 }
 @media only screen and (min-width: 600px){
-    .slider{
+    .carous{
         width:100%;
     }
-    .slider article{
+    .carous article{
         width:40%;
     }
 }
 @media only screen and (min-width: 800px){
-    .slider {
+    .carous {
         display: flex;
         flex-wrap: wrap;
         width:100%;
         justify-content: center;
     }
-    .slider article{
+    .carous article{
         width:40%;
     }
 }
