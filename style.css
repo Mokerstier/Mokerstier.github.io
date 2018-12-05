@@ -198,6 +198,12 @@ form legend {
     font-size: 0.875rem;
     font-weight: 700;
 }
+.slider{
+    margin-left: 1.5em;
+}
+.slider legend{
+    margin-bottom: 2.5em;
+}
 
 #terug {
     display: none;
@@ -232,7 +238,7 @@ form legend {
     max-width: 40%;
     flex-direction: column;
 }
-    @media only screen and (min-width: 800px){
+    @media only screen and (min-width: 910px){
         .sfeer-2{
             max-width: 100%;
             flex-direction: row;
