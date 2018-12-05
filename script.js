@@ -43,7 +43,7 @@ function enable() {
 
 function geKlik(){
     if ((klik.checked) == true){
-        document.getElementById('leestijd').innerHTML =('<input type="text" id="sampleSlider" />');
+        document.getElementById('leestijd').innerHTML +=('<input type="text" id="sampleSlider"  />');
         console.log(document.getElementById('leestijd').innerHTML);
         var script = document.createElement('script');
    script.src = '/js/rSlider.js';

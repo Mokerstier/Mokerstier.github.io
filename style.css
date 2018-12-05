@@ -12,6 +12,9 @@ body {
     background-color: #fcd900;
     box-sizing: border-box;
 }
+@media only screen and (min-width: 910px){
+    body{font-size: 12px;}
+}
 section{
     
     background-color: #FFFFFF;
@@ -21,24 +24,28 @@ section:nth-last-child(6){
 }
 h1 {
     margin: 0;
-    font-size: 1.2em;
-    padding: 0px 15px;
+    padding: 1.5em;
     padding-top: 30px;
-    color: #e7772b;
+    color: black;
+    background-color: #fcd900;
 }
 
 h2 {
-    font-size: 2em;
-    margin: 0;
-    padding: 0 15px;
+    margin: 0 1em;
+    padding:0;
 }
 
 h3 {
+    font-size: 12px;
     margin: 0;
-    padding: 30px 15px;
+    padding: 1.5em 1.5em;
     font-size: 1.6em;
 }
-
+h4 {
+    margin: 0;
+    padding: 0px 15px;
+    padding-top: 30px;
+    color: #e7772b;}
 h5 {
     padding: 0 1.5em;
 }
@@ -61,7 +68,7 @@ h5 {
 #logo {}
 
 #logo>img {
-    margin-top: 5px;
+    margin-top: 0.5em;
 }
 
 .login {
@@ -171,7 +178,10 @@ form:first-of-type {
     border-top-right-radius: 10px;
     margin-right: 15px;
 }
-
+     @media only screen and (min-width: 910px){
+        form.index{display:flex;
+             flex-wrap: wrap;
+         }}
 form.index {
     z-index: 1;
     display: none;
@@ -198,10 +208,14 @@ form legend {
     font-size: 0.875rem;
     font-weight: 700;
 }
-.slider{
-    margin-left: 1.5em;
+
+
+#leestijd{
+    margin-bottom: 1.5em;
+    padding:0;
 }
-.slider legend{
+#leestijd legend{
+    
     margin-bottom: 2.5em;
 }
 
@@ -238,6 +252,7 @@ form legend {
     max-width: 40%;
     flex-direction: column;
 }
+/*
     @media only screen and (min-width: 910px){
         .sfeer-2{
             max-width: 100%;
@@ -248,6 +263,7 @@ form legend {
             flex-direction: row;
         }
 }
+*/
 
 /*Checkboxes*/
 
@@ -384,18 +400,11 @@ form footer:first-of-type {
 
 .carous {
     background-color: inherit;
-    margin-top: 3em;
+    margin-top: 2em;
   width: 100vw;
   height: auto;
   display: flex;
   overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-scroll-snap-points-x: repeat(300px);
-      -ms-scroll-snap-points-x: repeat(300px);
-          scroll-snap-points-x: repeat(300px);
-  -webkit-scroll-snap-type: mandatory;
-      -ms-scroll-snap-type: mandatory;
-          scroll-snap-type: mandatory;
 }
 .carous article {
   width: 350px;
@@ -403,22 +412,52 @@ form footer:first-of-type {
   height: 100%;
 }
 @media only screen and (min-width: 600px){
-    .carous{
-        width:100%;
+    .carous {
+        display:flex;
+        flex-wrap: wrap;
     }
-    .carous article{
-        width:40%;
+    .carous .banner{
+        min-height: 100%;
     }
 }
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 910px){
     .carous {
-        display: flex;
-        flex-wrap: wrap;
-        width:100%;
-        justify-content: center;
+        height: 40%;
+        justify-content: space-around;
     }
+    
+        
+    .carous article header li{
+        
+        margin-right: 0;
+        margin-left: 1.5em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .carous article header ul{
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 1140px){
     .carous article{
-        width:40%;
+        width: 30%; 
+    }
+    .carous article header ul{
+    justify-content: flex-start;
+    }
+    .carous li{
+        width: auto;
+    }
+    .carous li:nth-child(2){
+        margin-left: 10%;
+    }
+    .carous li:nth-child(4){
+        margin-left: 26%
+    }
+    .carous article li:last-child{
+        position: absolute;
+        right: 0;
+        bottom: -2em;
     }
 }
 /*========Sorteer======*/
@@ -476,12 +515,10 @@ main {
 }
 
     article {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 1.5em;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        height: 12rem;
 }
 
     article h3 {
@@ -497,7 +534,7 @@ main {
         margin-left: 20px;
         border-radius: 10px;
         position: relative;
-        bottom: 8em;
+        bottom: 6em;
         max-width: 330px;
          box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
@@ -519,7 +556,7 @@ main {
         align-content: center;
         padding-top: 15px;
         padding-left: 15px;
-        padding bottom: 1.5em;
+        padding-bottom: 1.5em;
         list-style: none;
         padding-right: 25px;
 }
@@ -539,10 +576,10 @@ main {
         font-size: 2.4em;
         font-weight: 700;
         position: absolute;
-        right: -20px;
-        top: 0;
-        padding-left: 0;
-        margin-right: 15px;
+        right:0;
+        top: 1.2em;
+        padding: 0;
+        margin-right: 0;
     }
 
     article footer {
@@ -552,8 +589,8 @@ main {
 
     article>footer img {
         border-radius: 10px;
-        width: 31em;
-        height: 16em;
+        width: 100%;
+        height: 15em;
         box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
     }
 
@@ -583,35 +620,37 @@ main {
             height: 20em;
         }
 }
-@media only screen and (min-width: 815px){
+@media only screen and (min-width: 960px){
     article {
             width: 40%;
-            
         }
+    article footer{
+        width: 100%;
+    }
 }
-@media only screen and (min-width: 1145px) {
+@media only screen and (min-width: 1140px) {
     article {
-        width: 29vw;
-        height: auto;
+        width: 30%;
+        height: 100%;
     }
     article li{
         min-width: 25%;
-    }
-    article li:nth-last-child(4) {
-        padding-right: ;
-        margin-right: 10%;
-    }
-    article li:nth-last-child(2) {
-        padding-right: 0;
-        margin-left: 0;
-    }
-    article header li {
         margin: 0;
         padding: 1.5em;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        width: 25%;
     }
+    article li:nth-last-child(4) {
+        margin-left: 10%;
+        
+    }
+    article li:nth-last-child(2) {
+        padding-right: 0;
+        margin-left: 10%;
+    }
+
     article>header {
         min-width: 100%;
         border-top-left-radius: 0;
@@ -634,7 +673,7 @@ main {
         display: flex;
         position: relative;
         right: 0;
-        top: -1.5em;
+        top: -2.5em;
         padding: 0;
         margin: auto;
     }
