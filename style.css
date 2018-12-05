@@ -95,14 +95,13 @@ section>a {
     margin-left: 15px;
     margin-right: 15px;
     padding-top: 12px;
-    padding-bottom: 12px;
     font-size: 1.4em;
     font-weight: 700;
     color: #675C53;
     text-decoration: none;
 }
 
-body>section:first-of-type {
+body>section>h3 {
     margin: 0;
     background-color: #fcd900;
 }
@@ -133,6 +132,7 @@ body>label:last-of-type {
 }
 
 section.random {
+    padding-bottom: 1.2em;
     position: relative;
     top: -3px;
     background-color: rgba(248, 248, 247, .50);
@@ -188,7 +188,7 @@ fieldset {
 }
 
 form fieldset {
-    padding: 0 15px;
+    padding: 0 1.5em;
     border-style: none;
     margin: 0;
 }
@@ -218,7 +218,7 @@ form legend {
     margin: 0;
     padding: 0;
     display: flex;
-    max-width: 234px;
+    max-width: 40%;
     flex-direction: column;
 }
 
@@ -226,13 +226,22 @@ form legend {
 /* rechter lijstje*/
 
 .sfeer-2 {
-    margin-left: 11px;
+    margin-left: 1em;
     padding: 0;
     display: flex;
-    max-width: 234px;
+    max-width: 40%;
     flex-direction: column;
 }
-
+    @media only screen and (min-width: 800px){
+        .sfeer-2{
+            max-width: 100%;
+            flex-direction: row;
+        }
+        .sfeer-1{
+            max-width: 100%;
+            flex-direction: row;
+        }
+}
 
 /*Checkboxes*/
 
@@ -249,7 +258,11 @@ form legend {
     padding: 11px 0;
     min-width: 111px;
 }
-
+    @media only screen and (min-width: 800px){
+        .checkbox{
+            margin-right: 2em;
+        }
+}
 
 /* Maakt het vierkantje voor het label */
 
@@ -275,7 +288,11 @@ form legend {
 #leestijd {
     margin-left: 15px;
 }
-
+    @media only screen and (min-width: 800px){
+        #leestijd{
+          margin-left:2em;
+        } 
+}
 
 /*====== Veranderd styling als de checkbox is aangevinkt
 tutorial van https://codersblock.com/blog/checkbox-trickery-with-css/ =======*/
@@ -321,7 +338,9 @@ input:checked+label::before {
     width: 100vw;
     border-radius: 0;
 }
-
+#klik:checked~section{
+    display: none;
+}
 #klik[type=checkbox]:checked~section:nth-of-type(3) {
     display: none;
 }
@@ -360,7 +379,7 @@ form footer:first-of-type {
 .carous {
     background-color: inherit;
     margin-top: 3em;
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
   overflow-x: auto;
@@ -373,7 +392,7 @@ form footer:first-of-type {
           scroll-snap-type: mandatory;
 }
 .carous article {
-  width: 300px;
+  width: 350px;
   flex-shrink: 0;
   height: 100%;
 }
