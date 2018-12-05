@@ -12,7 +12,13 @@ body {
     background-color: #fcd900;
     box-sizing: border-box;
 }
-
+section{
+    
+    background-color: #FFFFFF;
+}
+section:nth-last-child(6){
+    background-color:  #f1f1f1;
+}
 h1 {
     margin: 0;
     font-size: 1.2em;
@@ -59,8 +65,8 @@ h5 {
 }
 
 .login {
-    margin-left: 35%;
-    padding-right: 1.5em;
+    margin-left: 36%;
+    margin-right: 1.5em;
     min-height: 1.6rem;
     min-width: 1.6rem;
     border-style: none;
@@ -72,6 +78,11 @@ h5 {
     border-color: transparent;
 }
 
+@media  only screen and (min-width: 600px){
+    .login {
+        margin-left: 40%;
+    }
+}
 .login:hover {
     cursor: pointer;
 }
@@ -82,8 +93,8 @@ h5 {
 section>a {
     display: flex;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding-top: 12px;
     padding-bottom: 12px;
     font-size: 1.4em;
@@ -92,7 +103,7 @@ section>a {
     text-decoration: none;
 }
 
-section:first-child {
+body>section:first-of-type {
     margin: 0;
     background-color: #fcd900;
 }
@@ -103,6 +114,7 @@ section:nth-child(5) {
     border-top-right-radius: 10px;
     padding-bottom: 1.5rem;
     margin-bottom: 0;
+     box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
 
 body>label:last-of-type {
@@ -118,14 +130,16 @@ body>label:last-of-type {
     border-bottom-right-radius: 10px;
     padding-bottom: 2rem;
     cursor: pointer;
+     box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
 
-.random {
+section.random {
     position: relative;
     top: -3px;
     background-color: rgba(248, 248, 247, .50);
     margin-right: 2.5em;
     border-bottom-right-radius: 10px;
+    
 }
 
 body>label:first-of-type {
@@ -135,6 +149,7 @@ body>label:first-of-type {
     padding-left: 15px;
     z-index: 2;
     font-weight: 400;
+    
 }
 
 .streep {
@@ -159,6 +174,7 @@ form:first-of-type {
 }
 
 form.index {
+    z-index: 1;
     display: none;
     height: 0;
     overflow: hidden;
@@ -340,7 +356,47 @@ form footer:first-of-type {
     background-color: #D6CEC6;
 }
 
+/*=====Populair Slider=====*/
 
+.slider {
+    background-color: inherit;
+    margin-top: 3em;
+  width: 80%;
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scroll-snap-points-x: repeat(300px);
+      -ms-scroll-snap-points-x: repeat(300px);
+          scroll-snap-points-x: repeat(300px);
+  -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+}
+.slider article {
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+}
+@media only screen and (min-width: 600px){
+    .slider{
+        width:100%;
+    }
+    .slider article{
+        width:40%;
+    }
+}
+@media only screen and (min-width: 800px){
+    .slider {
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+        justify-content: center;
+    }
+    .slider article{
+        width:40%;
+    }
+}
 /*========Sorteer======*/
 
 form#sort {
@@ -418,6 +474,7 @@ main {
         position: relative;
         bottom: 8em;
         max-width: 330px;
+         box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
 
     article ul {
@@ -465,12 +522,14 @@ main {
 
     article footer {
         margin-right: 2em;
+        
     }
 
     article>footer img {
         border-radius: 10px;
         width: 31em;
         height: 16em;
+        box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
     }
 
  @media only screen and (min-width: 600px) {
@@ -481,12 +540,16 @@ main {
             width: 80%;
             height: 80%;
         }
+     article li{
+         padding-bottom: 1.5em;
+     }
      article footer{
          height: 60%;
      }
      article>header{
          padding-right: 5em;
-         bottom: 8.3em;
+         bottom: 7.3em;
+         left: 0;
          
      }
      article>footer img {
@@ -495,14 +558,20 @@ main {
             height: 100%;
         }
 }
-
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px){
+    article {
+            width: 40%;
+            
+        }
+}
+@media only screen and (min-width: 1010px) {
     article {
         width: 29vw;
         height: auto;
     }
     article li:nth-last-child(4) {
-        padding-right: 0;
+        padding-right: ;
+        margin-right: 10%;
     }
     article li:nth-last-child(2) {
         padding-right: 0;
@@ -515,11 +584,13 @@ main {
         justify-content: flex-start;
         align-items: center;
     }
-    article header {
+    article>header {
         min-width: 100%;
         border-top-left-radius: 0;
+        left:0;
         border-top-right-radius: 0;
         margin: 0;
+        padding: 0;
         background-color: #FFFFFF;
     }
     article footer {
