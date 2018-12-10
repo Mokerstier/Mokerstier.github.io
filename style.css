@@ -140,7 +140,11 @@ body>label:last-of-type {
     cursor: pointer;
      box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
-
+ @media only screen and (min-width: 910px){
+        body>label:last-of-type{
+            display: none;
+        }
+}
 section.random {
     padding-bottom: 1.2em;
     position: relative;
@@ -169,8 +173,11 @@ body>label:first-of-type {
     margin-right: 30px;
     margin-left: 15px;
 }
-
-
+    @media only screen and (min-width: 910px){
+        .streep{
+            display: none;
+        }
+     }
 /*========ZOEK FORMULIER========*/
 
 form:first-of-type {
@@ -184,7 +191,8 @@ form:first-of-type {
      @media only screen and (min-width: 910px){
         form.index{display:flex;
              flex-wrap: wrap;
-         }}
+         }
+}
 form.index {
     z-index: 1;
     display: none;
@@ -195,6 +203,22 @@ form.index {
     top: 200px;
     transition: all 300ms ease-in-out;
 }
+    @media only screen and (min-width: 910px){
+        form.index{
+            position: static;
+            display: block;
+            overflow: visible;
+            z-index: 0;
+            height: 100%;
+            opacity: 1;
+            margin: auto;
+            max-width: 85%;
+            border-top-right-radius: 0;
+        }
+        .index h5{
+            display: none;
+        }
+    }
 
 fieldset {
     background-color: #FFFFFF;
@@ -217,9 +241,10 @@ form legend {
     margin-bottom: 1.5em;
     padding:0;
 }
+        
 #leestijd legend{
     
-    margin-bottom: 2.5em;
+    margin-bottom: 5em;
 }
 
 #terug {
@@ -244,7 +269,7 @@ form legend {
     max-width: 40%;
     flex-direction: column;
 }
-
+        
 
 /* rechter lijstje*/
 
@@ -255,6 +280,16 @@ form legend {
     max-width: 40%;
     flex-direction: column;
 }
+        @media only screen and (min-width: 910px){
+            .sfeer-1 {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .sfeer-2 {
+               flex-direction: row;
+                flex-wrap: wrap;
+            }
+    }
 /*
     @media only screen and (min-width: 910px){
         .sfeer-2{
@@ -335,7 +370,7 @@ input:checked+label::before {
 }
 
 #klik {
-    position: absolute;
+    position: relative;
     left: -9999999px;
     min-width: 300px;
 }
