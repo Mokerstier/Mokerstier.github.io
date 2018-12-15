@@ -9,6 +9,7 @@ for (var i = 0; i < checkBox.length; i++){
     checkBox[i].addEventListener("change", checked);
 }
 
+
 function checked() {
     var isChecked = this.checked;
     
@@ -26,7 +27,7 @@ function checked() {
 // voegt de slider toe op het uitschuifbare zoekmenu - home -
 function geKlik(){
     if ((klik.checked) === true){
-        document.getElementById('leestijd').innerHTML =('<legend>Leestijd</legend>')+('<input type="text" id="sampleSlider"  />');
+        document.getElementById('leestijd').innerHTML = '<input type="text" id="sampleSlider"  />';
         console.log(document.getElementById('leestijd').innerHTML);
         var script = document.createElement('script');
    script.src = '/js/rSlider.js';
