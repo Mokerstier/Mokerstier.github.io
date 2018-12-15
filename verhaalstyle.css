@@ -8,6 +8,7 @@ body{
     font-family: 'Cabin Sketch', cursive;
 font-family: 'Special Elite', cursive; 
     height: 1600px;
+    background-color: #fff;
 }
 h1{ 
     color: #FFFFFF;
@@ -46,4 +47,33 @@ p{
     position: fixed;
     top: 8em; 
     right: 0.1em;
+}
+footer#verhaal{
+    z-index: 99;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+}
+footer button{
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-style: none;
+    text-indent: -999px;
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #E7772B;
+    box-shadow: 0 8px 18px rgba(231, 119, 43, .3);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+footer button:first-of-type{
+    background-image: url(./img/icon/Ster.svg);
+
+}
+footer button:last-of-type{
+    background-image: url(./img/icon/thumbs-up.svg);
+    
 }

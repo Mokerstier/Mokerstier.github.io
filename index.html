@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>U-ov verhalenwebsite</title>
 </head>
@@ -18,7 +18,7 @@
         </h1>
     </section>
 
-    <input id="klik" type="checkbox" value="klik hier om je zoekopdracht te verfijnen" onchange="geKlik()">
+    <input id="klik" type="checkbox"  >
     <label for="klik"> <img src="img/icon/arrow/left.svg" alt="pijl naar links"> terug</label>
     <section>
         <h4>Jouw verhalen van deur tot deur</h4>
@@ -53,7 +53,7 @@
 
         <fieldset class="reistijd">
             <legend>Aansluitend aan reistijd</legend>
-            <input id="reischeck" type="checkbox"><label for="reischeck">Laat verhalen zien die passen bij mijn rit</label>
+            <input class="check" id="reischeck" type="checkbox"><label for="reischeck" class="checkbox">Laat verhalen zien die passen bij mijn rit</label>
 
         </fieldset>
         <footer>
@@ -62,8 +62,9 @@
     </form>
     <section class="random">
     <a href="resultaten.html">Geef me een willekeurig verhaal <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></a></section>
-    <section class="carous">
+    <section>
         <h2>Top 5 best gewaardeerde verhalen</h2>
+        <div class="carous">
         <article><footer>
                 <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
             </footer>
@@ -154,6 +155,7 @@
                     </li>
                 </ul>
             </header></article>
+        </div>
         </section>
     
     <section>
@@ -173,7 +175,7 @@
         
     </section>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <script src="js/rSlider.js"></script>
     <link rel="stylesheet" href="css/rSlider.css">
     <!--     //Range slider heb ik gejat van https://github.com/slawomir-zaziablo/range-slider/ -->
