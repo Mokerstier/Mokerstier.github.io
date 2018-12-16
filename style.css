@@ -178,6 +178,7 @@ section:nth-child(5) {
         }
 }
 body>label:last-of-type {
+    box-sizing: border-box;
     font-size: 1.6rem;
     position: relative;
     top: -1px;
@@ -195,6 +196,7 @@ body>label:last-of-type {
     body>label:last-of-type {
          max-width: 75rem;
         margin: auto;
+        border-bottom-left-radius: 10px;
     }
 }
  @media only screen and (min-width: 62rem){
@@ -223,17 +225,23 @@ section.random {
          margin-left:18%;
      }
 }
-
+body>label{
+    padding:0 1.5rem;
+    
+}
 body>label:first-of-type {
     display: none;
     position: absolute;
     top: 15px;
     z-index: 2;
     font-weight: 400;
+    background-color: #fefaf1;
     
 }
 
 .streep {
+    box-sizing: border-box;
+    padding: 0 1.5rem;
     display: flex;
     position: relative;
     top: -25px;
@@ -247,12 +255,6 @@ body>label:first-of-type {
         }
      }
 @media only screen and (min-width: 48rem){
-        body>label:last-of-type{
-            padding-bottom: 1.5em;
-            max-width: 75rem;
-            margin: auto;
-            border-bottom-left-radius: 10px;
-     } 
     
      span.streep{
          max-width: 75rem;
@@ -282,7 +284,7 @@ form.index {
     overflow: hidden;
     opacity: 0;
     position: absolute;
-    bottom: 35rem;
+    top:5em;
     transition: all .4s ease-in;
 }
     @media only screen and (min-width: 62rem){
@@ -395,6 +397,7 @@ form:first-of-type label {
     padding: 1.1rem 0;
     min-width: 12rem;
     max-width: 35rem;
+    
 }
 @media (min-width: 48rem){
     form label{
@@ -426,7 +429,7 @@ form:first-of-type label::before {
 #leestijd {
     margin-left: 1.5rem;
 }
-    @media only screen and (min-width: 800px){
+    @media only screen and (min-width: 50rem){
         #leestijd{
           margin-left:2em;
         } 
@@ -446,7 +449,6 @@ input:checked+label::before {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 #klik {
     position: relative;
     left: -9999999px;
@@ -460,7 +462,8 @@ input:checked+label::before {
 #klik[type=checkbox]:checked~label:first-of-type {
     font-size: 1.2rem;
     display: flex;
-    background-color: #FFFFFF;
+    background-color: #fefaf1;
+
 }
 
 #klik[type=checkbox]:checked~label:first-of-type img {
@@ -527,32 +530,34 @@ section:nth-of-type(4){
 .carous {
     position: relative;
     background-color: #f1f1f1;
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     overflow-x: auto;
     padding-top: .5rem;
+    margin: auto;
 }
 .carous article {
     padding-right 1.5rem;
-  width: 35rem;
-  flex-shrink: 0;
-  height: 100%;
+    width: 35rem;
+    flex-shrink: 0;
+    height: 100%;
 }
 @media only screen and (min-width: 600px){
     .carous .banner{
         min-height: 100%;
     }
 }
-@media only screen and (min-width: 910px){
+@media only screen and (min-width: 62rem){
     .carous {
         display:flex;
         flex-wrap: wrap;
         height: 40%;
-        justify-content: space-around;
+        justify-content: flex-start;
+        overflow: hidden;
     }
     .carous article{
-        width: 40%;
+        width: 30%;
     }
         
     .carous article header li{
@@ -643,8 +648,8 @@ main {
 }
 
     article {
-        margin-left: 1.5em;
-        margin-right: 1.5em;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -726,9 +731,10 @@ main {
          justify-content: center;
      }
      article {
-         margin-top: 6em;
+         margin-top: 2.4rem;
             width: 80%;
             height: 80%;
+            
         }
      article li{
          padding-bottom: 1.5em;
@@ -747,7 +753,7 @@ main {
             height: 20em;
         }
 }
-@media only screen and (min-width: 960px){
+@media only screen and (min-width: 62rem){
     article {
             width: 40%;
         }
