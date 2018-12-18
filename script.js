@@ -4,9 +4,12 @@
 var klik = document.getElementById("klik");
 var disabled = document.getElementById("zoek");
 var checkBox = document.getElementsByClassName("check");
+var buttonBewaar = document.querySelector('article>footer>button');
 
-for (var i = 0; i < checkBox.length; i++){
-    checkBox[i].addEventListener("change", checked);
+var c = 0; //nummertje voor de checkbox[Array]
+
+for (c = 0; c < checkBox.length; c++){
+    checkBox[c].addEventListener("change", checked);
 }
 
 
@@ -35,9 +38,13 @@ function geKlik(){
    head.appendChild(script);
     }
 }
-// scroll effect voor verhaal//
+// ===== Micro bewaren =====
+function bewaar(){
+    buttonBewaar.classList.toggle('bewaard');
+}
 
 
-
+buttonBewaar.addEventListener("click", bewaar);
 klik.addEventListener("click", geKlik);
+document.addEventListener('DOMContentLoaded', geKlik);
 //window.onscroll = function() {myScroll1();};

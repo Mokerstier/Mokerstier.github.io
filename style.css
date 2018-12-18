@@ -716,9 +716,62 @@ main {
     article footer {
         margin-right: 2em;
         max-width: 35em;
-        
+        position: relative;
     }
-
+    article>footer>button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        padding-top: 2em;
+        border: 1px solid #fbba38;
+        border-radius: 4px;
+        color: #fbba38;
+        font-weight: 700;
+        background-image: url(./img/icon/button/Bewaar-blankState.svg);
+        background-repeat: no-repeat;
+        background-position:top .4rem center;
+        background-color: #fff; 
+        background-size: 2.5rem;
+        transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
+}
+/* == Micro Bewaren == */
+            article>footer>button:before{
+                overflow: hidden;
+                position: absolute;
+                display: inline;
+                content: "";
+                top: -2rem;
+                right: 0;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                transform: rotate(30deg);
+                background-image: url(./img/icon/button/Bewaar-idealState.svg);
+                background-repeat: no-repeat;
+                transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
+                
+}
+article>footer>button.bewaard{
+        width: 80px;
+        color: #fff;
+        background-color: #fbba38;
+        
+}
+.bewaard:before{
+                width: 3rem;
+                height: 3rem;
+                top: .2rem;
+                right: 2.4rem;
+                opacity: 1;
+                transform: rotate(0deg);
+                
+}
+.bewaard::after{
+    content: "d";
+    
+}
+/* == Einde Micro Bewaren == */
     article>footer img {
         border-radius: 10px;
         width: 100%;
