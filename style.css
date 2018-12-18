@@ -229,15 +229,7 @@ body>label{
     padding:0 1.5rem;
     
 }
-body>label:first-of-type {
-    display: none;
-    position: absolute;
-    top: 15px;
-    z-index: 2;
-    font-weight: 400;
-    background-color: #fefaf1;
-    
-}
+
 
 .streep {
     box-sizing: border-box;
@@ -281,10 +273,12 @@ form:first-of-type {
 form.index {
     z-index: 1;
     height: 0;
+    width: 0;
     overflow: hidden;
     opacity: 0;
     position: absolute;
-    top:5em;
+    top:20em;
+    left: 5em;
     transition: all .4s ease-in;
 }
     @media only screen and (min-width: 62rem){
@@ -293,6 +287,7 @@ form.index {
             display: flex;
             overflow: visible;
             z-index: 0;
+            width: 100%;
             height: 100%;
             opacity: 1;
             margin: auto;
@@ -458,11 +453,22 @@ input:checked+label::before {
 #klik:checked {
     display: none;
 }
-
+body>label:first-of-type {
+    position: absolute;
+    left: -200px;
+    background-color: #fefaf1;
+    transition: all .8s ease-in-out;
+    
+}
 #klik[type=checkbox]:checked~label:first-of-type {
     font-size: 1.2rem;
     display: flex;
     background-color: #fefaf1;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 2;
+    font-weight: 400;
 
 }
 
