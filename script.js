@@ -6,11 +6,15 @@ var disabled = document.getElementById("zoek");
 var checkBox = document.getElementsByClassName("check");
 var buttonBewaar = document.querySelector('article>footer>button');
 
-var c = 0; //nummertje voor de checkbox[Array]
+var loginLijstje = document.querySelector('body>header>ul');
+var logIn = document.querySelector('.login');
 
-for (c = 0; c < checkBox.length; c++){
-    checkBox[c].addEventListener("change", checked);
+var c = 0; //nummertje voor de checkbox[Array]
+ 
+function showLijstje (){
+    loginLijstje.classList.toggle('display');
 }
+
 
 
 function checked() {
@@ -26,7 +30,9 @@ function checked() {
         disabled.disabled = disabled;
     }
 }
-
+for (c = 0; c < checkBox.length; c++){
+    checkBox[c].addEventListener("change", checked);
+    }
 // voegt de slider toe op het uitschuifbare zoekmenu - home -
 function geKlik(){
     if ((klik.checked) === true){
@@ -43,7 +49,7 @@ function bewaar(){
     buttonBewaar.classList.toggle('bewaard');
 }
 
-
+logIn.addEventListener("click", showLijstje);
 buttonBewaar.addEventListener("click", bewaar);
 klik.addEventListener("click", geKlik);
 document.addEventListener('DOMContentLoaded', geKlik);
