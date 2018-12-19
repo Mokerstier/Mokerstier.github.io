@@ -5,6 +5,7 @@
 }
 html{
     font-size: 62.5%;
+    max-width: 100vw;
 }
 
 body {
@@ -123,11 +124,21 @@ h5 {
         margin-left: 42%;
     }
 }
+header{
+    position: relative;
+}
 .login:hover {
     cursor: pointer;
 }
-
-
+header>ul{
+    position: absolute;
+    list-style: none;
+}
+header>ul>li{
+    padding-right: 1.5rem;
+    text-align: right;
+    color: #fff;
+}
 /*======Zoek een verhaal===== */
 
 section>a {
