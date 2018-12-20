@@ -9,8 +9,10 @@ var buttonBewaar = document.querySelector('article>footer>button');
 var loginLijstje = document.querySelector('body>header>ul');
 var logIn = document.querySelector('.login');
 
+
 var c = 0; //nummertje voor de checkbox[Array]
- 
+
+
 function showLijstje (){
     loginLijstje.classList.toggle('display');
 }
@@ -48,9 +50,13 @@ function geKlik(){
 function bewaar(){
     buttonBewaar.classList.toggle('bewaard');
 }
-
 logIn.addEventListener("click", showLijstje);
+
+
 buttonBewaar.addEventListener("click", bewaar);
 klik.addEventListener("click", geKlik);
-document.addEventListener('DOMContentLoaded', geKlik);
+
+//document.addEventListener('DOMContentLoaded', function (){
+//    document.getElementById('leestijd').innerHTML = '<input type="text" id="sampleSlider"  />';
+//});
 //window.onscroll = function() {myScroll1();};
