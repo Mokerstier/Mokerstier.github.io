@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
@@ -23,163 +24,181 @@
         </h1>
     </section>
 
-    
+
     <section>
         <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
         <h2>Zoek een passend verhaal</h2>
-    <input id="klik" type="checkbox"  >
-    <label for="klik"> <img src="img/icon/arrow/left.svg" alt="pijl naar links"> terug</label>
-    <label for="klik">klik hier om je zoekopdracht te verfijnen <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></label>
-    <span class="streep"></span>
-    
-    <form class="index" action="resultaten.html#sort">
-        <fieldset class="sfeer">
-            <legend>Zoek op sfeer</legend>
-            <div class="flex-container">
-                <div class="sfeer-1">
-                    <input class="check" type="checkbox" id="duister"><label class="checkbox" for="duister">Duister</label>
-                    <input class="check" type="checkbox" id="druk"><label class="checkbox" for="druk">Druk</label>
-                    <input class="check" type="checkbox" id="rustig"><label class="checkbox" for="rustig">Rustig</label>
-                </div>
-                <div class="sfeer-2">
-                    <input class="check" type="checkbox" id="simpel"><label class="checkbox" for="simpel">Simpel</label>
-                    <input class="check" type="checkbox" id="verdrietig"><label class="checkbox" for="verdrietig">Verdrietig</label>
-                    <input class="check" type="checkbox" id="vrolijk"><label class="checkbox" for="vrolijk">Vrolijk</label>
-                </div>
-            </div>
-             
-        </fieldset>
-        
-        <fieldset>
-        <legend>Leestijd</legend>
-        <label for="sampleSlider">Leestijd</label>
-        <div id="leestijd"><input type="range" ></div>
-        </fieldset>
+        <input id="klik" type="checkbox">
+        <label for="klik"> <img src="img/icon/arrow/left.svg" alt="pijl naar links"> terug</label>
+        <label for="klik">klik hier om je zoekopdracht te verfijnen <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></label>
+        <span class="streep"></span>
 
-        <fieldset class="reistijd">
-            <legend>Aansluitend aan reistijd</legend>
-            <input class="check" id="reischeck" type="checkbox"><label for="reischeck" class="checkbox">Laat verhalen zien die passen bij mijn rit</label>
+        <form class="index" action="resultaten.html#sort">
+            <fieldset class="sfeer">
+                <legend>Zoek op sfeer</legend>
+                <div class="flex-container">
+                    <div class="sfeer-1">
+                        <input class="check" type="checkbox" id="duister"><label class="checkbox" for="duister">Duister</label>
+                        <input class="check" type="checkbox" id="druk"><label class="checkbox" for="druk">Druk</label>
+                        <input class="check" type="checkbox" id="rustig"><label class="checkbox" for="rustig">Rustig</label>
+                    </div>
+                    <div class="sfeer-2">
+                        <input class="check" type="checkbox" id="simpel"><label class="checkbox" for="simpel">Simpel</label>
+                        <input class="check" type="checkbox" id="verdrietig"><label class="checkbox" for="verdrietig">Verdrietig</label>
+                        <input class="check" type="checkbox" id="vrolijk"><label class="checkbox" for="vrolijk">Vrolijk</label>
+                    </div>
+                </div>
 
-        </fieldset>
-        <footer>
-            <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
-        </footer>
-    </form>
+            </fieldset>
+
+            <fieldset>
+                <legend>Leestijd</legend>
+                <label for="sampleSlider">Leestijd</label>
+                <div id="leestijd"><input type="range"></div>
+            </fieldset>
+
+            <fieldset class="reistijd">
+                <legend>Aansluitend aan reistijd</legend>
+                <input class="check" id="reischeck" type="checkbox"><label for="reischeck" class="checkbox">Laat verhalen zien die passen bij mijn rit</label>
+
+            </fieldset>
+            <footer>
+                <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
+            </footer>
+        </form>
     </section>
     <section class="random">
-    <a href="resultaten.html">Geef me een willekeurig verhaal <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></a></section>
+        <a href="resultaten.html">Geef me een willekeurig verhaal <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></a></section>
     <section>
         <h2>Top 5 best gewaardeerde verhalen</h2>
         <div class="carous">
-        <article><footer>
-                <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+            <article>
                 <button>Bewaar</button>
-            </footer>
-            <header>
-                <ul>
-                   <li><h3>Vergezocht</h3></li>
-                    <li><img src="img/icon/klok.svg" alt="klokje">35:00
-                    </li>
-                    <li><a href="verhaal.html">Lees nu</a></li>
-                    
-                    <li>
-                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
-                    </li>
-                    <li>71
-                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
-                    </li>
-                </ul>
-            </header></article>
-        <article><footer>
-                <a href="#"><img class="banner" src="img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-            </footer>
-            <header>
-                <ul>
-                   <li><h3>Droom</h3></li>
-                    <li><img src="img/icon/klok.svg" alt="klokje">25:00
-                    </li>
-                    <li><a href="#">Lees nu</a></li>
-                    
-                    <li>
-                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
-                    </li>
-                    <li>60
-                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
-                    </li>
-                </ul>
-            </header></article>
-        <article><footer>
-                <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
-            </footer>
-            <header>
-                <ul>
-                   <li><h3>Western</h3></li>
-                    <li><img src="img/icon/klok.svg" alt="klokje">30:00
-                    </li>
-                    <li><a href="#">Lees nu</a></li>
-                    
-                    <li>
-                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
-                    </li>
-                    <li>58
-                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
-                    </li>
-                </ul>
-            </header></article>
-        <article><footer>
-                <a href="#"><img class="banner" src="img/verhalen/Western.jpeg" alt="vergezocht"></a>
-            </footer>
-            <header>
-                <ul>
-                   <li><h3>Vergezocht</h3></li>
-                    <li><img src="img/icon/klok.svg" alt="klokje">35:00
-                    </li>
-                    <li><a href="#">Lees nu</a></li>
-                    
-                    <li>
-                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
-                    </li>
-                    <li>71
-                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
-                    </li>
-                </ul>
-            </header></article>
-        <article><footer>
-                <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
-            </footer>
-            <header>
-                <ul>
-                   <li><h3>Vergezocht</h3></li>
-                    <li><img src="img/icon/klok.svg" alt="klokje">35:00
-                    </li>
-                    <li><a href="#">Lees nu</a></li>
-                    
-                    <li>
-                        <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
-                    </li>
-                    <li>71
-                        <img src="img/icon/thumbs-up.svg" alt="duimpjes">
-                    </li>
-                </ul>
-            </header></article>
+                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht">
+                    <footer>
+                        <ul>
+                            <li>35:00
+                            </li>
+
+                            <li>
+                                Download
+                            </li>
+                            <li>71
+                            </li>
+                        </ul>
+                    </footer>
+                    <header>
+                        <h3>Vergezocht
+                        </h3>
+                    </header>
+                </a>
+            </article>
+            <article>
+                <footer>
+                    <a href="#"><img class="banner" src="img/verhalen/Droom.jpeg" alt="vergezocht"></a>
+                </footer>
+                <header>
+                    <ul>
+                        <li>
+                            <h3>Droom</h3>
+                        </li>
+                        <li><img src="img/icon/klok.svg" alt="klokje">25:00
+                        </li>
+                        <li><a href="#">Lees nu</a></li>
+
+                        <li>
+                            <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
+                        </li>
+                        <li>60
+                            <img src="img/icon/thumbs-up.svg" alt="duimpjes">
+                        </li>
+                    </ul>
+                </header>
+            </article>
+            <article>
+                <footer>
+                    <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                </footer>
+                <header>
+                    <ul>
+                        <li>
+                            <h3>Western</h3>
+                        </li>
+                        <li><img src="img/icon/klok.svg" alt="klokje">30:00
+                        </li>
+                        <li><a href="#">Lees nu</a></li>
+
+                        <li>
+                            <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
+                        </li>
+                        <li>58
+                            <img src="img/icon/thumbs-up.svg" alt="duimpjes">
+                        </li>
+                    </ul>
+                </header>
+            </article>
+            <article>
+                <footer>
+                    <a href="#"><img class="banner" src="img/verhalen/Western.jpeg" alt="vergezocht"></a>
+                </footer>
+                <header>
+                    <ul>
+                        <li>
+                            <h3>Vergezocht</h3>
+                        </li>
+                        <li><img src="img/icon/klok.svg" alt="klokje">35:00
+                        </li>
+                        <li><a href="#">Lees nu</a></li>
+
+                        <li>
+                            <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
+                        </li>
+                        <li>71
+                            <img src="img/icon/thumbs-up.svg" alt="duimpjes">
+                        </li>
+                    </ul>
+                </header>
+            </article>
+            <article>
+                <footer>
+                    <a href="#"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                </footer>
+                <header>
+                    <ul>
+                        <li>
+                            <h3>Vergezocht</h3>
+                        </li>
+                        <li><img src="img/icon/klok.svg" alt="klokje">35:00
+                        </li>
+                        <li><a href="#">Lees nu</a></li>
+
+                        <li>
+                            <a href=""><img src="img/icon/download.svg" alt="download">Download</a>
+                        </li>
+                        <li>71
+                            <img src="img/icon/thumbs-up.svg" alt="duimpjes">
+                        </li>
+                    </ul>
+                </header>
+            </article>
         </div>
-        </section>
-    
+    </section>
+
     <section>
         <h2>Direct naar</h2>
-        
-            <a href="resultaten.html">
-                Alle verhalen
-            </a>
-            <a href="resultaten.html">
-                Hoogst beoordeelde
-            </a>
-            <a href="resultaten.html">
-                
-            </a>
-            <a href="resultaten.html"></a>
-            <a href="resultaten.html"></a>
-        
+
+        <a href="resultaten.html">
+            Alle verhalen
+        </a>
+        <a href="resultaten.html">
+            Hoogst beoordeelde
+        </a>
+        <a href="resultaten.html">
+
+        </a>
+        <a href="resultaten.html"></a>
+        <a href="resultaten.html"></a>
+
     </section>
 
     <script src="./java/script.js"></script>
@@ -187,4 +206,5 @@
     <link rel="stylesheet" href="css/rSlider.css">
     <!--     //Range slider heb ik gejat van https://github.com/slawomir-zaziablo/range-slider/ -->
 </body>
+
 </html>

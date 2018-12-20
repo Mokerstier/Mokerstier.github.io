@@ -4,12 +4,13 @@
 var klik = document.getElementById("klik");
 var disabled = document.getElementById("zoek");
 var checkBox = document.getElementsByClassName("check");
-var buttonBewaar = document.querySelector('article>footer>button');
+var buttonBewaar = document.querySelector('article>button');
 
 var loginLijstje = document.querySelector('body>header>ul');
 var logIn = document.querySelector('.login');
 
-
+var header = document.querySelector('body>header');
+var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkbox[Array]
 
 
@@ -17,11 +18,17 @@ function showLijstje (){
     loginLijstje.classList.toggle('display');
 }
 
-
-
+window.onscroll = function showHeader(){
+    var huidgeScrollPos = window.pageYOffset;
+    if (vorigeScrollpos > huidgeScrollPos) {
+         header.className = ('');
+    } else {
+         header.className = ('header-up'); 
+}
+    vorigeScrollpos = huidgeScrollPos;
+}
 function checked() {
-    var isChecked = this.checked;
-    
+    var isChecked = this.checked;  
     if (isChecked){
        disabled.removeAttribute('disabled');
       disabled.classList.remove('inactive');
@@ -32,6 +39,7 @@ function checked() {
         disabled.disabled = disabled;
     }
 }
+
 for (c = 0; c < checkBox.length; c++){
     checkBox[c].addEventListener("change", checked);
     }
