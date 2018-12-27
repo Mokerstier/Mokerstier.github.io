@@ -26,7 +26,7 @@ window.onscroll = function showHeader(){
          header.className = ('header-up'); 
 }
     vorigeScrollpos = huidgeScrollPos;
-}
+};
 function checked() {
     var isChecked = this.checked;  
     if (isChecked){
@@ -55,9 +55,29 @@ function geKlik(){
     }
 }
 // ===== Micro bewaren =====
-function bewaar(){
-    buttonBewaar.classList.toggle('bewaard');
+function display(){
+    loginLijstje.classList.add('display');
+    header.classList.add('bewaren');
 }
+function hide(){
+    loginLijstje.classList.remove('display');
+}
+function onBewaar(){
+    buttonBewaar.classList.remove('bewaard');
+} 
+function bewaar(){
+    if (buttonBewaar.classList == ('bewaard') == true){
+        onBewaar();
+    } else{
+    setTimeout(display, 1000);
+    setTimeout(hide, 3000);
+    buttonBewaar.classList.add('bewaard');
+    
+    }
+}
+   
+
+
 logIn.addEventListener("click", showLijstje);
 
 
