@@ -4,7 +4,7 @@
 var klik = document.getElementById("klik");
 var disabled = document.getElementById("zoek");
 var checkBox = document.getElementsByClassName("check");
-var buttonBewaar = document.querySelector('article>button');
+var buttonBewaar = [].slice.call(document.querySelectorAll('article>button'));
 
 var loginLijstje = document.querySelector('body>header>ul');
 var logIn = document.querySelector('.login');
@@ -12,7 +12,7 @@ var logIn = document.querySelector('.login');
 var header = document.querySelector('body>header');
 var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkbox[Array]
-
+var b = 0; // bewaarButton nummer
 
 function showLijstje (){
     loginLijstje.classList.toggle('display');
@@ -27,6 +27,7 @@ window.onscroll = function showHeader(){
 }
     vorigeScrollpos = huidgeScrollPos;
 };
+
 function checked() {
     var isChecked = this.checked;  
     if (isChecked){
@@ -39,7 +40,7 @@ function checked() {
         disabled.disabled = disabled;
     }
 }
-
+// checkt de checkbox
 for (c = 0; c < checkBox.length; c++){
     checkBox[c].addEventListener("change", checked);
     }
@@ -61,27 +62,34 @@ function display(){
 }
 function hide(){
     loginLijstje.classList.remove('display');
+    header.classList.remove('bewaren');
 }
 function onBewaar(){
-    buttonBewaar.classList.remove('bewaard');
-} 
-function bewaar(){
+    buttonBewaar[b].classList.remove('bewaard');
+}
+
+
+
+buttonBewaar.forEach(function (buttonBewaar, index){
+    buttonBewaar.addEventListener("click", function(){
+    console.log("je klikt button nummer " +index + "!");
     if (buttonBewaar.classList == ('bewaard') == true){
         onBewaar();
     } else{
     setTimeout(display, 1000);
     setTimeout(hide, 3000);
-    buttonBewaar.classList.add('bewaard');
-    
-    }
-}
+    buttonBewaar.classList.add('bewaard');    
    
+    }
+    
+});
+});
+//buttonBewaar.addEventListener("click", bewaar);
 
 
 logIn.addEventListener("click", showLijstje);
 
 
-buttonBewaar.addEventListener("click", bewaar);
 klik.addEventListener("click", geKlik);
 
 //document.addEventListener('DOMContentLoaded', function (){
