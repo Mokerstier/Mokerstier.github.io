@@ -224,6 +224,9 @@ body>header>ul>li>a{
 body>footer{
     box-shadow: inset 0 4px 12px 4px hsla(0,0%,95%,.5);
 }
+a>p{
+    display: inline;
+}
 /*======Zoek een verhaal===== */
 
 div>a {
@@ -820,10 +823,10 @@ article>a{
     color: #000;
     text-decoration: none;
 }
-article>a>footer{
+article>footer>ul>li>button{
     
 }
-article>a>footer>ul{
+article>footer>ul{
     background-color: rgba(255,255,255, 0.96);
     color: #000;
     width: 100%;
@@ -840,6 +843,34 @@ article>a>footer>ul>li{
     
 }
 /*====Einde Article====*/
+/*====Download animatie====*/
+article>footer>ul>li>button.download::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #fff;
+    width:100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.download{
+    position: relative;
+}
+.download::after{
+    animation: download 4s steps(10); 
+    
+}
+@keyframes download{
+    from{
+        width: 0%;
+        background-color: #fff
+    }
+    to{
+        width: 100%;
+        background-color: darkorange;
+    }
+}
 /*=====Populair carousel=====*/
 /*
 section:nth-of-type(4){

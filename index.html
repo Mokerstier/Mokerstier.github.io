@@ -14,8 +14,8 @@
         <button class="login">login</button>
         <ul>
             <li><a href="inloggen.html">Inloggen</a></li>
-            <li><a href="">Bewaarde verhalen</a></li>
-            <li><a href="">Gedownloade verhalen</a></li>
+            <li><a href="">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
+            <li><a href="">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
         </ul>
     </header>
     <section>
@@ -75,19 +75,22 @@
         <div class="carous">
             <article>
                 <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht">
+                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
                             <li>35:00
                             </li>
 
                             <li>
-                                Download
+                            <button class="button active">
+                            Download
+                            </button>
                             </li>
                             <li>71
                             </li>
                         </ul>
                     </footer>
+                    <a href="verhaal.html">
                     <header>
                         <h3>Vergezocht
                         </h3>
