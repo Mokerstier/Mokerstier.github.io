@@ -12,7 +12,9 @@ var logIn = document.querySelector('.login');
 var header = document.querySelector('body>header');
 var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkbox[Array]
-var b = 0; // bewaarButton nummer
+var displayTime;
+var hideTime;
+
 
 function showLijstje (){
     loginLijstje.classList.toggle('display');
@@ -56,35 +58,40 @@ function geKlik(){
     }
 }
 // ===== Micro bewaren =====
-function display(){
-    loginLijstje.classList.add('display');
-    header.classList.add('bewaren');
-}
-function hide(){
-    loginLijstje.classList.remove('display');
-    header.classList.remove('bewaren');
-}
-function onBewaar(){
-    buttonBewaar[b].classList.remove('bewaard');
-}
-
+//function display(){ // Laat lijstje en header zien
+//    loginLijstje.classList.add('display');
+//    header.classList.add('bewaren');
+//}
+//function hide(){ // Haalt lijstje en header weer weg
+//    loginLijstje.classList.remove('display');
+//    header.classList.remove('bewaren');
+//}
 
 
 buttonBewaar.forEach(function (buttonBewaar, index){
     buttonBewaar.addEventListener("click", function(){
     console.log("je klikt button nummer " +index + "!");
+        
     if (buttonBewaar.classList == ('bewaard') == true){
-        onBewaar();
-    } else{
-    setTimeout(display, 1000);
-    setTimeout(hide, 3000);
-    buttonBewaar.classList.add('bewaard');    
-   
-    }
-    
+        clearTimeout(displayTime);// als de gebruiker 2 keer achter elkaar klikt op de button wordt de animatie van toevoegen niet gestart
+        buttonBewaar.classList.remove('bewaard'); // haalt 'bewaard' class weg
+        
+    } else {
+    displayTime = setTimeout(function(){ // Laat lijstje en header zien
+    loginLijstje.classList.add('display');
+    header.classList.add('bewaren');
+}, 1000);
+    hideTime =  setTimeout(function(){ // Haalt lijstje en header weer weg
+    loginLijstje.classList.remove('display');
+    header.classList.remove('bewaren');
+}, 3000);
+    displayTime; // Activeerd display functie na 1 sec
+    hideTime; // Activeerd hide functie na 3 sec
+    buttonBewaar.classList.add('bewaard');  // geeft de button class 'bewaard'  
+    }    
 });
 });
-//buttonBewaar.addEventListener("click", bewaar);
+
 
 
 logIn.addEventListener("click", showLijstje);
