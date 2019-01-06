@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-html{
+
+html {
     font-size: 62.5%;
     max-width: 100vw;
 }
+
 body {
     font-size: 16px;
     line-height: 2.2em;
@@ -17,50 +20,65 @@ body {
     box-sizing: border-box;
     padding-top: 39px;
 }
-section{
+
+section {
     background-color: #FFFFFF;
 }
-section:nth-of-type(2){
-    background-color:  #fff;
+
+section:nth-of-type(2) {
+    background-color: #fff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-right: 1.5rem;
-    box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
 }
-@media (min-width: 48rem){
-    section:first-of-type, section:nth-of-type(2){
-     max-width: 62rem; 
-     margin: auto;
-     border-radius: 10px;
+
+    @media (min-width: 48rem) {
+
+    section:first-of-type,
+    section:nth-of-type(2) {
+        max-width: 62rem;
+        margin: auto;
+        border-radius: 10px;
     }
 }
-@media (min-width: 62rem){
-    section:first-of-type, section:nth-of-type(2){
-     max-width: 75rem; 
-        
+
+    @media (min-width: 62rem) {
+
+    section:first-of-type,
+    section:nth-of-type(2) {
+        max-width: 75rem;
+
     }
 }
-@media (min-width: 75rem){
-    section:first-of-type, section:nth-of-type(2){
-     max-width: 114rem; 
+
+    @media (min-width: 75rem) {
+
+    section:first-of-type,
+    section:nth-of-type(2) {
+        max-width: 114rem;
     }
 }
-.geel{
+
+.geel {
     position: relative;
     width: 100%;
     background-color: #fcd900;
     min-height: 210px;
     overflow: hidden;
 }
-.background-image{
+
+.background-image {
     position: absolute;
     left: 70%;
     top: 20px;
     overflow: hidden;
 }
+
 section:first-of-type {
     background-color: #fcd900;
-}   
+}
+
 h1 {
     box-sizing: border-box;
     font-size: 2.2rem;
@@ -68,28 +86,32 @@ h1 {
     padding: 0.83em;
     padding-top: 30px;
     color: black;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
     width: 100%;
 }
 
 h2 {
     font-size: 20px;
     margin: 0 1.5rem;
-    padding:0;
-    transition: all .4s ease-in; 
+    padding: 0;
+    transition: all .4s ease-in;
 }
-@media (min-width: 62rem){
-    h2{
+
+    @media (min-width: 62rem) {
+    h2 {
         font-size: 3rem;
     }
 }
-h2:first-of-type{
+
+h2:first-of-type {
     padding-bottom: 2rem;
 }
+
 h3 {
     margin: 0;
     padding: 1.5rem 1.5rem;
 }
+
 #zoektitel {
     line-height: 1;
     font-size: 1.2rem;
@@ -100,11 +122,13 @@ h3 {
     color: #e7772b;
     transition: all .4s ease-in;
 }
-@media (min-width: 48em){
-    #zoektitel{
+
+    @media (min-width: 48em) {
+    #zoektitel {
         font-size: 1.8rem;
     }
 }
+
 h5 {
     padding: 0 1.5em;
 }
@@ -124,10 +148,12 @@ h5 {
     z-index: 999;
     transition: .35s ease-in-out;
 }
-.header-up{
+
+.header-up {
     transform: translateY(-100%);
 }
-.bewaren::after{
+
+.bewaren::after {
     content: '';
     position: absolute;
     background-image: url(./img/icon/button/Bewaar-idealState.svg);
@@ -139,25 +165,38 @@ h5 {
     height: 3rem;
     animation: bewaren 2.8s .5s;
 }
-@keyframes bewaren{
-    0% { top: 20em;
-         right: 12em;
-         opacity: 1;}
-    50%{ opacity: .8;}
-    70% { opacity: .5;}
-    100% { transform: rotateZ(60deg) translate(2em, 2em);
-    opacity: 0;}
+
+@keyframes bewaren {
+    0% {
+        top: 20em;
+        right: 12em;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .8;
+    }
+
+    70% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: rotateZ(60deg) translate(2em, 2em);
+        opacity: 0;
+    }
 }
+
 /*afbeeldingen in de Header*/
 
-#logo>img {
+#logo > img {
     margin-top: 0.5em;
 }
 
 .login {
     margin-left: 36%;
     margin-right: 1.5em;
-    padding-left:0.1rem;
+    padding-left: 0.1rem;
     padding-right: 0.1rem;
     height: 1.6rem;
     width: 1.6rem;
@@ -169,67 +208,79 @@ h5 {
     color: transparent;
     border-color: transparent;
 }
-@media (min-width: 48em){
-    .login{
+
+@media (min-width: 48em) {
+    .login {
         height: 2rem;
         width: 2rem;
         background-size: 20px 20px;
     }
 
 }
-@media  only screen and (min-width: 600px){
+
+    @media only screen and (min-width: 600px) {
     .login {
         margin-left: 42%;
-        
+
     }
 }
-body>header{
+
+body > header {
     position: relative;
 }
+
 .login:hover {
     cursor: pointer;
 }
 
 /*===Einde Header===*/
 /*== Lijsteje login ==*/
-body>header>ul{
+body > header > ul {
     position: absolute;
     list-style: none;
     transform: translateY(-6em);
     transition: all .4s ease-in-out;
 }
-.display{
-        transform: translateY(4.5em);
-        z-index: 0;
+
+.display {
+    transform: translateY(4.5em);
+    z-index: 0;
 }
-body>header>ul>li{
+
+body > header > ul > li {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     text-align: right;
     color: #fff;
     background-color: #675c53;
-    
+
 }
-body>header>ul>li:nth-child(1)::after, body>header>ul>li:nth-child(2)::after{
+
+body > header > ul > li:nth-child(1)::after,
+body > header > ul > li:nth-child(2)::after {
     display: block;
     content: "";
     width: 80%;
     border-bottom: 1px solid #fff;
     margin: auto;
 }
-body>header>ul>li>a{
+
+body > header > ul > li > a {
     text-decoration: none;
     color: #fff;
 }
-body>footer{
-    box-shadow: inset 0 4px 12px 4px hsla(0,0%,95%,.5);
+
+body > footer {
+    box-shadow: inset 0 4px 12px 4px hsla(0, 0%, 95%, .5);
 }
-a>p{
+
+a > p {
     display: inline;
 }
+
 /*======Zoek een verhaal===== */
 
-div>a {
+div > a {
     display: flex;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -239,16 +290,18 @@ div>a {
     color: #675C53;
     text-decoration: none;
 }
-@media (min-width: 62rem){
-    div>a{
+
+    @media (min-width: 62rem) {
+    div > a {
         font-size: 1.792rem
     }
 }
-section>a>img{
+
+section > a > img {
     padding-left: 10px;
 }
 
-body>section>h3 {
+body > section > h3 {
     margin: 0;
     background-color: #fcd900;
 }
@@ -259,29 +312,32 @@ section:nth-child(6) {
     border-top-right-radius: 10px;
     padding-bottom: 1.5rem;
     margin-bottom: 0;
-    box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     transition: all .4s ease-in;
 }
-@media (min-width: 48rem){
-    section:nth-child(6){
+
+    @media (min-width: 48rem) {
+    section:nth-child(6) {
         max-width: 75rem;
         margin: auto;
         border-top-left-radius: 10px;
-}  
+    }
 }
-@media (min-width: 75rem){
-     section:nth-child(6){
-            max-width: 114rem;
-            margin: auto;
-            
-        }
+
+    @media (min-width: 75rem) {
+    section:nth-child(6) {
+        max-width: 114rem;
+        margin: auto;
+
+    }
 }
-section>label:last-of-type {
+
+section > label:last-of-type {
     box-sizing: border-box;
     font-size: 1.6rem;
     display: flex;
     justify-content: space-between;
-    margin-top: 0; 
+    margin-top: 0;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
     background-color: #FFFFFF;
@@ -289,16 +345,18 @@ section>label:last-of-type {
     padding-bottom: 2rem;
     cursor: pointer;
 }
-@media (min-width: 48em){
-    section>label:last-of-type {
+
+    @media (min-width: 48em) {
+    section > label:last-of-type {
         max-width: 75rem;
         border-bottom-left-radius: 10px;
     }
 }
- @media only screen and (min-width: 62rem){
-        section>label:last-of-type{
-            display: none;
-        }
+
+    @media only screen and (min-width: 62rem) {
+    section > label:last-of-type {
+        display: none;
+    }
 }
 
 
@@ -312,18 +370,23 @@ div.random {
     margin-bottom: 5rem;
     border-bottom-right-radius: 10px;
     margin-right: 2.5rem;
-    
+    background-image: url(img/icon/arrow/right.svg);
+    background-position: 18em;
+    background-repeat: no-repeat;
+
 }
-@media (min-width: 48rem){
-     div.random{
-         border-bottom-left-radius: 10px;
-         margin-right: 50%;
-         margin-left:18%;
-     }
+
+    @media (min-width: 48rem) {
+    div.random {
+        border-bottom-left-radius: 10px;
+        margin-right: 50%;
+        margin-left: 18%;
+    }
 }
-body>label{
-    padding:0 1.5rem;
-    
+
+body > label {
+    padding: 0 1.5rem;
+
 }
 
 
@@ -337,40 +400,45 @@ body>label{
     margin-right: 3rem;
     margin-left: 1.5rem;
 }
-    @media only screen and (min-width: 62rem){
-        .streep{
-            display: none;
-        }
-     }
-@media only screen and (min-width: 48rem){
-    
-     span.streep{
-         max-width: 75rem;
-         
-     }
-        
+
+    @media only screen and (min-width: 62rem) {
+    .streep {
+        display: none;
+    }
 }
+
+    @media only screen and (min-width: 48rem) {
+
+    span.streep {
+        max-width: 75rem;
+
+    }
+
+}
+
 /*========ZOEK FORMULIER========*/
 
 form:first-of-type {
     z-index: 3;
     padding-top: 1.5rem;
-     background-color: #fefaf1;
+    background-color: #fefaf1;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     margin-right: 1.5rem;
     transition: all .8s ease-in-out;
 }
-     @media only screen and (min-width: 62rem){
-        form:first-of-type{
-            border-bottom-left-radius: 10px;
-            border-top-left-radius: 10px;
-            display:flex;
-            flex-wrap: wrap;
-            margin: auto;
-            margin-top: 4rem;
-         }
+
+    @media only screen and (min-width: 62rem) {
+    form:first-of-type {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-top: 4rem;
+    }
 }
+
 form.index {
     z-index: 1;
     height: 0;
@@ -378,65 +446,75 @@ form.index {
     overflow: hidden;
     opacity: 0;
     position: absolute;
-    top:20em;
+    top: 20em;
     left: 5em;
     transition: all .4s ease-in;
     margin: 0;
 }
-    @media only screen and (min-width: 62rem){
-        form.index {
-            position: static;
-            display: flex;
-            overflow: visible;
-            z-index: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-        }
-        form{
-            max-width: 72rem;
-            
-        }
-        form>header>h5{
-            display: none;
-        }
-        fieldset#leestijd{
-            padding-left: 1.5rem;
-        }
+
+    @media only screen and (min-width: 62rem) {
+    form.index {
+        position: static;
+        display: flex;
+        overflow: visible;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
     }
 
+    form {
+        max-width: 72rem;
+
+    }
+
+    form > header > h5 {
+        display: none;
+    }
+
+    fieldset#leestijd {
+        padding-left: 1.5rem;
+    }
+}
+
 form fieldset {
-    padding: 0 ;
+    padding: 0;
     border-style: none;
     margin: 0;
     padding: 0 1.5rem;
 }
-form>fieldset:first-of-type{
-        padding-right: 4rem;
+
+form > fieldset:first-of-type {
+    padding-right: 4rem;
 }
-@media (min-width: 62em){
-    form>fieldset:nth-of-type(2){
-            border-left: rgb(241, 241, 241) 1px solid;
+
+    @media (min-width: 62em) {
+    form > fieldset:nth-of-type(2) {
+        border-left: rgb(241, 241, 241) 1px solid;
     }
 }
+
 form legend {
     margin-bottom: 5px;
     font-size: 1.6rem;
     font-weight: 700;
 }
-form input[type=checkbox]:focus +label{
+
+form input[type=checkbox]:focus + label {
     box-shadow: 0 8px 18px rgba(231, 119, 43, .3);
 }
 
-#leestijd{
+#leestijd {
     margin-bottom: 1.5em;
-    padding:0;
+    padding: 0;
 }
-form.index fieldset:nth-child(2) label{
+
+form.index fieldset:nth-child(2) label {
     visibility: hidden;
-}        
-#leestijd legend{
-    
+}
+
+#leestijd legend {
+
     margin-bottom: 5em;
 }
 
@@ -447,7 +525,7 @@ form.index fieldset:nth-child(2) label{
 
 .flex-container {
     display: flex;
-    
+
 }
 
 
@@ -460,7 +538,7 @@ form.index fieldset:nth-child(2) label{
     max-width: 40%;
     flex-direction: column;
 }
-        
+
 
 /* rechter lijstje*/
 
@@ -470,20 +548,23 @@ form.index fieldset:nth-child(2) label{
     display: flex;
     max-width: 40%;
     flex-direction: column;
-}    
+}
 
-        @media only screen and (min-width: 62rem){
-            .sfeer-1, .sfeer-2 {
-                
-                flex-direction: column;
-                flex-wrap: wrap;
-                max-width: 100%;
-            }
-            
+    @media only screen and (min-width: 62rem) {
+
+    .sfeer-1,
+    .sfeer-2 {
+
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 100%;
     }
+
+}
+
 /*Checkboxes*/
- form:first-of-type label {
-    
+form:first-of-type label {
+
     font-size: 1.4rem;
     font-weight: 700;
     display: flex;
@@ -495,15 +576,17 @@ form.index fieldset:nth-child(2) label{
     padding: 1.1rem 0;
     min-width: 12rem;
     max-width: 35rem;
-    
+
 }
-@media (min-width: 48rem){
-    form label{
+
+    @media (min-width: 48rem) {
+    form label {
         font-size: 1.6rem;
     }
 }
+
 /* Maakt het vierkantje voor het label */
-form:first-of-type input[type=checkbox]+label::before {
+form:first-of-type input[type=checkbox] + label::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -513,41 +596,46 @@ form:first-of-type input[type=checkbox]+label::before {
     margin-left: 15px;
     margin-right: 13px;
 }
+
 /*Zet de orginele checkbox ergens buiten het zicht */
 .check {
     position: absolute;
     left: -9999px;
 }
+
 #leestijd {
     margin-left: 1.5rem;
 }
-    @media only screen and (min-width: 50rem){
-        #leestijd{
-          margin-left:2em;
-        } 
+
+    @media only screen and (min-width: 50rem) {
+    #leestijd {
+        margin-left: 2em;
+    }
 }
 
 /*====Micro voor index form====*/
-section:nth-of-type(2)>button:first-of-type{
+section:nth-of-type(2) > button:first-of-type {
     position: relative;
-    border:none;
+    border: none;
     background-color: #fff;
     padding-right: 3em;
     margin-left: 1.5rem;
     font-size: 1.6rem;
     background-image: url(img/icon/arrow/right.svg);
     background-repeat: no-repeat;
-    background-position:top right;
+    background-position: top right;
     transition: all .8s ease-in-out;
     padding-bottom: 2rem;
 }
-    @media (min-width: 62rem){
-        section:nth-of-type(2)>button:first-of-type{
-            display: none;
-        } 
-    
+
+    @media (min-width: 62rem) {
+    section:nth-of-type(2) > button:first-of-type {
+        display: none;
     }
-section:nth-of-type(2)>button:first-of-type::after{
+
+}
+
+section:nth-of-type(2) > button:first-of-type::after {
     content: "";
     position: absolute;
     bottom: 1.7rem;
@@ -556,11 +644,12 @@ section:nth-of-type(2)>button:first-of-type::after{
     border-bottom: 1px solid #000;
 }
 
-.terug{
+.terug {
     position: absolute;
     left: -5rem;
     transition: all 0 0 ease-in-out;
 }
+
 .showterug {
     z-index: 9999;
     position: absolute;
@@ -576,7 +665,8 @@ section:nth-of-type(2)>button:first-of-type::after{
     margin-left: 1.5rem;
     transition: all .4s .8s ease-in-out;
 }
-.showform{
+
+.showform {
     position: absolute;
     display: block;
     opacity: 1;
@@ -587,10 +677,12 @@ section:nth-of-type(2)>button:first-of-type::after{
     width: 100vw;
     border-radius: 0;
 }
+
 .hide {
     display: none;
     transition: all .4s 1s ease-in-out;
 }
+
 /*======FOOTER FORMULIER=====*/
 form footer:first-of-type {
     display: flex;
@@ -600,11 +692,13 @@ form footer:first-of-type {
     border-bottom-right-radius: 10px;
     width: 100%;
 }
-@media (min-width: 62em){
+
+    @media (min-width: 62em) {
     form footer:first-of-type {
         border-bottom-left-radius: 10px;
     }
 }
+
 /*=====Einde footer form=====*/
 /*====Button Styling=====*/
 .button {
@@ -613,32 +707,37 @@ form footer:first-of-type {
     padding: 0.9rem 1.5rem;
     border-radius: 10px;
     color: #FFFFFF;
-    border-style: none ;
+    border-style: none;
     border: 1px solid #E7772B;
     min-width: 12.5rem;
-        line-height: 1.15;
+    line-height: 1.15;
 }
+
 .active {
     background-color: #E7772B;
     box-shadow: 0 8px 18px rgba(231, 119, 43, .3);
     transition: all .3s ease;
 }
+
 .active:hover {
-background-color:#c05e00;
+    background-color: #c05e00;
 }
+
 .inactive {
     background-color: #D6CEC6;
     border-color: #D6CEC6;
 }
-.dark-button{
+
+.dark-button {
     font-weight: 700;
     background-color: #675c53;
     color: #fff;
     border-radius: 10px;
     border: 2px solid #675c53;
-    box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     text-decoration: none;
 }
+
 /*Einde button styling*/
 
 /*===== Inlog-veld=====*/
@@ -649,39 +748,45 @@ main.inloggen {
     height: 42.7rem;
     box-sizing: border-box;
 }
-main.inloggen>h1{
+
+main.inloggen > h1 {
     position: absolute;
     top: -9.5em;
 }
-main.inloggen>form{
+
+main.inloggen > form {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 10px;
-    padding: 0 ;
-    margin-left:1.5rem;
+    padding: 0;
+    margin-left: 1.5rem;
     margin-right: 1.5rem;
     position: relative;
-    box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     position: absolute;
     top: -8em;
-    
+
 }
-main.inloggen>form>fieldset>legend{
+
+main.inloggen > form > fieldset > legend {
     margin-left: 3rem;
 }
-main.inloggen>form div{
+
+main.inloggen > form div {
     width: 100%;
     position: relative;
     padding: 0 3rem;
 }
-main.inloggen>form>fieldset{
+
+main.inloggen > form > fieldset {
     padding: 0;
     width: 100%;
     box-sizing: border-box;
 }
-main.inloggen>form>fieldset>div>label{
+
+main.inloggen > form > fieldset > div > label {
     font-size: 1.4rem;
     line-height: 1.15;
     font-weight: 300;
@@ -691,19 +796,22 @@ main.inloggen>form>fieldset>div>label{
     position: absolute;
     left: 3rem;
     top: 1rem;
-    transition: all .45s cubic-bezier(.23,1,.32,1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
-main.inloggen input:focus-within+label{
+
+main.inloggen input:focus-within + label {
     transform: translateY(-2.5rem);
     font-size: 1.2rem;
-    
+
 }
-.blijfomhoog{
+
+.blijfomhoog {
     transform: translateY(-2.5rem);
     font-size: 1.2rem;
     padding-top: 5px;
 }
-main fieldset input{
+
+main fieldset input {
     padding-bottom: .5rem;
     padding-left: 2rem;
     font-size: 1.6rem;
@@ -712,16 +820,18 @@ main fieldset input{
     padding-top: 2rem;
     outline: none;
 }
-main hr{
+
+main hr {
     height: 0;
     box-sizing: content-box;
     position: relative;
     color: #f1f1f1;
     margin: 0;
     overflow: visible;
-    transition: all .45s cubic-bezier(.23,1,.32,1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
-main hr::before{
+
+main hr::before {
     content: "";
     border-bottom: 1px solid #8d857e;
     bottom: 0;
@@ -729,9 +839,10 @@ main hr::before{
     width: 100%;
     left: 0;
     transform: scaleX(0);
-    transition: all .45s cubic-bezier(.23,1,.32,1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
-main hr::after{
+
+main hr::after {
     position: absolute;
     width: 100%;
     left: 0;
@@ -739,26 +850,29 @@ main hr::after{
     border-bottom: 2px solid #e7772b;
     bottom: 0;
     transform: scaleX(0);
-    transition: all .45s cubic-bezier(.23,1,.32,1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
-main input:focus~hr::before{
+
+main input:focus ~ hr::before {
     position: absolute;
     content: "";
     width: 100%;
     left: 0;
-    color:  #e7772b;
+    color: #e7772b;
     border-bottom: 2px solid #e7772b;
     transform: scaleX(1);
-    transition: all .45s cubic-bezier(.23,1,.32,1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
-main input[type=text]:focus+~hr::after{
+
+main input[type=text]:focus + ~ hr::after {
     content: "";
-    color:  #e7772b;
+    color: #e7772b;
     border-bottom: 2px solid #e7772b;
     transform: scaleX(1);
-    transition: all .45s cubic-bezier(.23,1,.32,1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
-main.inloggen form>a:first-of-type{
+
+main.inloggen form > a:first-of-type {
     text-decoration: none;
     width: 100%;
     margin-top: 1.9rem;
@@ -768,33 +882,38 @@ main.inloggen form>a:first-of-type{
     color: #54a5dd;
     margin-bottom: 2.5rem;
 }
-main.inloggen .button, .dark-button{
+
+main.inloggen .button,
+.dark-button {
     margin-left: 3rem;
     margin-top: 2.5rem;
-    
+
 }
 
-main.inloggen>form>footer{
+main.inloggen > form > footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-main.inloggen>form>footer>ul{
+
+main.inloggen > form > footer > ul {
     width: 100%;
     margin-left: 3rem;
 }
-main.inloggen>form>footer>ul>li{
+
+main.inloggen > form > footer > ul > li {
     list-style: none;
     padding-left: 2.5rem;
     position: relative;
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 400;
-    
+
 }
-main.inloggen>form>footer>ul>li:before{    
+
+main.inloggen > form > footer > ul > li:before {
     display: inline-block;
     background-image: url(./img/icon/273-checkmark.svg);
     background-repeat: no-repeat;
@@ -806,85 +925,88 @@ main.inloggen>form>footer>ul>li:before{
     left: 0;
     top: 4px;
 }
+
 /*====Einde inlog====*/
 
-.carous{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 /*====Article Styling====*/
-article{
+article {
     position: relative;
     max-width: 20em;
     margin: 0 1.5rem;
     text-align: center;
     background-color: #fff;
-    box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     margin-bottom: 3rem;
     border-radius: 10px;
 }
 
-article img{
-    max-width:100%;
+article img {
+    max-width: 100%;
     width: 32rem;
     height: 14em;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-article>a{
+
+article > a {
     color: #000;
     text-decoration: none;
 }
-article>footer>ul>li>button{
-    
-}
-article>footer>ul{
-    background-color: rgba(255,255,255, 0.96);
+
+article > footer > ul > li > button {}
+
+article > footer > ul {
+    background-color: rgba(255, 255, 255, 0.96);
     color: #000;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     position: absolute;
-    top:12em;
-    
+    top: 12em;
+
     list-style: none;
     border-radius: 4px;
 }
-article>a>footer>ul>li{
-    
-}
+
+article > a > footer > ul > li {}
+
 /*====Einde Article====*/
 /*====Download animatie====*/
-article>footer>ul>li>button.download::after{
+article > footer > ul > li > button.download::after {
     position: absolute;
     top: 0;
     left: 0;
     content: "";
     background-color: #fff;
-    width:100%;
+    width: 100%;
     height: 100%;
     border-radius: 8px;
 }
-.download{
+
+.download {
     position: relative;
 }
-.download::after{
-    animation: download 4s steps(10); 
-    
+
+.download::after {
+    animation: download 4s steps(10);
+
 }
-@keyframes download{
-    from{
+
+@keyframes download {
+    from {
         width: 0%;
         background-color: #fff
     }
-    to{
+
+    to {
         width: 100%;
         background-color: darkorange;
     }
 }
+
 /*=====Populair carousel=====*/
 /*
 section:nth-of-type(4){
@@ -900,12 +1022,15 @@ section:nth-of-type(4){
     padding-top: .5rem;
     margin: auto;
 }
+
 .carous article {
     padding-right 1.5rem;
     width: 35rem;
     flex-shrink: 0;
     height: 100%;
-}/*
+}
+
+/*
 @media only screen and (min-width: 600px){
     .carous .banner{
         min-height: 100%;
@@ -960,43 +1085,47 @@ section:nth-of-type(4){
 /*========Sorteer======*/
 
 form#sort {
-        max-width: 40em;
-        background-color: #f7f7f6;
-        margin-top: 3rem;
-        margin-left: 15px;
-        margin-right: 15px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+    max-width: 40em;
+    background-color: #f7f7f6;
+    margin-top: 3rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-    #sort img{
+
+#sort img {
     height: 3em;
     width: 3em;
 }
-    #sort>label:nth-last-child(1){
-        border-top-right-radius: 10px;
-}
-    #sort>label:nth-child(2){
-        border-top-left-radius: 10px;
-}
-    #sort input {
-        position: absolute;
-        left: -99999px;
+
+#sort > label:nth-last-child(1) {
+    border-top-right-radius: 10px;
 }
 
-    form>label {
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        background-color: #f7f7f6;
-        width: 33.33%;
-        height: 100%;
+#sort > label:nth-child(2) {
+    border-top-left-radius: 10px;
 }
 
-    form input[type=radio]:checked+label {
-        background-color: #FFFFFF;
+#sort input {
+    position: absolute;
+    left: -99999px;
+}
+
+form > label {
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f6;
+    width: 33.33%;
+    height: 100%;
+}
+
+form input[type=radio]:checked + label {
+    background-color: #FFFFFF;
 }
 
 
@@ -1010,6 +1139,7 @@ main {
     background-color: #f1f1f1;
     max-width: 100vw;
 }
+
 /*
     article {
         margin-left: 1.5rem;
@@ -1046,7 +1176,8 @@ main {
 }
 
     article li:nth-last-child(2) {
-        /*download*//*
+        /*download*/
+/*
 }
     article li:first-child{
         min-width: 80%;
@@ -1060,7 +1191,8 @@ main {
         padding:0 1.5rem;
 }
 
-    article li:nth-child(2) { /*Leestijd*//*
+    article li:nth-child(2) { /*Leestijd*/
+/*
         position: absolute;
         top: -10em;
         left: -0.9em;
@@ -1082,60 +1214,64 @@ main {
         max-width: 35em;
         position: relative;
     }*/
-    article>button{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80px;
-        padding-top: 2em;
-        border: 1px solid #fbba38;
-        border-radius: 4px;
-        color: #fbba38;
-        font-weight: 700;
-        background-image: url(./img/icon/button/Bewaar-blankState.svg);
-        background-repeat: no-repeat;
-        background-position:top .4rem center;
-        background-color: #fff; 
-        background-size: 2.5rem;
-        transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
-        border-top-right-radius: 10px;
-} 
+article > button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    padding-top: 2em;
+    border: 1px solid #fbba38;
+    border-radius: 4px;
+    color: #fbba38;
+    font-weight: 700;
+    background-image: url(./img/icon/button/Bewaar-blankState.svg);
+    background-repeat: no-repeat;
+    background-position: top .4rem center;
+    background-color: #fff;
+    background-size: 2.5rem;
+    transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
+    border-top-right-radius: 10px;
+}
 
 /* == Micro Bewaren == */
-            article>button:before{
-                overflow: hidden;
-                position: absolute;
-                display: inline;
-                content: "";
-                top: -2rem;
-                right: 0;
-                width: 0;
-                height: 0;
-                opacity: 1;
-                transform: rotate(30deg);
-                background-image: url(./img/icon/button/Bewaar-idealState.svg);
-                background-repeat: no-repeat;
-                transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87), opacity 1.8s .8s ease-in-out;
+article > button:before {
+    overflow: hidden;
+    position: absolute;
+    display: inline;
+    content: "";
+    top: -2rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    opacity: 1;
+    transform: rotate(30deg);
+    background-image: url(./img/icon/button/Bewaar-idealState.svg);
+    background-repeat: no-repeat;
+    transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87), opacity 1.8s .8s ease-in-out;
 }
-article>button.bewaard{
-        width: 80px;
-        color: #fff;
-        background-color: #fbba38;
-        background-image: url(./img/icon/button/Bewaar-idealState.svg);
+
+article > button.bewaard {
+    width: 80px;
+    color: #fff;
+    background-color: #fbba38;
+    background-image: url(./img/icon/button/Bewaar-idealState.svg);
 }
-.bewaard:before{
-                width: 3rem;
-                height: 3rem;
-                top: .2rem;
-                right: 2.4rem;
-                opacity: 0;
-                transform: rotate(0deg);
-                
+
+.bewaard:before {
+    width: 3rem;
+    height: 3rem;
+    top: .2rem;
+    right: 2.4rem;
+    opacity: 0;
+    transform: rotate(0deg);
+
 }
-.bewaard::after{
+
+.bewaard::after {
     content: "d";
-    
+
 }
+
 /* == Einde Micro Bewaren == */
 /*
     article>footer img {
@@ -1232,4 +1368,3 @@ article>button.bewaard{
     }
 }
 */
- 
