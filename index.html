@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/rSlider.css">
     <title>U-ov verhalenwebsite</title>
 </head>
 
@@ -29,11 +30,8 @@
         <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
         <h2>Zoek een passend verhaal</h2>
         <button>klik hier om je zoekopdracht te verfijnen</button>
-        <input id="klik" type="checkbox">
-        <label for="klik"> <img src="img/icon/arrow/left.svg" alt="pijl naar links"> terug</label>
-        <label for="klik">klik hier om je zoekopdracht te verfijnen <img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></label>
-        <span class="streep"></span>
-
+        
+        <button class="terug">terug</button>
         <form class="index" action="resultaten.html#sort">
             <fieldset class="sfeer">
                 <legend>Zoek op sfeer</legend>
@@ -100,21 +98,24 @@
             </article>
             <article>
                 <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht">
+                <a href="verhaal.html"><img class="banner" src="img/verhalen/Droom.jpeg" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
+                            <li>25:00
                             </li>
 
                             <li>
-                                Download
+                            <button class="button active">
+                            Download
+                            </button>
                             </li>
-                            <li>71
+                            <li>60
                             </li>
                         </ul>
                     </footer>
+                    <a href="verhaal.html">
                     <header>
-                        <h3>Vergezocht
+                        <h3>Droom
                         </h3>
                         <p></p>
                     </header>
@@ -122,43 +123,24 @@
             </article>
             <article>
                 <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht">
+                <a href="verhaal.html"><img class="banner" src="img/verhalen/Western.jpeg" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
+                            <li>20:00
                             </li>
 
                             <li>
-                                Download
+                            <button class="button active">
+                            Download
+                            </button>
                             </li>
-                            <li>71
-                            </li>
-                        </ul>
-                    </footer>
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht">
-                    <footer>
-                        <ul>
-                            <li>35:00
-                            </li>
-
-                            <li>
-                                Download
-                            </li>
-                            <li>71
+                            <li>50
                             </li>
                         </ul>
                     </footer>
+                    <a href="verhaal.html">
                     <header>
-                        <h3>Vergezocht
+                        <h3>Western
                         </h3>
                         <p></p>
                     </header>
@@ -186,7 +168,6 @@
 
     <script src="./java/script.js"></script>
     <script src="js/rSlider.js"></script>
-    <link rel="stylesheet" href="css/rSlider.css">
     <!--     //Range slider heb ik gejat van https://github.com/slawomir-zaziablo/range-slider/ -->
 </body>
 

@@ -353,18 +353,22 @@ body>label{
 /*========ZOEK FORMULIER========*/
 
 form:first-of-type {
-    z-index: 0;
+    z-index: 3;
     padding-top: 1.5rem;
      background-color: #fefaf1;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    margin-right: 15px;
+    margin-right: 1.5rem;
+    transition: all .8s ease-in-out;
 }
      @media only screen and (min-width: 62rem){
-        form.index{
+        form:first-of-type{
             border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
             display:flex;
             flex-wrap: wrap;
+            margin: auto;
+            margin-top: 4rem;
          }
 }
 form.index {
@@ -377,9 +381,10 @@ form.index {
     top:20em;
     left: 5em;
     transition: all .4s ease-in;
+    margin: 0;
 }
     @media only screen and (min-width: 62rem){
-        form.index{
+        form.index {
             position: static;
             display: flex;
             overflow: visible;
@@ -387,11 +392,16 @@ form.index {
             width: 100%;
             height: 100%;
             opacity: 1;
-            
-          
         }
-        .index h5{
+        form{
+            max-width: 72rem;
+            
+        }
+        form>header>h5{
             display: none;
+        }
+        fieldset#leestijd{
+            padding-left: 1.5rem;
         }
     }
 
@@ -430,9 +440,7 @@ form.index fieldset:nth-child(2) label{
     margin-bottom: 5em;
 }
 
-#terug {
-    display: none;
-}
+
 
 
 /* heb je nodig want fieldset kan niet flexxen*/
@@ -474,7 +482,7 @@ form.index fieldset:nth-child(2) label{
             
     }
 /*Checkboxes*/
-section form:first-of-type label {
+ form:first-of-type label {
     
     font-size: 1.4rem;
     font-weight: 700;
@@ -519,49 +527,56 @@ form:first-of-type input[type=checkbox]+label::before {
         } 
 }
 
-/*====== Veranderd styling als de checkbox is aangevinkt
-tutorial van https://codersblock.com/blog/checkbox-trickery-with-css/ =======*/
-
-input:checked+label {
-    transition: background-color .2s;
-    background-color: #F1F1F1;
-}
-input:checked+label::before {
-    border-color: #E7772B;
-    background-image: url(img/icon/vink.svg);
+/*====Micro voor index form====*/
+section:nth-of-type(2)>button:first-of-type{
+    position: relative;
+    border:none;
+    background-color: #fff;
+    padding-right: 3em;
+    margin-left: 1.5rem;
+    font-size: 1.6rem;
+    background-image: url(img/icon/arrow/right.svg);
     background-repeat: no-repeat;
-    background-position: center;
-}
-#klik {
-    position: absolute;
-    left: -9999999px;
-    
-}
-#klik:checked {
-    display: none;
-}
-body>section>label:first-of-type {
-    position: absolute;
-    left: -200px;
-    background-color: #fefaf1;
+    background-position:top right;
     transition: all .8s ease-in-out;
+    padding-bottom: 2rem;
+}
+    @media (min-width: 62rem){
+        section:nth-of-type(2)>button:first-of-type{
+            display: none;
+        } 
     
-}
-#klik[type=checkbox]:checked~label:first-of-type {
-    font-size: 1.2rem;
-    display: flex;
-    background-color: #fefaf1;
+    }
+section:nth-of-type(2)>button:first-of-type::after{
+    content: "";
     position: absolute;
-    top: 3rem;
-    left: 1.5rem;
-    z-index: 2;
-    font-weight: 400;
+    bottom: 1.7rem;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
 
+.terug{
+    position: absolute;
+    left: -5rem;
+    transition: all 0 0 ease-in-out;
 }
-#klik[type=checkbox]:checked~label:first-of-type img {
-    padding-right: 1.5rem;
+.showterug {
+    z-index: 9999;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    border: none;
+    background-color: #fefaf1;
+    padding-right: 0;
+    background-repeat: no-repeat;
+    background-image: url(img/icon/arrow/left.svg);
+    background-position: left;
+    padding-left: 2rem;
+    margin-left: 1.5rem;
+    transition: all .4s .8s ease-in-out;
 }
-#klik[type=checkbox]:checked~form {
+.showform{
     position: absolute;
     display: block;
     opacity: 1;
@@ -572,11 +587,9 @@ body>section>label:first-of-type {
     width: 100vw;
     border-radius: 0;
 }
-#klik:checked~section{
+.hide {
     display: none;
-}
-#klik[type=checkbox]:checked~section:nth-of-type(3) {
-    display: none;
+    transition: all .4s 1s ease-in-out;
 }
 /*======FOOTER FORMULIER=====*/
 form footer:first-of-type {
@@ -593,7 +606,7 @@ form footer:first-of-type {
     }
 }
 /*=====Einde footer form=====*/
-/*Button Styling */
+/*====Button Styling=====*/
 .button {
     font-weight: 700;
     font-size: 1.6rem;
@@ -814,6 +827,7 @@ article{
 
 article img{
     max-width:100%;
+    width: 32rem;
     height: 14em;
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -875,7 +889,7 @@ article>footer>ul>li>button.download::after{
 /*
 section:nth-of-type(4){
     background-color: #f1f1f1;
-}
+}*/
 .carous {
     position: relative;
     background-color: #f1f1f1;
@@ -891,7 +905,7 @@ section:nth-of-type(4){
     width: 35rem;
     flex-shrink: 0;
     height: 100%;
-}
+}/*
 @media only screen and (min-width: 600px){
     .carous .banner{
         min-height: 100%;

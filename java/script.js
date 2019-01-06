@@ -1,23 +1,28 @@
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
-var klik = document.getElementById("klik");
+
+var formButton = document.querySelector('section:nth-of-type(2)>button');
+var zoekForm = document.querySelector('section>form');
+var sectionArticle = document.querySelector('section:nth-of-type(3)');
+var sectionDirect = document.querySelector('section:last-of-type');
 var disabled = document.getElementById("zoek");
 var checkBox = document.getElementsByClassName("check");
-var buttonBewaar = [].slice.call(document.querySelectorAll('article>button'));
-
 var loginLijstje = document.querySelector('body>header>ul');
-var bewaardeVerhalen = document.getElementById('bewaarCount');
 var logIn = document.querySelector('.login');
-
+var buttonBewaar = [].slice.call(document.querySelectorAll('article>button'));
+var downloadButton = [].slice.call(document.querySelectorAll('article>footer>ul>li>button'));
+var bewaardeVerhalen = document.getElementById('bewaarCount');
+var gedownloadeVerhalen = document.getElementById('downloadCount');
+var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
+var aantalDownload = 0;
 var header = document.querySelector('body>header');
 var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkbox[Array]
 var displayTime;
 var hideTime;
-var aantalBewaard = 0;
-var aantalDownload = 0;
-var downloadButton = [].slice.call(document.querySelectorAll('article>footer>ul>li>button'));
+var terugButton = document.querySelector('.terug');
+
 
 function showLijstje() {
     loginLijstje.classList.toggle('display');
@@ -33,8 +38,25 @@ window.onscroll = function showHeader() {
     vorigeScrollpos = huidgeScrollPos;
 };
 
+function showForm(){
+    zoekForm.classList.add('showform');
+    zoekForm.classList.toggle('index');
+    sectionDirect.classList.add('hide');
+    sectionArticle.classList.add('hide');
+    terugButton.classList.add('showterug');
+    terugButton.classList.remove('hide');
+}
+function hideForm(){
+    zoekForm.classList.remove('showform');
+    zoekForm.classList.toggle('index');
+    sectionDirect.classList.remove('hide');
+    sectionArticle.classList.remove('hide');
+    terugButton.classList.remove('showterug');
+}
 function checked() {
+    
     var isChecked = this.checked;
+    
     if (isChecked) {
         disabled.removeAttribute('disabled');
         disabled.classList.remove('inactive');
@@ -45,21 +67,12 @@ function checked() {
         disabled.disabled = disabled;
     }
 }
-// checkt de checkbox
 for (c = 0; c < checkBox.length; c++) {
     checkBox[c].addEventListener("change", checked);
 }
-// voegt de slider toe op het uitschuifbare zoekmenu - home -
-function geKlik() {
-    if ((klik.checked) === true) {
-        document.getElementById('leestijd').innerHTML = '<input type="text" id="sampleSlider"  />';
-        console.log(document.getElementById('leestijd').innerHTML);
-        var script = document.createElement('script');
-        script.src = './js/rSlider.js';
-        var head = document.getElementsByTagName("head")[0];
-        head.appendChild(script);
-    }
-}
+
+// checkt de checkbox
+
 // ===== Micro bewaren =====
 //function display(){ // Laat lijstje en header zien
 //    loginLijstje.classList.add('display');
@@ -106,16 +119,31 @@ console.log(bewaardeVerhalen);
 
 downloadButton.forEach(function (downloadButton, index) {
     downloadButton.addEventListener("click", function () {
+        
+        if (downloadButton.classList == ('download') === true){
+            aantalDownload--;
+            gedownloadeVerhalen.innerHTML = aantalDownload;
+            
+        } else {
         downloadButton.classList.add('download');
         console.log("je klikt downloadbutton nummer " + index + "!");
+        aantalDownload++;
+        gedownloadeVerhalen.innerHTML = aantalDownload;
+        setTimeout(function(){
+            downloadButton.classList.remove('download', 'active');
+            downloadButton.innerHTML = 'Gedownload';
+            
+            downloadButton.classList.add('inactive');
+        }, 5000);
+        }
     });
 });
 
-
+formButton.addEventListener("click", showForm);
+terugButton.addEventListener("click", hideForm);
 logIn.addEventListener("click", showLijstje);
 
 
-klik.addEventListener("click", geKlik);
 
 //document.addEventListener('DOMContentLoaded', function (){
 //    document.getElementById('leestijd').innerHTML = '<input type="text" id="sampleSlider"  />';
