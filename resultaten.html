@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icon/favi/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="css/rSlider.css">
     <title>Verhalen resultaten</title>
 </head>
@@ -14,8 +15,13 @@
     <header id="top">
         <a href="index.html" id="logo"><img src="img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
         <button class="login">login</button>
+        <ul>
+            <li><a href="inloggen.html">Inloggen</a></li>
+            <li><a href="">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
+            <li><a href="">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
+        </ul>
     </header>
-        <form action="resultaten.html">
+    <form action="resultaten.html">
         <header>
             <h5>
                 Wat voor verhaal zoek je
@@ -37,8 +43,8 @@
             </div>
         </fieldset>
         <fieldset id="leestijd">
-           <legend>Leestijd</legend>
-           <label for="sampleSlider">Leestijd</label>
+            <legend>Leestijd</legend>
+            <label for="sampleSlider">Leestijd</label>
             <input type="text" id="sampleSlider" />
         </fieldset>
         <fieldset class="reistijd">
@@ -49,123 +55,134 @@
         <footer>
             <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
         </footer>
-    </form >
-    <section class="random"><a href="resultaten.html">Geef me een willekeurig verhaal<img src="img/icon/arrow/right.svg" alt="pijl naar rechts"></a></section>
-    
-        <form id="sort" action="#">
-            
-            <input type="radio" name="sorteer" id="sfeer" >
-            <label for="sfeer">Sfeer</label>
-            
-            <input type="radio"  name="sorteer" id="duimpjes" checked>
-            <label for="duimpjes"><img src="img/icon/thumbs-up.svg"  alt="meeste stemmen"></label>
-            
-            <input type="radio" name="sorteer" id="leesduur">
-            <label for="leesduur"><img src="img/icon/klok.svg" alt="leesduur"></label>
-        </form>
-       <main>
-        
-        <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+    </form>
+    <div class="random">
+        <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
+
+    <form id="sort" action="#">
+
+        <input type="radio" name="sorteer" id="sfeer">
+        <label for="sfeer">Sfeer</label>
+
+        <input type="radio" name="sorteer" id="duimpjes" checked>
+        <label for="duimpjes"><img src="img/icon/thumbs-up.svg" alt="meeste stemmen"></label>
+
+        <input type="radio" name="sorteer" id="leesduur">
+        <label for="leesduur"><img src="img/icon/klok.svg" alt="leesduur"></label>
+    </form>
+    <main>
+        <ul>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
+                            <li class="tijd">35:00
                             </li>
 
                             <li>
-                            <button class="button active">
-                            Download
-                            </button>
+                                <button class="button active">
+                                    Download
+                                </button>
                             </li>
-                            <li>71
+                            <li class="likes">71
                             </li>
                         </ul>
                     </footer>
                     <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
+                            <li class="tijd">35:00
                             </li>
 
                             <li>
-                            <button class="button active">
-                            Download
-                            </button>
+                                <button class="button active">
+                                    Download
+                                </button>
                             </li>
-                            <li>71
+                            <li class="likes">60
                             </li>
                         </ul>
                     </footer>
                     <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
+                            <li class="tijd">25:00
                             </li>
 
                             <li>
-                            <button class="button active">
-                            Download
-                            </button>
+                                <button class="button active">
+                                    Download
+                                </button>
                             </li>
-                            <li>71
+                            <li class="likes">55
                             </li>
                         </ul>
                     </footer>
                     <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
+                            <li class="tijd">20:00
                             </li>
 
                             <li>
-                            <button class="button active">
-                            Download
-                            </button>
+                                <button class="button active">
+                                    Download
+                                </button>
                             </li>
-                            <li>71
+                            <li class="likes">30
                             </li>
                         </ul>
                     </footer>
                     <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article>
+            </li>
+        </ul>
     </main>
+    <script src="sortscript.js"></script>
     <script src="java/script.js"></script>
     <script src="js/rSlider.js"></script>
 </body>

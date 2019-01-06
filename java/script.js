@@ -1,7 +1,7 @@
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 /*eslint-env browser*/
 /*eslint 'no-console':0*/
-
+// Sorteer functie bij resultaten pagina
 var formButton = document.querySelector('section:nth-of-type(2)>button');
 var zoekForm = document.querySelector('section>form');
 var sectionArticle = document.querySelector('section:nth-of-type(3)');
@@ -17,6 +17,7 @@ var gedownloadeVerhalen = document.getElementById('downloadCount');
 var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
 var aantalDownload = 0;
 var header = document.querySelector('body>header');
+
 var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkbox[Array]
 var displayTime;
@@ -37,7 +38,7 @@ window.onscroll = function showHeader() {
     }
     vorigeScrollpos = huidgeScrollPos;
 };
-
+// Zoekveld laten zien
 function showForm(){
     zoekForm.classList.add('showform');
     zoekForm.classList.toggle('index');
@@ -46,6 +47,7 @@ function showForm(){
     terugButton.classList.add('showterug');
     terugButton.classList.remove('hide');
 }
+// Zoekveld verbergen
 function hideForm(){
     zoekForm.classList.remove('showform');
     zoekForm.classList.toggle('index');
@@ -53,6 +55,8 @@ function hideForm(){
     sectionArticle.classList.remove('hide');
     terugButton.classList.remove('showterug');
 }
+
+// Styling checkboxes en activeren zoekbutton
 function checked() {
     
     var isChecked = this.checked;
@@ -67,22 +71,14 @@ function checked() {
         disabled.disabled = disabled;
     }
 }
+// checkt de checkbox
 for (c = 0; c < checkBox.length; c++) {
     checkBox[c].addEventListener("change", checked);
 }
 
-// checkt de checkbox
+
 
 // ===== Micro bewaren =====
-//function display(){ // Laat lijstje en header zien
-//    loginLijstje.classList.add('display');
-//    header.classList.add('bewaren');
-//}
-//function hide(){ // Haalt lijstje en header weer weg
-//    loginLijstje.classList.remove('display');
-//    header.classList.remove('bewaren');
-//}
-
 
 buttonBewaar.forEach(function (buttonBewaar, index) {
     buttonBewaar.addEventListener("click", function () {
@@ -116,7 +112,7 @@ buttonBewaar.forEach(function (buttonBewaar, index) {
     });
 });
 console.log(bewaardeVerhalen);
-
+// Micro downloaden
 downloadButton.forEach(function (downloadButton, index) {
     downloadButton.addEventListener("click", function () {
         

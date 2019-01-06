@@ -930,6 +930,12 @@ main.inloggen > form > footer > ul > li:before {
 
 
 /*====Article Styling====*/
+main>ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+}
 article {
     position: relative;
     max-width: 20em;
