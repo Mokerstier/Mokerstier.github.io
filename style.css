@@ -518,8 +518,16 @@ form.index fieldset:nth-child(2) label {
     margin-bottom: 5em;
 }
 
-
-
+input:checked+label {
+    transition: background-color .2s;
+    background-color: #F1F1F1;
+}
+input:checked+label::before {
+    border-color: #E7772B;
+    background-image: url(img/icon/vink.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /* heb je nodig want fieldset kan niet flexxen*/
 
@@ -796,6 +804,7 @@ main.inloggen > form > fieldset > div > label {
     position: absolute;
     left: 3rem;
     top: 1rem;
+    border: none;
     transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
 

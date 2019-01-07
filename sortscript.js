@@ -7,7 +7,7 @@ var duimpJes = document.getElementById("duimpjes");
 function sortLikes(){
     var lijst, i, switching, likes, articles, shouldSwitch;
     lijst = document.querySelector('main>ul');
-    articles = document.querySelectorAll('article');
+    articles = document.querySelectorAll('main>ul>li');
     switching = true;
     while (switching){
         switching = false;
