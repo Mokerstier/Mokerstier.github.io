@@ -22,6 +22,7 @@ body {
 }
 
 section {
+    
     background-color: #FFFFFF;
 }
 
@@ -278,7 +279,7 @@ a > p {
     display: inline;
 }
 
-/*======Zoek een verhaal===== */
+/*======Willekeurig verhaal===== */
 
 div > a {
     display: flex;
@@ -363,13 +364,11 @@ section > label:last-of-type {
 div.random {
     line-height: 1.15;
     padding-bottom: 1rem;
-    position: relative;
-    top: -3px;
     background-color: rgba(248, 248, 247, .50);
     margin: auto;
+    margin-right: 2.5rem;
     margin-bottom: 5rem;
     border-bottom-right-radius: 10px;
-    margin-right: 2.5rem;
     background-image: url(img/icon/arrow/right.svg);
     background-position: 18em;
     background-repeat: no-repeat;
@@ -379,8 +378,9 @@ div.random {
     @media (min-width: 48rem) {
     div.random {
         border-bottom-left-radius: 10px;
-        margin-right: 50%;
-        margin-left: 18%;
+        margin-right: auto;
+        margin-left: 19%;
+        max-width: 33rem;
     }
 }
 
@@ -453,6 +453,10 @@ form.index {
 }
 
     @media only screen and (min-width: 62rem) {
+    body>form {
+        max-width: 72rem;
+
+    }
     form.index {
         position: static;
         display: flex;
@@ -462,12 +466,6 @@ form.index {
         height: 100%;
         opacity: 1;
     }
-
-    form {
-        max-width: 72rem;
-
-    }
-
     form > header > h5 {
         display: none;
     }
@@ -654,7 +652,7 @@ section:nth-of-type(2) > button:first-of-type::after {
 
 .terug {
     position: absolute;
-    left: -5rem;
+    left: -50rem;
     transition: all 0 0 ease-in-out;
 }
 
@@ -1027,6 +1025,9 @@ article > footer > ul > li > button.download::after {
 section:nth-of-type(4){
     background-color: #f1f1f1;
 }*/
+.relative{
+    position: relative;
+}
 .carous {
     position: relative;
     background-color: #f1f1f1;
@@ -1044,7 +1045,22 @@ section:nth-of-type(4){
     flex-shrink: 0;
     height: 100%;
 }
-
+.dot-container{
+  position: absolute;
+  right: 0;
+    top: 1rem;
+}
+.dot {
+  text-indent: 9999px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 /*
 @media only screen and (min-width: 600px){
     .carous .banner{

@@ -4,15 +4,19 @@
 // Sorteer functie bij resultaten pagina
 var duimpJes = document.getElementById("duimpjes");
 
+var lijst = document.querySelector('main>ul');
+var articles = document.querySelectorAll('main>ul>li');
+
+
 function sortLikes(){
-    var lijst, i, switching, likes, articles, shouldSwitch;
-    lijst = document.querySelector('main>ul');
-    articles = document.querySelectorAll('main>ul>li');
+    var i, switching, likes,  shouldSwitch;
+     
     switching = true;
     while (switching){
         switching = false;
         likes = lijst.getElementsByClassName("likes");
         for (i = 0; i < (likes.length -1); i++){
+            
             shouldSwitch = false;
             
             if (Number(likes[i].innerHTML) > Number(likes[i + 1].innerHTML)){
@@ -26,5 +30,8 @@ function sortLikes(){
         }
     }
 }
+
+
+
 
 duimpJes.addEventListener("click", sortLikes);
