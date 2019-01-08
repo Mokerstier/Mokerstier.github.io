@@ -1,25 +1,75 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
 body{
+    position: relative;
     margin: 0;
     padding: 0;
-    background-image: url(img/Eurotium-ascomata-conidiophoor.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Cabin Sketch', cursive;
-font-family: 'Special Elite', cursive; 
-    height: 1600px;
-    background-color: #fff;
+    font-family: "Roboto", sans-serif; 
+    height: 5500px;
+    background-color: #D6CEC6;
 }
-h1{ 
-    color: #FFFFFF;
-    position: fixed;
-    left: 10%;
-    font-family: 'Cabin Sketch', cursive;
+aside{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -132px;
     text-align: center;
-    font-size: 4em;
-    transition: opacity 1.5s ease-in-out;
+    margin-top: 4rem;
+}
+.scrolldown{
+    animation: scrolldown 5s infinite linear;
+}
+@keyframes scrolldown{
+    from{ 
+        bottom: 0; 
+    }
+    to{ 
+        opacity: 0;
+        bottom: 80em;  
+    }
+}
+
+.container{
+    margin-top: 4rem;
+}
+.titel {
+  color: #D6CEC6;
+  font-size: 0;
+  line-height: 1;
+  text-align: center;
+}
+span {
+    font-weight: 500;
+    font-size: 80px;
+    display: inline-block;
+    animation: move 2.5s ease-in-out infinite;
     
-    
+}
+@media (min-width: 62em) {
+    span {
+        font-size: 120px;
+    }
+}
+/*===Delay voor de verschillende letters===*/
+/*===Eerste letter heeft geen delay nodig==*/
+
+span:nth-child(2) { animation-delay: 0.5s; } 
+span:nth-child(3) { animation-delay: 1.0s; }
+span:nth-child(4) { animation-delay: 1.5s; }
+span:nth-child(5) { animation-delay: 2.0s; }
+/*===Animatie value's voor move===*/
+@keyframes move {
+  0% {
+    transform: translate(-33%, 0);
+  }
+  50% {
+      opacity: 0.5;
+      color: #FFF;
+    text-shadow: 0 15px 40px rgba(103,92,83,.3);
+  }
+  100% {
+    transform: translate(33%, 0);
+  }
 }
 p{
     padding: 1em;
@@ -40,13 +90,16 @@ p{
 .show{
     display:block;
 }
-.hide{
+.verstop{
     opacity: 0;
 }
 .ronder{
     position: fixed;
     top: 8em; 
     right: 0.1em;
+}
+#vierde{
+    margin-bottom: 15rem;
 }
 footer#verhaal{
     z-index: 99;
