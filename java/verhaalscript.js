@@ -4,7 +4,7 @@
 //var buttonFav = document.querySelectorAll('footer > button:first-of-type');
 //var buttonLike = document.querySelectorAll('footer > button:last-of-type');
 var aside = document.querySelector('aside');
-var container = document.querySelector('div:first-of-type');
+var container = document.querySelector('body>div:first-of-type');
 var eerste = document.getElementById("eerste");
 var tweede = document.getElementById("tweede");
 var derde = document.getElementById("derde");
@@ -16,7 +16,7 @@ function myScroll1() {
         
         aside.classList.remove('scrolldown');
         aside.classList.add('verstop');
-        container.classList.add('verstop');
+        
        console.log(document.documentElement.scrollTop); 
         eerste.classList.remove('verstop');
     
@@ -58,6 +58,13 @@ function myScroll1() {
     }
 }
 
+function scrollIndicator() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 
+window.onscroll = function() {scrollIndicator();};
 
 window.addEventListener("scroll", myScroll1);

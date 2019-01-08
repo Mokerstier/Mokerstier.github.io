@@ -1044,7 +1044,7 @@ article > footer > ul > li > button.download::after {
 @keyframes download {
     from {
         width: 0%;
-        background-color: #fff
+        background-color: #fff;
     }
 
     to {
