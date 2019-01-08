@@ -18,7 +18,7 @@ var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
 var aantalDownload = 0;
 var header = document.querySelector('body>header');
 
-var vorigeScrollpos = window.pageYOffset;
+//var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkbox[Array]
 var displayTime;
 var hideTime;
@@ -29,15 +29,15 @@ function showLijstje() {
     loginLijstje.classList.toggle('display');
 }
 
-window.onscroll = function showHeader() {
-    var huidgeScrollPos = window.pageYOffset;
-    if (vorigeScrollpos > huidgeScrollPos) {
-        header.className = ('');
-    } else {
-        header.className = ('header-up');
-    }
-    vorigeScrollpos = huidgeScrollPos;
-};
+//window.onscroll = function showHeader() {
+//    var huidgeScrollPos = window.pageYOffset;
+//    if (vorigeScrollpos > huidgeScrollPos) {
+//        header.className = ('');
+//    } else {
+//        header.className = ('header-up');
+//    }
+//    vorigeScrollpos = huidgeScrollPos;
+//};
 // Zoekveld laten zien
 function showForm(){
     zoekForm.classList.add('showform');
@@ -135,11 +135,11 @@ downloadButton.forEach(function (downloadButton, index) {
     });
 });
 
+
+
+logIn.addEventListener("click", showLijstje);
 formButton.addEventListener("click", showForm);
 terugButton.addEventListener("click", hideForm);
-logIn.addEventListener("click", showLijstje);
-
-
 
 //document.addEventListener('DOMContentLoaded', function (){
 //    document.getElementById('leestijd').innerHTML = '<input type="text" id="sampleSlider"  />';

@@ -297,7 +297,28 @@ div > a {
         font-size: 1.792rem
     }
 }
+div.random {
+    line-height: 1.15;
+    padding-bottom: 1rem;
+    background-color: rgba(248, 248, 247, .50);
+    margin: auto;
+    margin-right: 2.5rem;
+    margin-bottom: 5rem;
+    border-bottom-right-radius: 10px;
+    background-image: url(img/icon/arrow/right.svg);
+    background-position: 18em;
+    background-repeat: no-repeat;
 
+}
+
+    @media (min-width: 48rem) {
+    div.random {
+        border-bottom-left-radius: 10px;
+        margin-right: auto;
+        margin-left: 19%;
+        max-width: 33rem;
+    }
+}
 section > a > img {
     padding-left: 10px;
 }
@@ -315,12 +336,14 @@ section:nth-child(6) {
     margin-bottom: 0;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     transition: all .4s ease-in;
+    margin-top: 3rem;
 }
 
     @media (min-width: 48rem) {
     section:nth-child(6) {
         max-width: 75rem;
         margin: auto;
+        margin-top: 3rem;
         border-top-left-radius: 10px;
     }
 }
@@ -329,10 +352,45 @@ section:nth-child(6) {
     section:nth-child(6) {
         max-width: 114rem;
         margin: auto;
+        margin-top: 3rem;
 
     }
 }
-
+section:nth-child(6)>ul{
+    list-style: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
+}
+section:nth-child(6)>ul>li{
+    width: 100%;
+    margin-right: 1.5rem;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgb(241, 241, 241);
+}
+section:nth-child(6)>ul>li>a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    color: #675c53;
+    position: relative;
+    min-width: 100%;
+    padding-right: 4rem;
+    display: block;
+}
+section:nth-child(6)>ul>li>a::after{
+    content: "";
+    position: absolute;
+    top:1rem;
+    right: 0;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    background-image: url(img/icon/arrow/right.svg);
+    background-repeat: no-repeat;
+    
+}
 section > label:last-of-type {
     box-sizing: border-box;
     font-size: 1.6rem;
@@ -358,35 +416,6 @@ section > label:last-of-type {
     section > label:last-of-type {
         display: none;
     }
-}
-
-
-div.random {
-    line-height: 1.15;
-    padding-bottom: 1rem;
-    background-color: rgba(248, 248, 247, .50);
-    margin: auto;
-    margin-right: 2.5rem;
-    margin-bottom: 5rem;
-    border-bottom-right-radius: 10px;
-    background-image: url(img/icon/arrow/right.svg);
-    background-position: 18em;
-    background-repeat: no-repeat;
-
-}
-
-    @media (min-width: 48rem) {
-    div.random {
-        border-bottom-left-radius: 10px;
-        margin-right: auto;
-        margin-left: 19%;
-        max-width: 33rem;
-    }
-}
-
-body > label {
-    padding: 0 1.5rem;
-
 }
 
 
@@ -967,7 +996,9 @@ article > a {
     color: #000;
     text-decoration: none;
 }
-
+article > a> header{
+    min-height: 10rem;
+}
 article > footer > ul > li > button {}
 
 article > footer > ul {
@@ -984,7 +1015,9 @@ article > footer > ul {
     border-radius: 4px;
 }
 
-article > a > footer > ul > li {}
+article > footer > ul > li:first-of-type::after {
+    content:"min";
+}
 
 /*====Einde Article====*/
 /*====Download animatie====*/
@@ -1038,7 +1071,13 @@ section:nth-of-type(4){
     padding-top: .5rem;
     margin: auto;
 }
-
+@media (min-width: 62rem){
+    .carous{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
 .carous article {
     padding-right 1.5rem;
     width: 35rem;
@@ -1245,10 +1284,11 @@ main {
         max-width: 35em;
         position: relative;
     }*/
+
 article > button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 1rem;
     width: 80px;
     padding-top: 2em;
     border: 1px solid #fbba38;
@@ -1261,7 +1301,7 @@ article > button {
     background-color: #fff;
     background-size: 2.5rem;
     transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
-    border-top-right-radius: 10px;
+    
 }
 
 /* == Micro Bewaren == */
