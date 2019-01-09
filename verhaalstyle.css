@@ -46,7 +46,7 @@ aside{
   text-transform: uppercase;
   white-space: nowrap;
   opacity: .3;
-  animation: pulse 2s linear alternate infinite;
+  animation: pulse 1.5s  linear alternate infinite;
 }
 @keyframes pulse {
     to{
@@ -64,10 +64,10 @@ aside{
     animation: scroll 3s ease-out infinite;
 }
 .pijltje:first-child {
-    animation: scroll 3s ease-out 1s infinite;
+    animation-delay: 1s;
 }
 .pijltje:nth-child(2) {
-    animation: scroll 3s ease-out 2s infinite;
+    animation-delay: 2s;
 }
 .pijltje:before,
 .pijltje:after {

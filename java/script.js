@@ -17,16 +17,17 @@ var gedownloadeVerhalen = document.getElementById('downloadCount');
 var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
 var aantalDownload = 0;
 var header = document.querySelector('body>header');
-
+var aBaDTotaal = document.querySelector('header>div');
 //var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkboxes[Array]
 var displayTime;
 var hideTime;
 var terugButton = document.querySelector('.terug');
-
+ // bollletje voor de downloads en bewaar 
 
 function showLijstje() {
     loginLijstje.classList.toggle('display');
+    aBaDTotaal.classList.remove('added');
 }
 
 //window.onscroll = function showHeader() {
@@ -82,7 +83,16 @@ for (c = 0; c < checkBoxes.length; c++) {
     checkBoxes[c].addEventListener("change", checked);
 }
 
-
+function bolletje(){
+    var aBaD = (aantalBewaard + aantalDownload);
+    aBaDTotaal.innerHTML = aBaD;
+    console.log(aBaDTotaal);
+    if (aBaD < 1){
+        aBaDTotaal.classList.remove('added');
+    } else {
+        aBaDTotaal.classList.add('added');
+    }
+}
 
 // ===== Micro bewaren =====
 
@@ -94,6 +104,7 @@ buttonBewaar.forEach(function (buttonBewaar, index) {
             clearTimeout(displayTime); // als de gebruiker 2 keer achter elkaar klikt op de button wordt de animatie van toevoegen niet gestart
             aantalBewaard--;
             bewaardeVerhalen.innerHTML = aantalBewaard;
+            bolletje();
             buttonBewaar.classList.remove('bewaard'); // haalt 'bewaard' class weg
 
         } else {
@@ -105,14 +116,16 @@ buttonBewaar.forEach(function (buttonBewaar, index) {
 
                 console.log(bewaardeVerhalen);
                 bewaardeVerhalen.innerHTML = aantalBewaard;
+                
 
             }, 1000);
             hideTime = setTimeout(function () { // Haalt lijstje en header weer weg
-                loginLijstje.classList.remove('display');
+               bolletje(); loginLijstje.classList.remove('display');
                 header.classList.remove('bewaren');
             }, 3000);
             displayTime; // Activeerd display functie na 1 sec
             hideTime; // Activeerd hide functie na 3 sec
+            
             buttonBewaar.classList.add('bewaard'); // geeft de button class 'bewaard'  
         }
     });
@@ -122,17 +135,21 @@ console.log(bewaardeVerhalen);
 downloadButton.forEach(function (downloadButton, index) {
     downloadButton.addEventListener("click", function () {
         
-        if (downloadButton.classList == ('download') === true){
+        if (downloadButton.classList.contains('inactive') === true){
             aantalDownload--;
             gedownloadeVerhalen.innerHTML = aantalDownload;
-            
+            downloadButton.innerHTML = 'Download';
+            downloadButton.classList.add('active');
+            downloadButton.classList.remove('inactive');
+            bolletje();
         } else {
         downloadButton.classList.add('download');
         console.log("je klikt downloadbutton nummer " + index + "!");
         aantalDownload++;
         gedownloadeVerhalen.innerHTML = aantalDownload;
+        
         setTimeout(function(){
-            downloadButton.classList.remove('download', 'active');
+           bolletje(); downloadButton.classList.remove('download', 'active');
             downloadButton.innerHTML = 'Gedownload';
             
             downloadButton.classList.add('inactive');
