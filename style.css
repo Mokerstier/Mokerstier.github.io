@@ -1014,9 +1014,18 @@ article > footer > ul {
     list-style: none;
     border-radius: 4px;
 }
-
-article > footer > ul > li:first-of-type::after {
-    content:"min";
+article > footer > ul > li{
+    position: relative;
+}
+article > footer > ul > li:first-of-type:before {
+    content:"";
+    position: absolute;
+    background-image: url(img/icon/klok.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: -1em;
 }
 
 /*====Einde Article====*/

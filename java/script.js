@@ -7,7 +7,7 @@ var zoekForm = document.querySelector('section>form');
 var sectionArticle = document.querySelector('section:nth-of-type(3)');
 var sectionDirect = document.querySelector('section:last-of-type');
 var disabled = document.getElementById("zoek");
-var checkBox = document.getElementsByClassName("check");
+var checkBoxes = document.querySelectorAll(".check");
 var loginLijstje = document.querySelector('body>header>ul');
 var logIn = document.querySelector('.login');
 var buttonBewaar = [].slice.call(document.querySelectorAll('article>button'));
@@ -19,7 +19,7 @@ var aantalDownload = 0;
 var header = document.querySelector('body>header');
 
 //var vorigeScrollpos = window.pageYOffset;
-var c = 0; //nummertje voor de checkbox[Array]
+var c = 0; //nummertje voor de checkboxes[Array]
 var displayTime;
 var hideTime;
 var terugButton = document.querySelector('.terug');
@@ -58,10 +58,16 @@ function hideForm(){
 
 // Styling checkboxes en activeren zoekbutton
 function checked() {
-    
+    var otherChecked = false;
     var isChecked = this.checked;
     
-    if (isChecked) {
+    checkBoxes.forEach(function(c){
+        if (c.checked){
+            otherChecked = true;
+        }
+    });
+    
+    if (isChecked || otherChecked) {
         disabled.removeAttribute('disabled');
         disabled.classList.remove('inactive');
         disabled.classList.add('active');
@@ -72,8 +78,8 @@ function checked() {
     }
 }
 // checkt de checkbox
-for (c = 0; c < checkBox.length; c++) {
-    checkBox[c].addEventListener("change", checked);
+for (c = 0; c < checkBoxes.length; c++) {
+    checkBoxes[c].addEventListener("change", checked);
 }
 
 
@@ -82,7 +88,7 @@ for (c = 0; c < checkBox.length; c++) {
 
 buttonBewaar.forEach(function (buttonBewaar, index) {
     buttonBewaar.addEventListener("click", function () {
-        console.log("je klikt button nummer " + index + "!");
+        console.log("je klikt button nummer " + index + "!"); 
 
         if (buttonBewaar.classList == ('bewaard') === true) {
             clearTimeout(displayTime); // als de gebruiker 2 keer achter elkaar klikt op de button wordt de animatie van toevoegen niet gestart
