@@ -16,14 +16,15 @@ var bewaardeVerhalen = document.getElementById('bewaarCount');
 var gedownloadeVerhalen = document.getElementById('downloadCount');
 var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
 var aantalDownload = 0;
+var duimErbij = [].slice.call(document.querySelectorAll('article li:last-of-type'));
 var header = document.querySelector('body>header');
-var aBaDTotaal = document.querySelector('header>div');
+var aBaDTotaal = document.querySelector('header>div'); // bollletje voor de downloads en bewaar
 //var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkboxes[Array]
 var displayTime;
 var hideTime;
 var terugButton = document.querySelector('.terug');
- // bollletje voor de downloads en bewaar 
+ 
 
 function showLijstje() {
     loginLijstje.classList.toggle('display');
@@ -147,9 +148,10 @@ downloadButton.forEach(function (downloadButton, index) {
         console.log("je klikt downloadbutton nummer " + index + "!");
         aantalDownload++;
         gedownloadeVerhalen.innerHTML = aantalDownload;
-        
+        downloadButton.innerHTML = '';
         setTimeout(function(){
-           bolletje(); downloadButton.classList.remove('download', 'active');
+           bolletje(); 
+            downloadButton.classList.remove('download', 'active');
             downloadButton.innerHTML = 'Gedownload';
             
             downloadButton.classList.add('inactive');
@@ -158,6 +160,11 @@ downloadButton.forEach(function (downloadButton, index) {
     });
 });
 
+duimErbij.forEach(function (duimErbij){
+    duimErbij.addEventListener("click", function(){
+        duimErbij.classList.toggle('leuk');
+    });
+});
 
 
 logIn.addEventListener("click", showLijstje);

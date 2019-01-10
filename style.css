@@ -48,7 +48,7 @@ section:nth-of-type(2) {
 
     section:first-of-type,
     section:nth-of-type(2) {
-        max-width: 75rem;
+        max-width: 97rem;
 
     }
 }
@@ -97,7 +97,11 @@ h2 {
     padding: 0;
     transition: all .4s ease-in;
 }
-
+    @media (min-width: 48rem) {
+        h2{
+          font-size: 3rem; 
+        }
+    }
     @media (min-width: 62rem) {
     h2 {
         font-size: 3rem;
@@ -250,7 +254,7 @@ header > div:first-of-type{
     color: #FFF;
     transition: all 1s ease-in-out;
 }
-div.added{
+div.added:first-of-type{
     line-height: 1.3;
     border-radius: 50%;
     background-color: #e7772b;
@@ -1033,7 +1037,7 @@ article {
 }
     @media (min-width: 48rem){
         article {
-            min-width: 100%;
+            min-width: 89%;
             max-width: 75rem;
         }
     }
@@ -1046,7 +1050,7 @@ article {
 article img {
     width: 100%;
     height: 14em;
-    object-fit: fill;
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -1134,6 +1138,7 @@ article > footer > ul > li > button.download::after {
     position: absolute;
     content: "0%";
     z-index: 9999;
+    top: 0;
     left: 50%;
     margin-left: -1.5rem;
     animation: percent 4s linear;
@@ -1186,28 +1191,60 @@ section:nth-of-type(4){
 .relative{
     position: relative;
 }
-.carous {
+div.carous {
     position: relative;
     background-color: #f1f1f1;
     width: 100%;
+    padding-left: 1.5rem;
     height: auto;
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     padding-top: .5rem;
     margin: auto;
 }
 @media (min-width: 62rem){
     .carous{
+        padding-left: 0;
+        max-width: 117rem;
         display: flex;
         flex-wrap: wrap;
         overflow: hidden;
     }
 }
-.carous article {
-    padding-right 1.5rem;
-    width: 35rem;
-    flex-shrink: 0;
-    height: 100%;
+.carous article{
+        
+        width: 89%;
+        flex-shrink: 0;
+        height: 100%;
+}
+@media (min-width: 48rem){
+    .carous article {
+
+        margin: 3rem 3.5rem;
+        margin-right: 1rem;
+    }
+}
+.carous > button{
+    position: absolute;
+    top: 7rem;
+    z-index: 99999;
+    height: 10rem;
+    
+}
+
+button.vorige,
+button.volgende{
+    min-width: 4rem;
+}
+button.vorige{
+    left: .5rem;
+    background-image: url(img/icon/arrow/left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button.volgende{
+    right: .5rem;
+    
 }
 .dot-container{
   position: absolute;
@@ -1469,6 +1506,33 @@ article > button.bewaard {
 }
 
 /* == Einde Micro Bewaren == */
+.leuk{
+    animation: leuk 2s linear;
+}
+@keyframes leuk{
+    0%{
+        transform:  translate(0px,0px)  rotate(0deg) ;
+    }
+      15% {
+    transform:  translate(-25px,0px)  rotate(-5deg) ;
+  }
+  30% {
+    transform:  translate(20px,0px)  rotate(3deg) ;
+  }
+  45% {
+    transform:  translate(-15px,0px)  rotate(-3deg) ;
+  }
+  60% {
+    transform:  translate(10px,0px)  rotate(2deg) ;
+  }
+  75% {
+    transform:  translate(-5px,0px)  rotate(-1deg) ;
+  }
+  100% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
 /*
     article>footer img {
         border-radius: 10px;
