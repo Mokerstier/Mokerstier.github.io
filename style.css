@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: relative;
     font-size: 16px;
     line-height: 2.2em;
     font-family: "Roboto", sans-serif;
@@ -22,10 +23,14 @@ body {
 }
 
 section {
-    
+
     background-color: #FFFFFF;
 }
-
+@media (min-width: 75rem){
+section {
+    max-width: 114rem;
+    }
+}
 section:nth-of-type(2) {
     background-color: #fff;
     border-top-right-radius: 10px;
@@ -34,17 +39,18 @@ section:nth-of-type(2) {
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
 }
 
-    @media (min-width: 48rem) {
+@media (min-width: 48rem) {
 
     section:first-of-type,
     section:nth-of-type(2) {
         max-width: 62rem;
         margin: auto;
         border-radius: 10px;
+        
     }
 }
 
-    @media (min-width: 62rem) {
+@media (min-width: 62rem) {
 
     section:first-of-type,
     section:nth-of-type(2) {
@@ -53,7 +59,7 @@ section:nth-of-type(2) {
     }
 }
 
-    @media (min-width: 75rem) {
+@media (min-width: 75rem) {
 
     section:first-of-type,
     section:nth-of-type(2) {
@@ -76,7 +82,7 @@ section:nth-of-type(2) {
     overflow: hidden;
 }
 
-section:first-of-type {
+body > section:first-of-type {
     background-color: #fcd900;
 }
 
@@ -95,32 +101,37 @@ h2 {
     font-size: 20px;
     margin: 0 1.5rem;
     padding: 0;
+    padding-top: 0.83em;
+    padding-bottom: 2rem;
     transition: all .4s ease-in;
+    display: block;
+    width: 100%;
+    max-width: 75rem;
+    margin-left: 1.5rem;
+
 }
-    @media (min-width: 48rem) {
-        h2{
-          font-size: 3rem; 
-        }
-    }
-    @media (min-width: 62rem) {
+
+@media (min-width: 48rem) {
     h2 {
         font-size: 3rem;
+        margin-left: 4rem;
     }
 }
 
-h2{
-    padding-bottom: 2rem;
-}
+
+
 
 h3 {
     margin: 0;
     padding: 1.5rem 1.5rem;
 }
+
 @media (min-width: 62rem) {
     h3 {
         font-size: 2.4rem;
     }
 }
+
 #zoektitel {
     line-height: 1;
     font-size: 1.2rem;
@@ -132,9 +143,10 @@ h3 {
     transition: all .4s ease-in;
 }
 
-    @media (min-width: 48em) {
+@media (min-width: 48em) {
     #zoektitel {
         font-size: 1.8rem;
+        padding-left: 4rem;
     }
 }
 
@@ -201,9 +213,11 @@ h5 {
 header #logo > img {
     margin-top: 0.5em;
 }
+
 body > header {
     position: relative;
 }
+
 button.login {
     position: relative;
     margin-left: 36%;
@@ -230,7 +244,7 @@ button.login {
 
 }
 
-    @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     button.login {
         margin-left: 42%;
 
@@ -242,7 +256,8 @@ button.login {
 button.login:hover {
     cursor: pointer;
 }
-header > div:first-of-type{
+
+header > div:first-of-type {
     position: absolute;
     right: -2rem;
     opacity: 0;
@@ -254,7 +269,8 @@ header > div:first-of-type{
     color: #FFF;
     transition: all 1s ease-in-out;
 }
-div.added:first-of-type{
+
+div.added:first-of-type {
     line-height: 1.3;
     border-radius: 50%;
     background-color: #e7772b;
@@ -266,6 +282,7 @@ div.added:first-of-type{
     opacity: 1;
 
 }
+
 /*===Einde Header===*/
 /*== Lijsteje login ==*/
 body > header > ul {
@@ -324,11 +341,12 @@ div > a {
     text-decoration: none;
 }
 
-    @media (min-width: 62rem) {
+@media (min-width: 62rem) {
     div > a {
         font-size: 1.792rem
     }
 }
+
 div.random {
     line-height: 1.15;
     padding-bottom: 1rem;
@@ -343,7 +361,7 @@ div.random {
 
 }
 
-    @media (min-width: 48rem) {
+@media (min-width: 48rem) {
     div.random {
         border-bottom-left-radius: 10px;
         margin-right: auto;
@@ -351,6 +369,7 @@ div.random {
         max-width: 33rem;
     }
 }
+
 section > a > img {
     padding-left: 10px;
 }
@@ -360,69 +379,6 @@ body > section > h3 {
     background-color: #fcd900;
 }
 
-section:nth-child(6) {
-    margin-right: 1.5rem;
-    background-color: #FFFFFF;
-    border-top-right-radius: 10px;
-    padding-bottom: 1.5rem;
-    margin-bottom: 0;
-    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
-    transition: all .4s ease-in;
-    margin-top: 3rem;
-}
-
-    @media (min-width: 48rem) {
-    section:nth-child(6) {
-        max-width: 75rem;
-        margin: auto;
-        margin-top: 3rem;
-        border-top-left-radius: 10px;
-    }
-}
-
-    @media (min-width: 75rem) {
-    section:nth-child(6) {
-        max-width: 114rem;
-        margin: auto;
-        margin-top: 3rem;
-
-    }
-}
-section:nth-child(6)>ul{
-    list-style: none;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    
-}
-section:nth-child(6)>ul>li{
-    width: 100%;
-    margin-right: 1.5rem;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-color: rgb(241, 241, 241);
-}
-section:nth-child(6)>ul>li>a{
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    color: #675c53;
-    position: relative;
-    min-width: 100%;
-    padding-right: 4rem;
-    display: block;
-}
-section:nth-child(6)>ul>li>a::after{
-    content: "";
-    position: absolute;
-    top:1rem;
-    right: 0;
-    line-height: 1;
-    width: 16px;
-    height: 16px;
-    background-image: url(img/icon/arrow/right.svg);
-    background-repeat: no-repeat;
-    
-}
 section > label:last-of-type {
     box-sizing: border-box;
     font-size: 1.6rem;
@@ -437,14 +393,14 @@ section > label:last-of-type {
     cursor: pointer;
 }
 
-    @media (min-width: 48em) {
+@media (min-width: 48em) {
     section > label:last-of-type {
         max-width: 75rem;
         border-bottom-left-radius: 10px;
     }
 }
 
-    @media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 62rem) {
     section > label:last-of-type {
         display: none;
     }
@@ -462,13 +418,13 @@ section > label:last-of-type {
     margin-left: 1.5rem;
 }
 
-    @media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 62rem) {
     .streep {
         display: none;
     }
 }
 
-    @media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
 
     span.streep {
         max-width: 75rem;
@@ -489,7 +445,7 @@ form:first-of-type {
     transition: all .8s ease-in-out;
 }
 
-    @media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 62rem) {
     form:first-of-type {
         border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
@@ -513,11 +469,12 @@ form.index {
     margin: 0;
 }
 
-    @media only screen and (min-width: 62rem) {
-    body>form {
+@media only screen and (min-width: 62rem) {
+    body > form {
         max-width: 72rem;
 
     }
+
     form.index {
         position: static;
         display: flex;
@@ -527,6 +484,7 @@ form.index {
         height: 100%;
         opacity: 1;
     }
+
     form > header > h5 {
         display: none;
     }
@@ -536,27 +494,40 @@ form.index {
     }
 }
 
+form legend {
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+form > fieldset:nth-of-type(2) > legend {
+    margin-bottom: 3rem;
+}
+
+form fieldset:nth-of-type(2) > label {
+    display: none;
+}
+
 form fieldset {
     padding: 0;
     border-style: none;
     margin: 0;
     padding: 0 1.5rem;
 }
-
+@media (min-width: 62rem){
+    form:first-of-type fieldset{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
 form > fieldset:first-of-type {
     padding-right: 4rem;
 }
 
-    @media (min-width: 62em) {
+@media (min-width: 62em) {
     form > fieldset:nth-of-type(2) {
         border-left: rgb(241, 241, 241) 1px solid;
     }
-}
-
-form legend {
-    margin-bottom: 5px;
-    font-size: 1.6rem;
-    font-weight: 700;
 }
 
 form input[type=checkbox]:focus + label {
@@ -572,26 +543,27 @@ form.index fieldset:nth-child(2) label {
     visibility: hidden;
 }
 
-#leestijd legend {
-
-    margin-bottom: 5em;
-}
-
-input:checked+label {
+input:checked + label {
     transition: background-color .2s;
     background-color: #F1F1F1;
 }
-input:checked+label::before {
+
+input:checked + label::before {
     border-color: #E7772B;
     background-image: url(img/icon/vink.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
+form:first-of-type fieldset:last-of-type {
+    width: 100%;
+}
+
 /* heb je nodig want fieldset kan niet flexxen*/
 
 .flex-container {
     display: flex;
+    flex-direction: row;
 
 }
 
@@ -617,17 +589,18 @@ input:checked+label::before {
     flex-direction: column;
 }
 
-    @media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 62rem) {
 
     .sfeer-1,
     .sfeer-2 {
-
-        flex-direction: column;
+        
+        flex-direction: row;
         flex-wrap: wrap;
         max-width: 100%;
     }
 
 }
+
 
 /*Checkboxes*/
 form:first-of-type label {
@@ -646,12 +619,16 @@ form:first-of-type label {
 
 }
 
-    @media (min-width: 48rem) {
+@media (min-width: 48rem) {
     form label {
         font-size: 1.6rem;
     }
 }
-
+@media only screen and (min-width: 62rem) {
+    form:first-of-type label{
+        margin-right: 1.5rem;
+    }
+}
 /* Maakt het vierkantje voor het label */
 form:first-of-type input[type=checkbox] + label::before {
     content: '';
@@ -674,7 +651,7 @@ form:first-of-type input[type=checkbox] + label::before {
     margin-left: 1.5rem;
 }
 
-    @media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 50rem) {
     #leestijd {
         margin-left: 2em;
     }
@@ -695,7 +672,7 @@ section:nth-of-type(2) > button:first-of-type {
     padding-bottom: 2rem;
 }
 
-    @media (min-width: 62rem) {
+@media (min-width: 62rem) {
     section:nth-of-type(2) > button:first-of-type {
         display: none;
     }
@@ -740,7 +717,6 @@ section:nth-of-type(2) > button:first-of-type::after {
     top: 39px;
     left: 0;
     padding-top: 4rem;
-    height: 100%;
     width: 100vw;
     border-radius: 0;
 }
@@ -760,7 +736,7 @@ form footer:first-of-type {
     width: 100%;
 }
 
-    @media (min-width: 62em) {
+@media (min-width: 62em) {
     form footer:first-of-type {
         border-bottom-left-radius: 10px;
     }
@@ -768,9 +744,10 @@ form footer:first-of-type {
 
 /*=====Einde footer form=====*/
 /*====Button Styling=====*/
-button:hover{
+button:hover {
     cursor: pointer;
 }
+
 .button {
     font-weight: 700;
     font-size: 1.6rem;
@@ -1003,27 +980,44 @@ main.inloggen > form > footer > ul > li:before {
 
 /*====Article Styling====*/
 main {
+    padding-top: 1.5rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    max-width: 100vw;
 }
-main > h2{
-    display: block;
-    width: 100%;
-    max-width: 75rem;
-    margin-left: 1.5rem;
+
+section.relative h2 {
     margin: auto;
+    padding-top: 0.83em;
 }
-main>ul{
+
+main h2 {
+    margin: auto;
+    padding-top: 0.83em;
+    max-width: 75rem;
+}
+
+main > ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin: auto;
-    
+    max-width: 117rem;
 }
-main > ul > li{
-    max-width: 100%;
-    margin: 0 auto;
-    align-self: center;
+
+@media (min-width: 62rem) {
+    main > ul {
+        width: 75rem;
+    }
 }
+
+main > ul > li {
+   
+
+}
+
 article {
     max-width: 100%;
     position: relative;
@@ -1032,21 +1026,25 @@ article {
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     margin-bottom: 3rem;
     border-radius: 10px;
-    margin-left: 1.5rem;
     margin-right: 1.5rem;
+
+
 }
-    @media (min-width: 48rem){
-        article {
-            min-width: 89%;
-            max-width: 75rem;
-        }
-    }
-@media (min-width: 62rem){
-    article{
-        min-width: 35rem;
+
+@media (min-width: 48rem) {
+    article {
+        min-width: 89%;
         max-width: 75rem;
     }
 }
+
+@media (min-width: 62rem) {
+    article {
+        min-width: 35rem;
+
+    }
+}
+
 article img {
     width: 100%;
     height: 14em;
@@ -1059,10 +1057,12 @@ article > a {
     color: #000;
     text-decoration: none;
 }
-article > a> header{
+
+article > a > header {
     width: 100%;
     min-height: 10rem;
 }
+
 article > footer > ul > li > button {}
 
 article > footer > ul {
@@ -1075,19 +1075,22 @@ article > footer > ul {
     position: absolute;
     top: 12em;
     list-style: none;
-    
+
 }
-article > footer > ul > li{
+
+article > footer > ul > li {
     position: relative;
     width: 33.3%;
 }
-@media (min-width: 62rem){
-    article > footer > ul > li{
+
+@media (min-width: 62rem) {
+    article > footer > ul > li {
         font-size: 2.2rem;
     }
 }
+
 article > footer > ul > li:first-of-type:before {
-    content:"";
+    content: "";
     position: absolute;
     background-image: url(img/icon/klok.svg);
     background-repeat: no-repeat;
@@ -1097,10 +1100,11 @@ article > footer > ul > li:first-of-type:before {
     height: 2rem;
     top: 8px;
     left: 1.5rem;
-    
+
 }
+
 article > footer > ul > li:last-of-type:before {
-    content:"";
+    content: "";
     position: absolute;
     background-image: url(img/icon/thumbs-up.svg);
     background-repeat: no-repeat;
@@ -1109,9 +1113,10 @@ article > footer > ul > li:last-of-type:before {
     width: 2rem;
     height: 2rem;
     top: 4px;
-    right: 1.5rem;  
+    right: 1.5rem;
 }
-@media (min-width: 62rem){
+
+@media (min-width: 62rem) {
     article > footer > ul > li:last-of-type:before {
         width: 3rem;
         height: 3rem;
@@ -1134,7 +1139,8 @@ article > footer > ul > li > button.download::after {
 .download {
     position: relative;
 }
-.download:before{
+
+.download:before {
     position: absolute;
     content: "0%";
     z-index: 9999;
@@ -1143,43 +1149,52 @@ article > footer > ul > li > button.download::after {
     margin-left: -1.5rem;
     animation: percent 4s linear;
 }
+
 .download::after {
     animation: download 4s linear;
 
 }
-@keyframes percent{
-    0%{
-        content:"0%";
+
+@keyframes percent {
+    0% {
+        content: "0%";
     }
-    15%{
-        content:"15%";
+
+    15% {
+        content: "15%";
     }
-    35%{
-        content:"35%";
+
+    35% {
+        content: "35%";
     }
-    50%{
-        content:"50%";
+
+    50% {
+        content: "50%";
     }
-    65%{
-        content:"65%";
+
+    65% {
+        content: "65%";
     }
-    85%{
-        content:"85%";
+
+    85% {
+        content: "85%";
     }
-    100%{
-        content:"100%";
+
+    100% {
+        content: "100%";
     }
 }
+
 @keyframes download {
     0% {
         width: 0%;
         background-color: #fff;
     }
-    
+
     100% {
         width: 100%;
         background-color: darkorange;
-    
+
     }
 }
 
@@ -1188,80 +1203,138 @@ article > footer > ul > li > button.download::after {
 section:nth-of-type(4){
     background-color: #f1f1f1;
 }*/
-.relative{
+section.relative {
     position: relative;
+    padding-bottom: 4rem;
 }
+
 div.carous {
     position: relative;
-    background-color: #f1f1f1;
+    background-color: #fff;
     width: 100%;
     padding-left: 1.5rem;
     height: auto;
     display: flex;
-    overflow-x: hidden;
-    padding-top: .5rem;
+    flex-direction: column;
     margin: auto;
+    padding-bottom: 3rem;
 }
-@media (min-width: 62rem){
-    .carous{
+
+@media (min-width: 62rem) {
+    div.carous {
         padding-left: 0;
         max-width: 117rem;
         display: flex;
         flex-wrap: wrap;
-        overflow: hidden;
     }
 }
-.carous article{
-        
-        width: 89%;
-        flex-shrink: 0;
-        height: 100%;
+
+@media (min-width: 75rem) {
+    div.carous {
+        max-width: 114rem;
+    }
 }
-@media (min-width: 48rem){
+
+.carous article {
+    margin: auto;
+    width: 89%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+@media (min-width: 48rem) {
     .carous article {
 
-        margin: 3rem 3.5rem;
-        margin-right: 1rem;
+        margin: auto;
+
     }
 }
-.carous > button{
+
+.dot-container {
     position: absolute;
-    top: 7rem;
-    z-index: 99999;
-    height: 10rem;
-    
+    right: 1rem;
+    top: -3rem;
 }
 
-button.vorige,
-button.volgende{
-    min-width: 4rem;
-}
-button.vorige{
-    left: .5rem;
-    background-image: url(img/icon/arrow/left.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-button.volgende{
-    right: .5rem;
-    
-}
-.dot-container{
-  position: absolute;
-  right: 0;
-    top: 1rem;
-}
 .dot {
-  text-indent: 9999px;
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    text-indent: 9999px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
+.dot:hover{
+    background-color: #c05e00;
+}
+.relative > div > div:last-of-type {
+    margin: auto;
+    width: 100%;
+    max-width: 117rem;
+    justify-content: center;
+}
+
+.relative > div > div > a {
+    width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 43%;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
+}
+@media (min-width: 62rem){
+    .relative > div > div > a{
+        max-width: 75rem;
+        margin: auto;
+    }  
+}
+/*====Einde populair===*/
+/*===Mijn verhalen===*/
+main.mijn {}
+
+main.mijn > ul {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 62rem) {
+    main.mijn > ul {
+        margin: auto;
+        width: 117rem;
+    }
+}
+
+@media(min-width: 70rem) {
+    main.mijn > ul {
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 75rem) {
+    main.mijn > ul {
+        max-width: 114rem;
+    }
+}
+
+main.mijn h2 {
+    min-width: 100%;
+    margin-top: 0.83em;
+    margin: auto;
+}
+
+main.mijn article {
+    width: 35rem;
+}
+
+/*===Einde mijn verhalen===*/
 /*
 @media only screen and (min-width: 600px){
     .carous .banner{
@@ -1363,14 +1436,7 @@ form input[type=radio]:checked + label {
 
 /*======Resultaten======*/
 
-main {
-    padding: 1.5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #f1f1f1;
-    max-width: 100vw;
-}
+
 
 /*
     article {
@@ -1463,7 +1529,7 @@ article > button {
     background-color: #fff;
     background-size: 2.5rem;
     transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
-    
+
 }
 
 /* == Micro Bewaren == */
@@ -1506,125 +1572,117 @@ article > button.bewaard {
 }
 
 /* == Einde Micro Bewaren == */
-.leuk{
+.leuk {
     animation: leuk 2s linear;
 }
-@keyframes leuk{
-    0%{
-        transform:  translate(0px,0px)  rotate(0deg) ;
-    }
-      15% {
-    transform:  translate(-25px,0px)  rotate(-5deg) ;
-  }
-  30% {
-    transform:  translate(20px,0px)  rotate(3deg) ;
-  }
-  45% {
-    transform:  translate(-15px,0px)  rotate(-3deg) ;
-  }
-  60% {
-    transform:  translate(10px,0px)  rotate(2deg) ;
-  }
-  75% {
-    transform:  translate(-5px,0px)  rotate(-1deg) ;
-  }
-  100% {
-    transform:  translate(0px,0px)  rotate(0deg) ;
-  }
-}
 
-/*
-    article>footer img {
-        border-radius: 10px;
-        width: 100%;
-        height: 15em;
-        box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+@keyframes leuk {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
     }
 
- @media only screen and (min-width: 600px) {
-     main {
-         justify-content: center;
-     }
-     article {
-         margin-top: 2.4rem;
-            width: 80%;
-            height: 80%;
-            
-        }
-     article li{
-         padding-bottom: 1.5em;
-     }
-     article footer{
-         height: 60%;
-     }
-     article>header{
-         padding-right: 5em;
-         bottom: -4em;
-         
-     }
-     article>footer img {
-            border-radius: 10px;
-            width: 100%;
-            height: 20em;
-        }
-}
-@media only screen and (min-width: 62rem){
-    article {
-            width: 40%;
-        }
-    article footer{
-        width: 100%;
-    }
-}
-@media only screen and (min-width: 1140px) {
-    article {
-        width: 30%;
-        height: 100%;
-    }
-    article li{
-        min-width: 25%;
-        margin: 0;
-        padding: 1.5em;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 25%;
-    }
-    article li:nth-last-child(4) {
-        margin-left: 10%;
-        
-        
-    }
-    article li:nth-last-child(2) {
-        padding-right: 0;
-        margin-left: 10%;
+    15% {
+        transform: translate(-25px, 0px) rotate(-5deg);
     }
 
-    article>header {
-        min-width: 100%;
-        border-top-left-radius: 0;
-        left:0;
-        border-top-right-radius: 0;
-        margin: 0;
-        padding: 0;
-        background-color: #FFFFFF;
+    30% {
+        transform: translate(20px, 0px) rotate(3deg);
     }
-    article footer {
-        margin-right: 0;
-        width: 100%;
+
+    45% {
+        transform: translate(-15px, 0px) rotate(-3deg);
     }
-    
-    article>footer img {
-        height: 20em;
-        
+
+    60% {
+        transform: translate(10px, 0px) rotate(2deg);
     }
-    article li:last-of-type {
-        display: flex;
-        position: relative;
-        right: 0;
-        top: -2.5em;
-        padding: 0;
+
+    75% {
+        transform: translate(-5px, 0px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+/*====Direct Naar====*/
+section:nth-child(6) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+    box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
+    transition: all .4s ease-in;
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+    section:nth-child(6) {
+        max-width: 75rem;
         margin: auto;
+        margin-top: 3rem;
+        border-top-left-radius: 10px;
     }
 }
-*/
+
+@media (min-width: 75rem) {
+    section:nth-child(6) {
+        max-width: 114rem;
+        margin: auto;
+        margin-top: 3rem;
+
+    }
+}
+
+section:nth-child(6) > ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+}
+
+section:nth-child(6) > ul > li {
+    width: 100%;
+    margin-right: 1.5rem;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgb(241, 241, 241);
+}
+
+section:nth-child(6) > ul > li > a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    color: #675c53;
+    position: relative;
+    min-width: 100%;
+    padding-right: 4rem;
+    display: block;
+}
+
+section:nth-child(6) > ul > li > a::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    background-image: url(img/icon/arrow/right.svg);
+    background-repeat: no-repeat;
+
+}
+
+/*===Flip Section====*/
+.flip-section {
+    background-color: #f1f1f1;
+    height: 20em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}

@@ -17,9 +17,9 @@
         <div>0</div>
         <ul>
             <li><a href="inloggen.html">Inloggen</a></li>
-            <li><a href="">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
-            <li><a href="">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
-            <li><a href="">Verhalen die ik leuk vind</a></li>
+            <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
+            <li><a href="mijnverhalen.html#downloads">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
+            <li><a href="mijnverhalen.html#leuke">Verhalen die ik leuk vind</a></li>
         </ul>
     </header>
     <section>
@@ -29,7 +29,7 @@
     </section>
 
 
-    <section>
+    <section >
         <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
         <h2>Zoek een passend verhaal</h2>
         <button>klik hier om je zoekopdracht te verfijnen</button>
@@ -73,16 +73,16 @@
         <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
     <section class="relative">
         <h2>Top 5 best gewaardeerde verhalen</h2>
-        
+
         <div class="carous">
-            
-                <button class="button active volgende">
 
-                </button>
-                <button class="button active vorige">
-
-                </button>
-            
+            <div class="dot-container">
+                <span class="dot inactive"></span>
+                <span class="dot inactive"></span>
+                <span class="dot inactive"></span>
+                <span class="dot inactive"></span>
+                <span class="dot inactive"></span>
+            </div>
 
             <article>
                 <button>Bewaar</button>
@@ -208,26 +208,29 @@
                     </header>
                 </a>
             </article>
+            <div><a href="resultaten.html" class="">Bekijk alle verhalen</a></div>
         </div>
+
     </section>
 
     <section>
         <h2>Direct naar</h2>
         <ul>
-        <li><a href="resultaten.html">
-            Alle verhalen
-        </a></li>
-        <li><a href="resultaten.html">
-            Hoogst beoordeeld
-        </a>
-        <li><a href="resultaten.html">
-            Mijn bewaarde verhalen
-        </a></li>
-        <li><a href="resultaten.html">
-            Mijn downloads
-        </a></li>
+            <li><a href="resultaten.html">
+                    Alle verhalen
+                </a></li>
+            <li><a href="resultaten.html">
+                    Hoogst beoordeeld
+                </a>
+            <li><a href="resultaten.html">
+                    Mijn bewaarde verhalen
+                </a></li>
+            <li><a href="resultaten.html">
+                    Mijn downloads
+                </a></li>
         </ul>
     </section>
+    <div class="flip-section"></div>
     <script src="java/slidescript.js"></script>
     <script src="./java/script.js"></script>
     <script src="js/rSlider.js"></script>
