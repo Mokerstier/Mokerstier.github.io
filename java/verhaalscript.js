@@ -40,21 +40,22 @@ function myScroll1() {
         tweede.classList.add('verstop');
         
     } if (document.documentElement.scrollTop >= 2500){
-        
+        tweede.classList.remove('start');
         tweede.classList.add('verstop');
         derde.classList.remove('verstop');
+        derde.classList.add('start');
     
     } else {
         derde.classList.remove('start');
         derde.classList.add('verstop');
         
     } if (document.documentElement.scrollTop >= 4400){
-        
+        derde.classList.remove('start');
         derde.classList.add('verstop');
         vierde.classList.remove('verstop');
-        
+        vierde.classList.add('start');
     } else {
-        
+        vierde.classList.remove('start');
         vierde.classList.add('verstop');
         
     }

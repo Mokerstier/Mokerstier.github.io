@@ -16,11 +16,10 @@ body{
 }
 .progress-container {
   transform: rotate(90deg);
-  position: absolute;
-  bottom: calc(-50vh - 4px);
-  left: -50vh;
-  margin-left: 4px;
-  width: 100vh;
+  position: fixed;
+  bottom: 49vh;
+  left: -48.5vh;
+  width: 98vh;
   height: 8px;
   background: #ccc;
 }
@@ -216,6 +215,9 @@ div > p > span{
 }
 footer#verhaal{
     z-index: 99;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 1.5rem;
     display: flex;
     justify-content: space-around;
@@ -236,7 +238,7 @@ footer button{
     background-position: center;
 }
 footer button:first-of-type{
-    background-image: url(./img/icon/Ster.svg);
+    background-image: url(./img/icon/thumbs-up.svg);
 
 }
 footer button:last-of-type{

@@ -39,7 +39,8 @@ section:nth-of-type(2) {
 
     section:first-of-type,
     section:nth-of-type(2) {
-        max-width: 62rem;
+        min-width: 62rem;
+        max-width: 75rem;
         margin: auto;
         border-radius: 10px;
         
@@ -259,7 +260,7 @@ button.login:hover {
     cursor: pointer;
 }
 
-header  div:first-of-type {
+header > nav > div:first-of-type {
     position: absolute;
     right: -2rem;
     opacity: 0;
@@ -323,16 +324,13 @@ body > header  ul > li:nth-child(3)::after {
     border-bottom: 1px solid #fff;
     margin: auto;
 }
-
-body > header  ul > li > a {
+a {
     text-decoration: none;
+}
+body > header  ul > li > a {
+
     color: #fff;
 }
-
-body > footer {
-    box-shadow: inset 0 4px 12px 4px hsla(0, 0%, 95%, .5);
-}
-
 a > p {
     display: inline;
 }
@@ -413,33 +411,6 @@ section > label:last-of-type {
     section > label:last-of-type {
         display: none;
     }
-}
-
-
-.streep {
-    box-sizing: border-box;
-    padding: 0 1.5rem;
-    display: flex;
-    position: relative;
-    top: -25px;
-    border-top: 1px solid black;
-    margin-right: 3rem;
-    margin-left: 1.5rem;
-}
-
-@media only screen and (min-width: 62rem) {
-    .streep {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 48rem) {
-
-    span.streep {
-        max-width: 75rem;
-
-    }
-
 }
 
 /*========ZOEK FORMULIER========*/
@@ -685,7 +656,11 @@ section:nth-of-type(2) > button:first-of-type {
     transition: all .8s ease-in-out;
     padding-bottom: 2rem;
 }
-
+@media (min-width: 48rem) {
+    section:nth-of-type(2) > button:first-of-type{
+        margin-left: 4rem;  
+    }
+}
 @media (min-width: 62rem) {
     section:nth-of-type(2) > button:first-of-type {
         display: none;
@@ -1318,6 +1293,11 @@ div.carous {
         margin: auto;
     }  
 }
+@media (min-width: 75rem){
+    section.relative h2{
+    max-width: 114rem;
+    }
+}
 /*====Einde populair===*/
 /*===Mijn verhalen===*/
 main.mijn div {
@@ -1361,7 +1341,7 @@ main.mijn article {
 
 /*========Sorteer======*/
 
-form#sort {
+/* form#sort {
     max-width: 40em;
     background-color: #f7f7f6;
     margin-top: 3rem;
@@ -1404,7 +1384,7 @@ form > label {
 form input[type=radio]:checked + label {
     background-color: #FFFFFF;
 }
-
+ */
 
 
 
@@ -1529,26 +1509,31 @@ section:nth-child(6)>div{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 @media (min-width: 48rem) {
     section:nth-child(6)>div{
-        max-width: 75rem;
+        min-width: 75rem;
+        max-width: 97rem;
     }  
 }
+
 @media (min-width: 75rem){
     section:nth-child(6)>div{
+        min-width: 97rem;
         max-width: 114rem;
+        justify-content: space-between;
     }
 }
 section:nth-child(6)>div>div{
     padding-right: 1.5rem;
+    padding-left: 1.5rem;
     width: 100%;
 }
-@media (min-width: 48rem) {
+@media (min-width: 62rem) {
     section:nth-child(6)>div>div{
-        max-width: 40%;
-        
+        min-width: 30%;
+        max-width: 50%;
     }  
 }
 
@@ -1598,7 +1583,9 @@ section:nth-child(6) div > div > ul > li > a {
     padding-right: 4rem;
     display: block;
 }
-
+section:nth-child(6) div > div > ul > li > a:hover{
+    text-decoration: underline;
+}
 section:nth-child(6) div > ul > li > a::after {
     content: "";
     position: absolute;
@@ -1614,16 +1601,10 @@ section:nth-child(6) div > ul > li > a::after {
 /* ===Einde direct naar=== */
 /* ===Recent toegevoegd=== */
 section:nth-child(6) article{
-    min-width: 35rem;
     max-width: 75rem;
     margin: auto;
 }
-@media (max-width: 48em){
-    section:nth-child(6) article{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    }  
-}
+
 
 /*===Flip Section====*/
 .flip-section {
@@ -1633,4 +1614,35 @@ section:nth-child(6) article{
     position: absolute;
     bottom: 0;
     z-index: -1;
+}
+/* ===Footer Styling==== */
+body > footer {
+    box-shadow: inset 0 4px 12px 4px hsla(0, 0%, 95%, .5);
+    background-color: #fff;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+body > footer ul{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+body > footer > ul > li{
+    list-style: none;
+    display: none;
+}
+body > footer ul > li:first-of-type{
+    display: block;
+    border-bottom: 1px solid rgb(227, 237, 244);
+}
+body > footer  a{
+    display: block;
+    color: #54a5dd;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+body > footer  a:hover{
+    text-decoration: underline;
 }
