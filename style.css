@@ -1614,27 +1614,60 @@ section:nth-child(6) article{
     position: absolute;
     bottom: 0;
     z-index: -1;
+    display: flex;
 }
 /* ===Footer Styling==== */
 body > footer {
     box-shadow: inset 0 4px 12px 4px hsla(0, 0%, 95%, .5);
     background-color: #fff;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding: 3.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 body > footer ul{
     list-style: none;
     text-decoration: none;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    
 }
-body > footer > ul > li{
+body > footer > div{
+    width: 100%;
+}
+body > footer > div > ul > li{
     list-style: none;
     display: none;
+    margin: .5rem 0;
 }
-body > footer ul > li:first-of-type{
+
+body > footer > div > ul > li:first-of-type{
     display: block;
+     
     border-bottom: 1px solid rgb(227, 237, 244);
+}
+@media (min-width: 62em){
+    body > footer > div > ul{
+        width: 20%;
+        padding-right: 2rem;
+    }
+}
+@media (min-width: 62em){
+    body > footer > div > ul > li:first-of-type{
+        border: none;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
+@media (min-width: 62em){
+    body > footer > div > ul > li{
+        display: block;
+    
+    }
+}
+@media (min-width: 62em){
+    body > footer > div > ul > li:first-of-type > a{
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    }
 }
 body > footer  a{
     display: block;
@@ -1642,7 +1675,91 @@ body > footer  a{
     width: 100%;
     font-size: 1.4rem;
     font-weight: 500;
+    line-height: 2.4rem;
 }
 body > footer  a:hover{
     text-decoration: underline;
+}
+body footer > div:nth-child(2) {
+    position: relative;
+    margin-top: 4rem;
+    
+}
+@media (min-width: 48em){
+    body footer > div {
+     max-width: 75rem;
+     margin-left: auto;
+     margin-right: auto;
+    }
+}
+@media (min-width: 62em){
+    body > footer > div{
+        max-width: 97rem;
+    }
+}
+@media (min-width: 75em){
+    body > footer > div{
+        max-width: 114rem;
+    }
+}
+@media (min-width: 62em){
+    body > footer > div:first-child{
+        display: flex;
+        margin: auto;
+    }
+}
+body > footer  img{
+    max-height: 2.8rem;
+}
+@media (min-width: 48em){
+    body > footer  img{
+        max-height: 3.3rem;
+    }
+}
+@media (min-width: 62em){
+    body > footer > div:nth-child(2){
+        display: flex;
+    }
+}
+@media (min-width: 62em){
+body > footer > div:nth-child(2) ul{
+    display: flex;
+    margin-left: 5rem;
+    }
+}
+@media (min-width: 62em){
+    body > footer > div:nth-child(2) ul a{
+        line-height: 3.3rem;
+        margin-right: 1.5rem;
+        font-weight: 500;
+    }
+}
+body > footer > div > div:last-of-type{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+body > footer > div > div:last-of-type > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+body > footer > div > div > ul > li > a{
+    color: #afa9a2;
+    line-height: 2.8rem;
+}
+body > footer > div > div:last-of-type > ul > li > a{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: rgba(255, 255, 255, 0);
+}
+body > footer > div > div:last-of-type > ul > li:first-of-type > a{
+    background-image: url(img/icon/facebook/facebook-512.png);
+
+}
+body > footer > div > div:last-of-type > ul > li:last-of-type > a{
+    background-image: url(img/icon/twitter/twitter-512.png);
 }
