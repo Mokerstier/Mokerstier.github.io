@@ -8,7 +8,7 @@ var sectionArticle = document.querySelector('section:nth-of-type(3)');
 var sectionDirect = document.querySelector('section:last-of-type');
 var disabled = document.getElementById("zoek");
 var checkBoxes = document.querySelectorAll(".check");
-var loginLijstje = document.querySelector('body>header>ul');
+var loginLijstje = document.querySelector('body>header ul');
 var logIn = document.querySelector('.login');
 var buttonBewaar = [].slice.call(document.querySelectorAll('article>button'));
 var downloadButton = [].slice.call(document.querySelectorAll('article>footer>ul>li>button'));
@@ -18,7 +18,7 @@ var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
 var aantalDownload = 0;
 var duimErbij = [].slice.call(document.querySelectorAll('article li:last-of-type'));
 var header = document.querySelector('body>header');
-var aBaDTotaal = document.querySelector('header>div'); // bollletje voor de downloads en bewaar
+var aBaDTotaal = document.querySelector('header>nav>div'); // bollletje voor de downloads en bewaar
 //var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkboxes[Array]
 var displayTime;
@@ -162,8 +162,15 @@ downloadButton.forEach(function (downloadButton, index) {
 
 duimErbij.forEach(function (duimErbij){
     duimErbij.addEventListener("click", function(){
-        duimErbij.classList.toggle('leuk');
+        if (duimErbij.classList.contains('leuk') == false){
+        duimErbij.classList.add('leuk');
+        duimErbij.innerHTML++;
+    }else{
+        duimErbij.classList.remove('leuk');
+        duimErbij.innerHTML--;
+    }
     });
+    
 });
 
 
@@ -171,7 +178,4 @@ logIn.addEventListener("click", showLijstje);
 formButton.addEventListener("click", showForm);
 terugButton.addEventListener("click", hideForm);
 
-//document.addEventListener('DOMContentLoaded', function (){
-//    document.getElementById('leestijd').innerHTML = '<input type="text" id="sampleSlider"  />';
-//});
-//window.onscroll = function() {myScroll1();};
+

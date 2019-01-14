@@ -12,6 +12,7 @@
 
 <body>
     <header id="top">
+        <nav>
         <a href="index.html" id="logo"><img src="img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
         <button class="login">login</button>
         <div>0</div>
@@ -21,6 +22,7 @@
             <li><a href="mijnverhalen.html#downloads">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
             <li><a href="mijnverhalen.html#leuke">Verhalen die ik leuk vind</a></li>
         </ul>
+    </nav>
     </header>
     <section>
         <h1>
@@ -214,21 +216,53 @@
     </section>
 
     <section>
-        <h2>Direct naar</h2>
-        <ul>
-            <li><a href="resultaten.html">
-                    Alle verhalen
-                </a></li>
-            <li><a href="resultaten.html">
-                    Hoogst beoordeeld
-                </a>
-            <li><a href="resultaten.html">
-                    Mijn bewaarde verhalen
-                </a></li>
-            <li><a href="resultaten.html">
-                    Mijn downloads
-                </a></li>
-        </ul>
+        <div>
+            <div>
+                <h2>Direct naar</h2>
+                <ul>
+                <li><a href="resultaten.html">
+                        Alle verhalen
+                    </a></li>
+                <li><a href="resultaten.html">
+                        Hoogst beoordeeld
+                    </a>
+                <li><a href="resultaten.html">
+                        Mijn bewaarde verhalen
+                    </a></li>
+                <li><a href="resultaten.html">
+                        Mijn downloads
+                    </a></li>
+            </ul>
+            </div>
+            <div>
+                <h2>Recent toegevoegd</h2>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/Droom.jpeg" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>25:00
+                            </li>
+
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>20
+                            </li>
+                        </ul>
+                    </footer>
+                    <a href="verhaal.html">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article>
+            </div>
+        </div>
     </section>
     <div class="flip-section"></div>
     <script src="java/slidescript.js"></script>

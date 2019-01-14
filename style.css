@@ -26,11 +26,7 @@ section {
 
     background-color: #FFFFFF;
 }
-@media (min-width: 75rem){
-section {
-    max-width: 114rem;
-    }
-}
+
 section:nth-of-type(2) {
     background-color: #fff;
     border-top-right-radius: 10px;
@@ -105,8 +101,6 @@ h2 {
     padding-bottom: 2rem;
     transition: all .4s ease-in;
     display: block;
-    width: 100%;
-    max-width: 75rem;
     margin-left: 1.5rem;
 
 }
@@ -117,7 +111,6 @@ h2 {
         margin-left: 4rem;
     }
 }
-
 
 
 
@@ -169,11 +162,29 @@ h5 {
     z-index: 999;
     transition: .35s ease-in-out;
 }
-
-.header-up {
-    transform: translateY(-100%);
+nav{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    
 }
-
+@media (min-width: 48em){
+    nav{
+        max-width: 75rem;
+    }
+}
+@media (min-width: 62em){
+    nav{
+        max-width: 97rem;
+    }
+}
+@media (min-width: 75em){
+    nav{
+        max-width: 114rem;
+    }
+}
 .bewaren::after {
     content: '';
     position: absolute;
@@ -210,7 +221,7 @@ h5 {
 
 /*afbeeldingen in de Header*/
 
-header #logo > img {
+header > nav >a  img {
     margin-top: 0.5em;
 }
 
@@ -219,11 +230,10 @@ body > header {
 }
 
 button.login {
-    position: relative;
-    margin-left: 36%;
-    margin-right: 1.5em;
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 2px;
+    margin-top: .8rem;
     height: 1.6rem;
     width: 1.6rem;
     border-style: none;
@@ -233,31 +243,23 @@ button.login {
     background-size: 16px 16px;
     color: transparent;
     border-color: transparent;
+    align-self: right;
 }
 
 @media (min-width: 48em) {
     button.login {
+        right: 0;
         height: 2rem;
         width: 2rem;
         background-size: 20px 20px;
     }
 
 }
-
-@media only screen and (min-width: 600px) {
-    button.login {
-        margin-left: 42%;
-
-    }
-}
-
-
-
 button.login:hover {
     cursor: pointer;
 }
 
-header > div:first-of-type {
+header  div:first-of-type {
     position: absolute;
     right: -2rem;
     opacity: 0;
@@ -285,29 +287,36 @@ div.added:first-of-type {
 
 /*===Einde Header===*/
 /*== Lijsteje login ==*/
-body > header > ul {
+body > header  ul {
     position: absolute;
+    right: 1.5rem;
     list-style: none;
-    transform: translateY(-6em);
+    transform: translateY(-10em);
     transition: all .4s ease-in-out;
+    background-color: #675c53;
 }
-
+@media (min-width: 48em){
+    header > nav > ul{
+        right: 0;
+    }
+}
 .display {
-    transform: translateY(5.5em);
+    transform: translateY(2.3em);
     z-index: 0;
 }
 
-body > header > ul > li {
+body > header  ul > li {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     text-align: right;
     color: #fff;
-    background-color: #675c53;
+    position: relative;
 
 }
 
-body > header > ul > li:nth-child(1)::after,
-body > header > ul > li:nth-child(2)::after {
+body > header  ul > li:nth-child(1)::after,
+body > header  ul > li:nth-child(2)::after,
+body > header  ul > li:nth-child(3)::after {
     display: block;
     content: "";
     width: 80%;
@@ -315,7 +324,7 @@ body > header > ul > li:nth-child(2)::after {
     margin: auto;
 }
 
-body > header > ul > li > a {
+body > header  ul > li > a {
     text-decoration: none;
     color: #fff;
 }
@@ -453,9 +462,14 @@ form:first-of-type {
         flex-wrap: wrap;
         margin: auto;
         margin-top: 4rem;
+        max-width: 97rem;
     }
 }
-
+@media (min-width: 75rem){
+    form:first-of-type {
+        max-width: 114rem;
+    }
+}
 form.index {
     z-index: 1;
     height: 0;
@@ -913,7 +927,7 @@ main input:focus ~ hr::before {
     transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
 }
 
-main input[type=text]:focus + ~ hr::after {
+main input[type=text]:focus  ~ hr::after {
     content: "";
     color: #e7772b;
     border-bottom: 2px solid #e7772b;
@@ -981,24 +995,37 @@ main.inloggen > form > footer > ul > li:before {
 /*====Article Styling====*/
 main {
     padding-top: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+   
     justify-content: space-between;
     background-color: #f1f1f1;
     max-width: 100vw;
 }
 
-section.relative h2 {
-    margin: auto;
-    padding-top: 0.83em;
-}
 
-main h2 {
-    margin: auto;
-    padding-top: 0.83em;
-    max-width: 75rem;
-}
 
+main > h2 {
+    
+    padding-top: 0.83em;
+   
+}
+@media (min-width: 48em){
+    main > h2{
+        max-width: 75rem;
+        margin: auto;
+    }
+}
+@media (min-width: 62rem){
+    main > h2{
+     margin: auto;
+    max-width: 97rem;
+    }
+}
+@media (min-width: 75rem){
+    main > h2{
+    max-width: 114rem;
+    }
+}
 main > ul {
     display: flex;
     flex-wrap: wrap;
@@ -1009,17 +1036,14 @@ main > ul {
 
 @media (min-width: 62rem) {
     main > ul {
-        width: 75rem;
+        width: 97rem;
     }
 }
-
-main > ul > li {
-   
-
-}
+  
 
 article {
     max-width: 100%;
+    min-width: 35rem;
     position: relative;
     text-align: center;
     background-color: #fff;
@@ -1033,7 +1057,7 @@ article {
 
 @media (min-width: 48rem) {
     article {
-        min-width: 89%;
+        min-width: 35rem;
         max-width: 75rem;
     }
 }
@@ -1062,8 +1086,6 @@ article > a > header {
     width: 100%;
     min-height: 10rem;
 }
-
-article > footer > ul > li > button {}
 
 article > footer > ul {
     background-color: #fff;
@@ -1199,10 +1221,7 @@ article > footer > ul > li > button.download::after {
 }
 
 /*=====Populair carousel=====*/
-/*
-section:nth-of-type(4){
-    background-color: #f1f1f1;
-}*/
+
 section.relative {
     position: relative;
     padding-bottom: 4rem;
@@ -1212,7 +1231,6 @@ div.carous {
     position: relative;
     background-color: #fff;
     width: 100%;
-    padding-left: 1.5rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1270,33 +1288,45 @@ div.carous {
     background-color: #c05e00;
 }
 .relative > div > div:last-of-type {
-    margin: auto;
     width: 100%;
     max-width: 117rem;
-    justify-content: center;
+    margin-top: 3rem;
 }
 
 .relative > div > div > a {
-    width: 100%;
-    margin: auto;
+    display: block;
+    text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    padding: 43%;
     border-radius: 10px;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     padding-top: 9px;
     padding-bottom: 9px;
-    text-align: center;
 }
+@media (min-width: 48rem){
+    section.relative > div > div:last-of-type{
+        max-width: 75rem;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    }
+
 @media (min-width: 62rem){
-    .relative > div > div > a{
+    section.relative > div > div > a,
+    section.relative h2{
         max-width: 75rem;
         margin: auto;
     }  
 }
 /*====Einde populair===*/
 /*===Mijn verhalen===*/
-main.mijn {}
+main.mijn div {
+    border-radius: 10px;
+    position: absolute;
+    top: 2em;
+    z-index: 998;
+    background-color: rgba(255, 255, 255, .8);
+}
 
 main.mijn > ul {
     flex-wrap: nowrap;
@@ -1311,13 +1341,6 @@ main.mijn > ul {
         width: 117rem;
     }
 }
-
-@media(min-width: 70rem) {
-    main.mijn > ul {
-        overflow-x: hidden;
-    }
-}
-
 @media (min-width: 75rem) {
     main.mijn > ul {
         max-width: 114rem;
@@ -1325,7 +1348,7 @@ main.mijn > ul {
 }
 
 main.mijn h2 {
-    min-width: 100%;
+
     margin-top: 0.83em;
     margin: auto;
 }
@@ -1335,58 +1358,7 @@ main.mijn article {
 }
 
 /*===Einde mijn verhalen===*/
-/*
-@media only screen and (min-width: 600px){
-    .carous .banner{
-        min-height: 100%;
-    }
-}
-@media only screen and (min-width: 62rem){
-    .carous {
-        display:flex;
-        flex-wrap: wrap;
-        height: 40%;
-        justify-content: flex-start;
-        overflow: hidden;
-    }
-    .carous article{
-        width: 30%;
-    }
-        
-    .carous article header li{
-        
-        margin-right: 0;
-        margin-left: 1.5em;
-        padding-right: 0;
-        padding-left: 0;
-    }
-    .carous article header ul{
-        justify-content: space-between;
-    }
-}
-@media only screen and (min-width: 1140px){
-    .carous article{
-        width: 30%; 
-    }
-    .carous article header ul{
-    justify-content: flex-start;
-    }
-    .carous li{
-        width: auto;
-    }
-    .carous li:nth-child(2){
-        margin-left: 10%;
-    }
-    .carous li:nth-child(4){
-        margin-left: 26%
-    }
-    .carous article li:last-child{
-        position: absolute;
-        right: 0;
-        bottom: -2em;
-    }
-}
-*/
+
 /*========Sorteer======*/
 
 form#sort {
@@ -1434,84 +1406,7 @@ form input[type=radio]:checked + label {
 }
 
 
-/*======Resultaten======*/
 
-
-
-/*
-    article {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        position: relative;
-        margin-bottom: 4.5em;
-}
-
-    article h3 {
-        padding: 0;
-        margin: 0;
-        
-}
-
-    article header {
-        background-color: rgba(255, 255, 255, .96);
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 20px;
-        border-radius: 10px;
-        position: absolute;
-        bottom: -3em;
-         box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
-}
-
-    article ul {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 0;
-}
-
-    article li:nth-last-child(2) {
-        /*download*/
-/*
-}
-    article li:first-child{
-        min-width: 80%;
-        padding-bottom: 1.5em;
-        padding-top: 1.5em;
-}
-    article li {
-        font-weight: 700;
-        align-content: center;
-        list-style: none;
-        padding:0 1.5rem;
-}
-
-    article li:nth-child(2) { /*Leestijd*/
-/*
-        position: absolute;
-        top: -10em;
-        left: -0.9em;
-        padding: 0.2em;
-        border-radius: 4px;
-        background-color: #FFFFFF;
-        
-        
-    }
-
-    article li:last-of-type {
-        font-size: 2rem;
-        font-weight: 700;
-        
-    }
-
-    article footer {
-        margin-right: 2em;
-        max-width: 35em;
-        position: relative;
-    }*/
 
 article > button {
     position: absolute;
@@ -1531,7 +1426,6 @@ article > button {
     transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
 
 }
-
 /* == Micro Bewaren == */
 article > button:before {
     overflow: hidden;
@@ -1540,8 +1434,6 @@ article > button:before {
     content: "";
     top: -2rem;
     right: 0;
-    width: 0;
-    height: 0;
     opacity: 1;
     transform: rotate(30deg);
     background-image: url(./img/icon/button/Bewaar-idealState.svg);
@@ -1572,8 +1464,11 @@ article > button.bewaard {
 }
 
 /* == Einde Micro Bewaren == */
-.leuk {
+/* ===Micro vind ik leuk=== */
+article > footer > ul > li:last-of-type.leuk:before {
     animation: leuk 2s linear;
+    background-image: url(img/icon/duimpje-vol.svg);
+    
 }
 
 @keyframes leuk {
@@ -1583,6 +1478,7 @@ article > button.bewaard {
 
     15% {
         transform: translate(-25px, 0px) rotate(-5deg);
+        transform: scale(2);
     }
 
     30% {
@@ -1591,22 +1487,33 @@ article > button.bewaard {
 
     45% {
         transform: translate(-15px, 0px) rotate(-3deg);
+        transform: scale(1.5);
     }
 
     60% {
         transform: translate(10px, 0px) rotate(2deg);
+        transform: scale(2);
     }
 
     75% {
         transform: translate(-5px, 0px) rotate(-1deg);
+        
     }
 
     100% {
         transform: translate(0px, 0px) rotate(0deg);
     }
 }
+/* === Einde vind ik leuk=== */
 /*====Direct Naar====*/
-section:nth-child(6) {
+section:nth-child(6){
+    background-color: #F1F1F1;
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-end: 4rem;
+}
+
+section:nth-child(6) div >ul {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     background-color: #FFFFFF;
@@ -1615,45 +1522,73 @@ section:nth-child(6) {
     margin-bottom: 0;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     transition: all .4s ease-in;
-    margin-top: 3rem;
-    padding-left: 1.5rem;
+    padding: 2.5rem 1.5rem;
+}
+section:nth-child(6)>div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+}
+@media (min-width: 48rem) {
+    section:nth-child(6)>div{
+        max-width: 75rem;
+    }  
+}
+@media (min-width: 75rem){
+    section:nth-child(6)>div{
+        max-width: 114rem;
+    }
+}
+section:nth-child(6)>div>div{
     padding-right: 1.5rem;
+    width: 100%;
+}
+@media (min-width: 48rem) {
+    section:nth-child(6)>div>div{
+        max-width: 40%;
+        
+    }  
 }
 
 @media (min-width: 48rem) {
-    section:nth-child(6) {
+    section:nth-child(6) div>ul,
+    section:nth-child(6) div>h2 {
         max-width: 75rem;
         margin: auto;
-        margin-top: 3rem;
         border-top-left-radius: 10px;
     }
 }
-
 @media (min-width: 75rem) {
-    section:nth-child(6) {
-        max-width: 114rem;
+    section::nth-child(6)> div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 75rem) {
+    section:nth-child(6) div > ul,
+    section:nth-child(6) div > h2 {
+    
         margin: auto;
-        margin-top: 3rem;
-
     }
 }
 
-section:nth-child(6) > ul {
+section:nth-child(6) > div > div > ul {
     list-style: none;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 
 }
 
-section:nth-child(6) > ul > li {
+section:nth-child(6) div > div > ul > li {
     width: 100%;
     margin-right: 1.5rem;
-    border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: rgb(241, 241, 241);
 }
 
-section:nth-child(6) > ul > li > a {
+section:nth-child(6) div > div > ul > li > a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1em;
@@ -1664,7 +1599,7 @@ section:nth-child(6) > ul > li > a {
     display: block;
 }
 
-section:nth-child(6) > ul > li > a::after {
+section:nth-child(6) div > ul > li > a::after {
     content: "";
     position: absolute;
     top: 1rem;
@@ -1675,6 +1610,19 @@ section:nth-child(6) > ul > li > a::after {
     background-image: url(img/icon/arrow/right.svg);
     background-repeat: no-repeat;
 
+}
+/* ===Einde direct naar=== */
+/* ===Recent toegevoegd=== */
+section:nth-child(6) article{
+    min-width: 35rem;
+    max-width: 75rem;
+    margin: auto;
+}
+@media (max-width: 48em){
+    section:nth-child(6) article{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    }  
 }
 
 /*===Flip Section====*/
