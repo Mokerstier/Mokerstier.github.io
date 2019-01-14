@@ -39,7 +39,7 @@ function myScroll1() {
         tweede.classList.remove('start');
         tweede.classList.add('verstop');
         
-    } if (document.documentElement.scrollTop >= 2500){
+    } if (document.documentElement.scrollTop >= 2400){
         tweede.classList.remove('start');
         tweede.classList.add('verstop');
         derde.classList.remove('verstop');
@@ -49,7 +49,7 @@ function myScroll1() {
         derde.classList.remove('start');
         derde.classList.add('verstop');
         
-    } if (document.documentElement.scrollTop >= 4400){
+    } if (document.documentElement.scrollTop >= 4000){
         derde.classList.remove('start');
         derde.classList.add('verstop');
         vierde.classList.remove('verstop');

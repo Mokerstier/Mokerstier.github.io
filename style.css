@@ -147,7 +147,62 @@ h3 {
 h5 {
     padding: 0 1.5em;
 }
-
+/* Error melding */
+#eerste-keer{
+    padding-top: 3rem;
+    margin: 0 auto;
+    position: fixed;
+    width: 35rem;
+    top: 30rem;
+    left: 50%;
+    margin-left: -17.5rem;
+    z-index: -3;
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+}
+#eerste-keer:hover{
+    cursor: pointer;
+}
+#eerste-keer::after{
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-image: url(img/icon/kruisje.svg);
+    background-size: 3rem 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#eerste-keer:hover::after{
+    background-image: url(img/icon/kruisje-oranje.svg);
+}
+#eerste-keer:hover:before{
+    content:"klik om te sluiten";
+    position: absolute;
+    top: 1.5rem;
+}
+#eerste-keer > p{
+    padding-bottom: 2rem;
+}
+#eerste-keer  span{
+    color: #e7772b;
+}
+#eerste-keer > p > a{
+    color: #54a5dd;
+    font-weight: 500;
+}
+#eerste-keer > p > a:hover{
+    text-decoration: underline;
+}
+#eerste-keer.show{
+    z-index: 999;
+    opacity: 1;
+    transition: all 0s;
+}
+/* ===Einde error=== */
 /*======HEADER======*/
 
 body > header {
@@ -655,7 +710,7 @@ section:nth-of-type(2) > button:first-of-type {
     position: relative;
     border: none;
     background-color: #fff;
-    padding-right: 3em;
+    padding-right: 2em;
     margin-left: 1.5rem;
     font-size: 1.6rem;
     background-image: url(img/icon/arrow/right.svg);
@@ -1315,7 +1370,6 @@ main.mijn div {
     z-index: 998;
     background-color: rgba(255, 255, 255, .8);
 }
-
 main.mijn > ul {
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -1326,7 +1380,6 @@ main.mijn > ul {
 @media (min-width: 62rem) {
     main.mijn > ul {
         margin: auto;
-        width: 117rem;
     }
 }
 @media (min-width: 75rem) {
@@ -1336,13 +1389,16 @@ main.mijn > ul {
 }
 
 main.mijn h2 {
-
+    margin-left:1.5rem;
     margin-top: 0.83em;
-    margin: auto;
 }
-
+@media (min-width: 48em){
+    main.mijn h2 {
+        margin: auto;
+    }
+}
 main.mijn article {
-    width: 35rem;
+    width: 32rem;
 }
 
 /*===Einde mijn verhalen===*/
@@ -1640,6 +1696,7 @@ body > footer {
 body > footer ul{
     list-style: none;
     text-decoration: none;
+    position: relative;
     
 }
 body > footer > div{
@@ -1649,12 +1706,28 @@ body > footer > div > ul > li{
     list-style: none;
     display: none;
     margin: .5rem 0;
+    position: relative;
 }
 
 body > footer > div > ul > li:first-of-type{
     display: block;
-     
     border-bottom: 1px solid rgb(227, 237, 244);
+}
+body > footer > div > ul:last-of-type > li{
+    display: block;
+}
+body > footer > div > ul:last-child > li > a::after{
+    content:"";
+    background-image: url(img/icon/arrow/target-out.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 1.3rem;
+    height: 1.3rem;
+    position: absolute;
+    right: 0;
+    top: .6rem;
+    padding-right: 1rem;
 }
 @media (min-width: 62em){
     body > footer > div > ul{
@@ -1662,7 +1735,7 @@ body > footer > div > ul > li:first-of-type{
         padding-right: 2rem;
     }
 }
-@media (min-width: 62em){
+@media (min-width: 75em){
     body > footer > div > ul{
         padding-right: 5rem;
     }
@@ -1681,11 +1754,20 @@ body > footer > div > ul > li:first-of-type{
     }
 }
 @media (min-width: 62em){
-    body > footer > div > ul > li:first-of-type > a{
+    body > footer > div > ul > li:nth-child(1) > a{
     color: #000;
     font-size: 1.6rem;
     font-weight: 700;
     }
+}
+@media (min-width: 62em){
+    body > footer > div > ul:last-child > li > a{
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: #675c53;
+        text-decoration: underline;
+        }
 }
 body > footer  a{
     display: block;
