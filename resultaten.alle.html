@@ -35,14 +35,14 @@
             <legend>Zoek op sfeer</legend>
             <div class="flex-container">
                 <div class="sfeer-1">
-                    <input checked type="checkbox" id="duister"><label for="duister">Duister</label>
+                    <input class="check" type="checkbox" id="duister"><label for="duister">Duister</label>
                     <input class="check" type="checkbox" id="druk"><label for="druk">Druk</label>
                     <input class="check" type="checkbox" id="rustig"><label for="rustig">Rustig</label>
                 </div>
                 <div class="sfeer-2">
                     <input class="check" type="checkbox" id="simpel"><label for="simpel">Simpel</label>
-                    <input checked type="checkbox" id="verdrietig"><label for="verdrietig">Verdrietig</label>
-                    <input checked type="checkbox" id="vrolijk"><label for="vrolijk">Vrolijk</label>
+                    <input class="check" type="checkbox" id="verdrietig"><label for="verdrietig">Verdrietig</label>
+                    <input class="check" type="checkbox" id="vrolijk"><label for="vrolijk">Vrolijk</label>
                 </div>
             </div>
         </fieldset>
@@ -53,8 +53,7 @@
         </fieldset>
         <fieldset class="reistijd">
             <legend>Aansluitend aan reistijd</legend>
-            <input class="check" id="reischeck" type="checkbox"><label for="reischeck">Laat verhalen zien die passen
-                bij mijn rit</label>
+            <input class="check" id="reischeck" type="checkbox"><label for="reischeck">Laat verhalen zien die passen bij mijn rit</label>
 
         </fieldset>
         <footer>
@@ -64,22 +63,22 @@
     <div class="random">
         <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
 
-    <form id="sort" action="#">
-        <fieldset>
-            <div>
-                <input type="radio" name="sorteer" id="sfeer">
-                <label for="sfeer">Sfeer</label>
-
-                <input type="radio" name="sorteer" id="duimpjes" checked>
-                <label for="duimpjes"><img src="img/icon/thumbs-up.svg" alt="meeste stemmen"></label>
-
-                <input type="radio" name="sorteer" id="leesduur">
-                <label for="leesduur"><img src="img/icon/klok.svg" alt="leesduur"></label>
-            </div>
-        </fieldset>
-    </form>
+        <form id="sort" action="#">
+                <fieldset>
+                    <div>
+                        <input type="radio" name="sorteer" id="sfeer">
+                        <label for="sfeer">Sfeer</label>
+        
+                        <input type="radio" name="sorteer" id="duimpjes" checked>
+                        <label for="duimpjes"><img src="img/icon/thumbs-up.svg" alt="meeste stemmen"></label>
+        
+                        <input type="radio" name="sorteer" id="leesduur">
+                        <label for="leesduur"><img src="img/icon/klok.svg" alt="leesduur"></label>
+                    </div>
+                    </fieldset>
+                </form>
     <main>
-        <h2>Verdrietig</h2>
+        <h2>Alle verhalen</h2>
         <ul>
             <li>
                 <article>
@@ -108,9 +107,6 @@
                     </a>
                 </article>
             </li>
-        </ul>
-        <h2>Vrolijk</h2>
-        <ul>
             <li>
                 <article>
                     <button>Bewaar</button>
@@ -165,9 +161,6 @@
                     </a>
                 </article>
             </li>
-        </ul>
-        <h2>Duister</h2>
-        <ul>
             <li>
                 <article>
                     <button>Bewaar</button>
@@ -195,10 +188,109 @@
                     </a>
                 </article>
             </li>
+            <li><article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/Droom.jpeg" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>25:00
+                            </li>
+    
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>60
+                            </li>
+                        </ul>
+                    </footer>
+                    <a href="verhaal.html">
+                        <header>
+                            <h3>Droom
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article></li>
+                <li><article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/Western.jpeg" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>20:00
+                            </li>
+    
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>50
+                            </li>
+                        </ul>
+                    </footer>
+                    <a href="verhaal.html">
+                        <header>
+                            <h3>Western
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article></li>
+                <li> <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/enigszins.svg" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>35:00
+                            </li>
+    
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>71
+                            </li>
+                        </ul>
+                    </footer>
+                    <a href="verhaal.html">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article></li>
+                <li><article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img class="banner" src="img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>35:00
+                            </li>
+    
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>71
+                            </li>
+                        </ul>
+                    </footer>
+                    <a href="verhaal.html">
+                        <header>
+                            <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article></li>
         </ul>
     </main>
     <footer>
-        <div>
+            <div>
             <ul>
                 <li><a href="https://www.u-ov.info/">U-ov</a></li>
                 <li><a href="https://www.u-ov.info/reizen/reisplanner">Reisplanner</a></li>
@@ -225,23 +317,23 @@
                 <li><a href="https://www.qbuzz.nl/">Over Qbuzz</a></li>
             </ul>
         </div>
-        <div>
-            <img src="img/icon/U-ov/logo-uov.color.svg" alt="Utrecht (U-OV)">
             <div>
-                <ul>
-                    <li><a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a></li>
-                    <li><a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a></li>
-                    <li><a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
+                <img src="img/icon/U-ov/logo-uov.color.svg" alt="Utrecht (U-OV)">
+                <div>
+                    <ul>
+                        <li><a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a></li>
+                        <li><a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a></li>
+                        <li><a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
                     <li><a href="https://www.facebook.com/UOV.info">Facebook</a></li>
                     <li><a href="https://twitter.com/UOV_info">Twitter</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+                    </ul>
+                </div>
+            </div> 
+        </footer>
     <script src="./sortscript.js"></script>
     <script src="java/script.js"></script>
     <script src="js/rSlider.js"></script>

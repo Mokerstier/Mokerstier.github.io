@@ -7,8 +7,10 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif; 
-    background-color: #D6CEC6;
+    background-image: linear-gradient(rgba(103,92,83), #fff, rgba(240,150,0),  #fff);
+    background-color: darkgrey;
 }
+
 @media (min-width: 50em){
     body{
         height: 5500px;
@@ -21,7 +23,7 @@ body{
   left: 0;
   width: 100%;
   height: 8px;
-  background: #ccc;
+  background-color: #ccc;
 }
 .progress-bar {
   height: 8px;
@@ -126,12 +128,13 @@ aside{
     .container-2{
         display: block;
         position: absolute;
-        bottom: 3em;
-        
+        bottom: 7em;
+        left: 50%;
+        margin-left: -180px;        
     }
 }
 .titel {
-  color: #D6CEC6;
+  color:rgba(240,150,0);
   font-size: 0;
   line-height: 1;
   text-align: center;
@@ -157,15 +160,17 @@ span:nth-child(4) { animation-delay: 1.5s; }
 span:nth-child(5) { animation-delay: 2.0s; }
 /*===Animatie value's voor move===*/
 @keyframes move {
-  0% {
+    0% {
+    color: rgba(103,92,83);
     transform: translate(-33%, 0);
   }
   50% {
-      opacity: 0.5;
-      color: #FFF;
+    opacity: 0.5;
+    color: #FFF;
     text-shadow: 0 15px 40px rgba(103,92,83,.3);
   }
   100% {
+    color: #FFF;
     transform: translate(33%, 0);
   }
 }
@@ -177,7 +182,7 @@ div >p{
 /*    background-color: rgba(255,255,255,0.4);*/
 }
 p.start{
-    background-color: #D6CEC6;
+    /* background-color: #D6CEC6; */
     animation: fadein 4s ease infinite alternate;
 }
 div > p > span > span{
@@ -186,25 +191,34 @@ div > p > span > span{
 
 @keyframes fadein{
     from{
-        background-image: radial-gradient( rgba(44,44,44, 0.8), #D6CEC6);
+        /* background-image: radial-gradient( rgba(44,44,44, 0.8), #D6CEC6); */
         opacity: 0.2;
     }
     to{ 
-        background-image: linear-gradient( 70deg, rgba(250,80,10, 0.3), #D6CEC6);
+        /* background-image: linear-gradient( 70deg, rgba(250,80,10, 0.3), #D6CEC6); */
         opacity: 1;
         color: #fff;
     }
 }
 @media only screen and (min-width: 500px){
     div > p{
-        max-width: 80%;
+        max-width: 40em;
         position: fixed;
-        top: 3em;
+        top: 1.5em;
         left: 50%;
-        margin-left:-40%;
+        margin-left:-20em;
     }
 }
-
+@media only screen and (min-width: 500px){
+#tweede, #eerste{
+    top: 10em;
+}
+}
+@media only screen and (min-width: 500px){
+    #vierde{
+        top: 15em;
+    }
+}
 .verstop{
     opacity: 0;
 }
@@ -222,7 +236,7 @@ footer#verhaal{
     justify-content: space-around;
     background-color: #fff;
 }
-footer button{
+/* footer button{
     font-size: 1.6rem;
     font-weight: 700;
     border-style: none;
@@ -235,21 +249,161 @@ footer button{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-}
-footer button:first-of-type{
-    background-image: url(./img/icon/thumbs-up.svg);
+} */
 
+footer button:last-of-type:before {
+        overflow: hidden;
+        position: absolute;
+        display: inline;
+        content: "";
+        top: -2rem;
+        right: 0;
+        opacity: 1;
+        transform: rotate(30deg);
+        background-image: url(./img/icon/button/Bewaar-idealState.svg);
+        background-repeat: no-repeat;
+        transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87), opacity 1.8s .8s ease-in-out;    
 }
-footer button:last-of-type{
-    background-image: url(./img/icon/thumbs-up.svg);
-    
+div.drip-container{
+    position: absolute;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
 }
-div.bol-1{
+div.drip{
+    display: inline-block;
     top: 50%;
     left: 25%;
-    width: 12em;
-    height: 12em;
-    animation: pulse 3s  infinite alternate;
+    margin-right: 5px;
+    width: 5px;
+    height: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation: fall 2.5s  infinite;
+}
+.drip:nth-child(1) {
+    animation-delay: 2.3s;
+}
+.drip:nth-child(2) {
+    animation-delay: 1.5s;
+}
+.drip:nth-child(3){
+    animation-delay: 1.6s;
+   }
+.drip:nth-child(4){
+    animation-delay: .1s;
+   }
+.drip:nth-child(5){
+    animation-delay: .81s;
+   }
+.drip:nth-child(6){
+ animation-delay: .41s;
+}
+.drip:nth-child(7){
+    animation-delay: .31s;
+   }
+.drip:nth-child(8){
+    animation-delay: 2.1s;
+   }
+.drip:nth-child(9){
+    animation-delay: .43s;
+   }
+.drip:nth-child(10){
+
+animation-delay: 1.5s;
+}
+.drip:nth-child(11){
+    animation-delay: 2.231s;
+   }
+.drip:nth-child(12){
+ animation-delay: 1.2s;
+}
+.drip:nth-child(13){
+    animation-delay: 1.561s;
+   }
+.drip:nth-child(14){
+    animation-delay: 3.41s;
+   }
+.drip:nth-child(15){
+    animation-delay: 2.71s;
+   }
+.drip:nth-child(16){
+    animation-delay: 1.21s;
+   }
+.drip:nth-child(17){
+    animation-delay: .61s;
+   }
+.drip:nth-child(18){
+ animation-delay: 1.3s;
+}
+.drip:nth-child(19){
+    animation-delay: .71s;
+   }
+.drip:nth-child(20){
+    animation-delay: .8991s;
+   }
+.drip:nth-child(21){
+    animation-delay: .121s;
+   }
+.drip:nth-child(22){
+    animation-delay: 1.41s;
+   }
+.drip:nth-child(23){
+    animation-delay: 2.1s;
+   }
+.drip:nth-child(24){
+ animation-delay: 1.5s;
+}
+.drip:nth-child(25){
+    animation-delay: 4.1s;
+   }
+.drip:nth-child(26){
+    animation-delay: .7551s;
+   }
+.drip:nth-child(27){
+    animation-delay: 1.91s;
+   }
+.drip:nth-child(28){
+    animation-delay: 2.21s;
+   }
+.drip:nth-child(29){
+    animation-delay: 1s;
+   }
+.drip:nth-child(30){
+ animation-delay: 1.5s;
+}
+.drip:nth-child(31){
+    animation-delay: .12s;
+   }
+.drip:nth-child(32){
+    animation-delay: 1.5s;
+   }
+.drip:nth-child(33){
+    animation-delay: 1.55s;
+   }
+.drip:nth-child(34){
+    animation-delay: 1.66s;
+   }
+.drip:nth-child(35){
+    animation-delay: 1.23s;
+}
+@keyframes fall{
+    0%{
+        opacity: 0.8;
+        transform: scale(.5);
+        background-color: #f1f1f1;
+    }
+    60%{
+        opacity: 0.5;
+        transform: translateY(54em) scale(.7);
+    }
+    100%{
+        opacity: 0.1;
+        transform: translateY(100em);
+        background-color: #fff;
+    }
 }
 div[class*="bol-"]{
     z-index: -1;
