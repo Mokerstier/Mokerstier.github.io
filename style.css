@@ -745,6 +745,7 @@ section:nth-of-type(2) > button:first-of-type::after {
 
 .terug {
     position: absolute;
+    top: 1.5rem;
     left: -50rem;
     transition: all 0 0 ease-in-out;
 }
@@ -752,7 +753,7 @@ section:nth-of-type(2) > button:first-of-type::after {
 .showterug {
     z-index: 9999;
     position: absolute;
-    top: 4rem;
+    top: 6rem;
     left: 0;
     border: none;
     background-color: #fefaf1;
@@ -766,7 +767,7 @@ section:nth-of-type(2) > button:first-of-type::after {
 }
 
 .showform {
-    position: absolute;
+    position: fixed;
     display: block;
     opacity: 1;
     top: 39px;
@@ -775,7 +776,9 @@ section:nth-of-type(2) > button:first-of-type::after {
     width: 100vw;
     border-radius: 0;
 }
-
+.showform > fieldset:first-child{
+    margin-top: 2.5rem;
+}
 .hide {
     display: none;
     transition: all .4s 1s ease-in-out;
@@ -1560,7 +1563,9 @@ section:nth-child(6){
     padding-block-end: 4rem;
     position: relative;
 }
-
+section:nth-child(6).hide{
+    display: none;
+}
 section:nth-child(6) div >ul {
     margin-left: 1.5rem;
     margin-right: 1.5rem;

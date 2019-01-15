@@ -48,6 +48,7 @@ function showForm(){
     sectionArticle.classList.add('hide');
     terugButton.classList.add('showterug');
     terugButton.classList.remove('hide');
+    zoekForm.parentElement.parentElement.children[2,3,4,5,6].classList.toggle('hide');
 }
 // Zoekveld verbergen
 function hideForm(){
@@ -56,6 +57,7 @@ function hideForm(){
     sectionDirect.classList.remove('hide');
     sectionArticle.classList.remove('hide');
     terugButton.classList.remove('showterug');
+    zoekForm.parentElement.parentElement.children[2,3,4,5,6].classList.toggle('hide');
 }
 
 // Styling checkboxes en activeren zoekbutton
