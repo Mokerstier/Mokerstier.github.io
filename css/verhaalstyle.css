@@ -214,6 +214,7 @@ div > p > span > span{
 #tweede, #eerste{
     top: 5em;
 }
+}
 @media (min-width: 770px){
     #derde{
         max-width: 50em;
@@ -427,11 +428,10 @@ div[class*="bol-"]{
     z-index: -1;
     position: absolute;
     background-image: radial-gradient(rgba(240,150,0, .8), #D6CEC6);
-    border-radius: 50%;
-    
-    
+    border-radius: 50%;    
 }
-@keyframes pulse{
+
+@keyframes pulse {
     from{
         opacity: 1;
     }
@@ -440,3 +440,4 @@ div[class*="bol-"]{
         opacity: 0.2;
     }
 }
+    
