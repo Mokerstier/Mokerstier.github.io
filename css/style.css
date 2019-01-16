@@ -398,7 +398,8 @@ a > p {
 
 /*======Willekeurig verhaal===== */
 
-div > a {
+ div > a {
+    line-height: 1.15;
     display: flex;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -414,13 +415,25 @@ div > a {
         font-size: 1.792rem
     }
 }
-
 div.random {
-    line-height: 1.15;
+    width: 100%;
+    
+}
+@media (min-width: 48em){
+    div.random{
+        max-width: 75rem;
+        margin:auto
+    }
+}
+@media (min-width: 62em){
+    div.random{
+        max-width: 97rem;
+    }
+}
+div.random a {
     padding-bottom: 1rem;
-    background-color: rgba(248, 248, 247, .50);
     margin: auto;
-    margin-right: 2.5rem;
+    margin-left: 2.5rem;
     margin-bottom: 5rem;
     border-bottom-right-radius: 10px;
     background-image: url(img/icon/arrow/right.svg);
@@ -430,11 +443,13 @@ div.random {
 }
 
 @media (min-width: 48rem) {
-    div.random {
+    div.random div{
+        background-color: rgba(248, 248, 247, .50);
         border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         margin-right: auto;
-        margin-left: 19%;
-        max-width: 33rem;
+        margin-left: 1.5rem;
+        max-width: 40rem;
     }
 }
 

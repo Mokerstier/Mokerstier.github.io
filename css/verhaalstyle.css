@@ -9,9 +9,10 @@ body{
     font-family: "Roboto", sans-serif; 
     background-image: linear-gradient(rgba(103,92,83), #fff, rgba(240,150,0),  #fff);
     background-color: darkgrey;
+    height: 5500px;
 }
 
-@media (min-width: 50em){
+@media (min-width: 800px){
     body{
         height: 5500px;
     }
@@ -124,7 +125,7 @@ aside{
     margin: auto;
 
 }
-@media (min-width: 50rem){
+@media (min-width: 750px){
     .container-2{
         display: block;
         position: absolute;
@@ -200,7 +201,7 @@ div > p > span > span{
         color: #fff;
     }
 }
-@media only screen and (min-width: 500px){
+@media only screen and (min-width:700px){
     div > p{
         max-width: 40em;
         position: fixed;
@@ -211,12 +212,18 @@ div > p > span > span{
 }
 @media only screen and (min-width: 500px){
 #tweede, #eerste{
-    top: 10em;
+    top: 5em;
 }
+@media (min-width: 770px){
+    #derde{
+        max-width: 50em;
+        margin-left: -25em;
+       
+    }
 }
 @media only screen and (min-width: 500px){
     #vierde{
-        top: 15em;
+        top: 8em;
     }
 }
 .verstop{
@@ -260,7 +267,7 @@ footer button:last-of-type:before {
         right: 0;
         opacity: 1;
         transform: rotate(30deg);
-        background-image: url(./img/icon/button/Bewaar-idealState.svg);
+        background-image: url(/img/icon/button/Bewaar-idealState.svg);
         background-repeat: no-repeat;
         transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87), opacity 1.8s .8s ease-in-out;    
 }
