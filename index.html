@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/icon/favi/favicon.ico">
+    <link rel="icon" href="css/img/icon/favi/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/rSlider.css">
@@ -35,7 +35,9 @@
         <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
         <h2>Zoek een passend verhaal</h2>
         <button>klik hier om je zoekopdracht te verfijnen</button>
-
+        <div class="random">
+        <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a>
+        </div>
         <button class="terug">terug</button>
         <form class="index" action="resultaten.html#sort">
             <fieldset class="sfeer">
@@ -71,10 +73,7 @@
             </footer>
         </form>
     </section>
-    <div class="random">
-        <div>
-        <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
-    </div>
+
     <section class="relative">
         <h2>Top 5 best gewaardeerde verhalen</h2>
 
@@ -90,7 +89,14 @@
 
             <article>
                 <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/vergezocht.png" alt="vergezocht">
+                
+                        <header>
+                        <h3>Vergezocht
+                        </h3>
+                        
+                    </header>
+                </a>
                 <footer>
                     <ul>
                         <li>35:00
@@ -105,13 +111,6 @@
                         </li>
                     </ul>
                 </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
             </article>
             <article>
                 <button>Bewaar</button>
@@ -241,27 +240,24 @@
                 <article>
                     <button>Bewaar</button>
                     <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li>25:00
-                            </li>
-
-                            <li>
-                                <button class="button active">
-                                    Download
-                                </button>
-                            </li>
-                            <li>20
-                            </li>
-                        </ul>
-                    </footer>
                     <a href="verhaal.html">
                         <header>
                             <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'
                             </h3>
-                            <p></p>
+                            <p>25:00</p>
                         </header>
                     </a>
+                    <footer>
+                        <ul>
+                           <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">20</button>
+                            </li>
+                        </ul>
+                    </footer>
                 </article>
             </div>
         </div>

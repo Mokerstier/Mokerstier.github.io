@@ -17,6 +17,9 @@ body{
         height: 5500px;
     }
 }
+p{
+    font-size: 1.6rem;
+}
 .progress-container {
   /* transform: rotate(90deg); */
   position: fixed;
@@ -135,7 +138,7 @@ aside{
     }
 }
 .titel {
-  color:rgba(240,150,0);
+  color:rgba(240,150,0, 0);
   font-size: 0;
   line-height: 1;
   text-align: center;
@@ -162,7 +165,7 @@ span:nth-child(5) { animation-delay: 2.0s; }
 /*===Animatie value's voor move===*/
 @keyframes move {
     0% {
-    color: rgba(103,92,83);
+    color: rgba(103,92,83, .5);
     transform: translate(-33%, 0);
   }
   50% {
@@ -171,7 +174,7 @@ span:nth-child(5) { animation-delay: 2.0s; }
     text-shadow: 0 15px 40px rgba(103,92,83,.3);
   }
   100% {
-    color: #FFF;
+    color: rgba(103,92,83, 0.1);
     transform: translate(33%, 0);
   }
 }
@@ -407,7 +410,7 @@ animation-delay: 1.5s;
     60%{
         height: 16px;
         opacity: 0.5;
-        transform: translateY(54em) scale(.7);
+        transform: translateY(60em) scale(.7);
     }
     90%{
         transform: translateY(99.9em);

@@ -72,11 +72,7 @@ function scrollIndicator() {
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-    if ((scrolled >= 45) && (scrolled <= 55)){
-      prompt.classList.remove('verstop');  
-    } else {
-        prompt.classList.add('verstop');
-    }
+    
 }
 function bolletje(){
     var aBaD = (aantalBewaard + aantalDownload);
