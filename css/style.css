@@ -32,20 +32,12 @@ section:first-of-type{
     width: 100%;
     position: relative;
     background-color: rgba(255, 255, 255, 0);
-    background-image: url(img/verhalen/Banner-top/banner-1.svg);
+    background-image: url(img/verhalen/Banner-top/intro-verhalen.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
-section:first-of-type:after{
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #fcd900;
-    opacity: .5;
-    z-index: -0;
-    top:0;
-}
+
 section {
 
     background-color: #FFFFFF;
@@ -109,12 +101,12 @@ h1 {
     box-sizing: border-box;
     font-size: 2.2rem;
     margin: 0;
-    padding: 0.83em;
-    padding-top: 30px;
+    padding: 10rem 1.5rem;
     color: black;
     background-color: rgba(255, 255, 255, 0);
     width: 100%;
     z-index: 1;
+    
 }
 
 h2 {
@@ -1115,7 +1107,6 @@ main > ul > li{
 }
 article {
     max-width: 100%;
-    min-width: 35rem;
     position: relative;
     text-align: center;
     background-color: #fff;
@@ -1544,7 +1535,7 @@ article > button {
     background-image: url(./img/icon/ster-blank.svg);
     background-repeat: no-repeat;
     background-position: top .4rem center;
-    background-color: rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, 0);
     background-size: 4rem;
     transition: all 1.3s cubic-bezier(0.1, -0.6, 0.23, 2.87);
 
@@ -1582,6 +1573,33 @@ article > button.bewaard {
 
 /* == Einde Micro Bewaren == */
 /* ===Micro vind ik leuk=== */
+article > footer > ul > li:last-of-type>button{
+    text-align: right;
+    min-width: 8rem;
+    position: relative;
+}
+article > footer > ul > li:last-of-type> .active:hover + .tooltiptext1{
+    visibility: visible;
+}
+article > footer > ul > li:last-of-type> .inactive:hover ~ .tooltiptext2{
+    visibility: visible;
+}
+article > footer > ul > li:last-of-type .tooltiptext1,
+article > footer > ul > li:last-of-type .tooltiptext2 {
+    position: absolute;
+    top: -4.5rem;
+    left: 50%;
+    margin-left: -10rem;
+    min-width: 16rem;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    visibility: hidden;
+    text-align: center;
+    padding: .9rem 1.5rem ;
+    background-color: #E7772B;
+}
 
 article > footer > ul > li:last-of-type>button:before {
     content: "";
@@ -1593,7 +1611,7 @@ article > footer > ul > li:last-of-type>button:before {
     width: 2.5rem;
     height: 2.5rem;
     top: .6rem;
-    left: -3.5rem;
+    left: 1.5rem;
 }
 
 @media (min-width: 62rem) {
@@ -1607,6 +1625,7 @@ article > footer > ul > li:last-of-type>button.leuk:before {
     background-image: url(img/icon/duimpje-vol.svg);
     
 }
+
 @keyframes leuk {
     0% {
         transform: translate(0, 0) ;
@@ -1632,6 +1651,41 @@ article > footer > ul > li:last-of-type>button.leuk:before {
 
     100% {
         transform: translate(0, 0) ;
+    }
+}
+article > footer > ul > li:last-of-type>button.leuk::after{
+    content: "+1";
+    display: block;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    padding: .9rem;
+    animation: plus1 2s ease-in-out;
+    background-color: #E7772B;
+    color: #FFF;
+    font-weight: 400;
+    opacity: 0;
+    border-radius: 50%;
+}
+article > footer > ul > li:last-of-type>button.leuk:focus::after{
+    outline-style: none;
+    outline-color: none;
+    outline: none;
+}
+@keyframes plus1 {
+    0% {
+        transform: translateY(-1rem);
+        opacity: .5;
+    }
+    50%{
+        opacity: .8;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-5rem);
+        opacity: 0;
     }
 }
 /* === Einde vind ik leuk=== */
