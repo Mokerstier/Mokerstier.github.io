@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/icon/favi/favicon.ico">
+    <link rel="icon" href="css/img/icon/favi/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/rSlider.css">
@@ -15,10 +15,10 @@
         <nav>
             <a href="index.html" id="logo"><img src="css/img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
             <button class="login">login</button>
-            <div>0</div>
+    
             <ul>
                 <li><a href="inloggen.html">Inloggen</a></li>
-                <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
+                <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Favoriete verhalen</a></li>
                 <li><a href="mijnverhalen.html#downloads">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
                 <li><a href="mijnverhalen.html#leuke">Verhalen die ik leuk vind</a></li>
             </ul>
@@ -29,239 +29,255 @@
     </section>
     <main class="mijn">
         <h2 id="bewaarde">
-            Mijn bewaarde verhalen
+            Mijn favoriete verhalen
         </h2>
-           <ul>
-               <li><article>
-                <button class="bewaard">Bewaar</button>
-                <a href="verhaal.html"><img  src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>35:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>71
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article></li>
-               <li><article>
-                <button class="bewaard">Bewaar</button>
-                <a href="verhaal.html"><img  src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>25:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>60
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Droom
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article></li>
-            <li><article>
+        <ul>
+            <li>
+                <article>
                     <button class="bewaard">Bewaar</button>
-                    <a href="verhaal.html"><img  src="css/img/verhalen/Verliefd.jpeg" alt="vergezocht"></a>
+                    <a href="verhaal.html"><img src="css/img/verhalen/vergezocht.png" alt="vergezocht">
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p>11:00</p>
+                        </header>
+                    </a>
                     <footer>
                         <ul>
-                            <li>15:00
-                            </li>
-    
                             <li>
                                 <button class="button active">
                                     Download
                                 </button>
                             </li>
-                            <li>71
+                            <li><button class="button like active">71
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                    <article>
+                            <button class="bewaard">Bewaar</button>
+                            <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                                <header>
+                                    <h3>Droom
+                                    </h3>
+                                    <p>25:00</p>
+                                </header>
+                            </a>
+                            <footer>
+                                <ul>
+                                    <li>
+                                        <button class="button active">
+                                            Download
+                                        </button>
+                                    </li>
+                                    <li><button class="button like active">60
+        
+                                        </button>
+                                        <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                        <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+            </li>
+            <li>
+                    <article>
+                            <button class="bewaard">Bewaar</button>
+                            <a href="verhaal.html"><img src="css/img/verhalen/Verliefd.jpeg" alt="vergezocht">
+                                <header>
+                                    <h3>Verliefd
+                                    </h3>
+                                    <p>15:00</p>
+                                </header>
+                            </a>
+                            <footer>
+                                <ul>
+                                    <li>
+                                        <button class="button active">
+                                            Download
+                                        </button>
+                                    </li>
+                                    <li><button class="button like active">71
+        
+                                        </button>
+                                        <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                        <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+            </li>
+            <li>
+                    <article>
+                            <button class="bewaard">Bewaar</button>
+                            <a href="verhaal.html"><img src="css/img/verhalen/vergezocht.png" alt="vergezocht">
+                                <header>
+                                    <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'
+                                    </h3>
+                                    <p>35:00</p>
+                                </header>
+                            </a>
+                            <footer>
+                                <ul>
+                                    <li>
+                                        <button class="button active">
+                                            Download
+                                        </button>
+                                    </li>
+                                    <li><button class="button like active">71
+        
+                                        </button>
+                                        <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                        <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+                
+            </li>
+            <li>
+                <article>
+                    <button class="bewaard">Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Western.jpeg" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>20:00
+                            </li>
+
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>50
                             </li>
                         </ul>
                     </footer>
                     <a href="verhaal.html">
                         <header>
-                            <h3>Verliefd
+                            <h3>Western
                             </h3>
                             <p></p>
                         </header>
                     </a>
-                </article></li>
-                <li><article>
-                        <button class="bewaard">Bewaar</button>
-                        <a href="verhaal.html"><img  src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
-                        <footer>
-                            <ul>
-                                <li>35:00
-                                </li>
-        
-                                <li>
-                                    <button class="button active">
-                                        Download
-                                    </button>
-                                </li>
-                                <li>71
-                                </li>
-                            </ul>
-                        </footer>
-                        <a href="verhaal.html">
-                            <header>
-                                <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'
-                                </h3>
-                                <p></p>
-                            </header>
-                        </a>
-                    </article></li>
-               <li><article>
-                <button class="bewaard">Bewaar</button>
-                <a href="verhaal.html"><img  src="css/img/verhalen/Western.jpeg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>20:00
-                        </li>
+                </article>
+            </li>
+        </ul>
 
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>50
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Western
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article></li>
-           </ul>
-            
-        
+
         <h2 id="downloads">
             Mijn downloads
         </h2>
         <ul>
-               <li>
-                
+            <li>
                 <article>
-                        <div>
-                                <h3>Je hebt dit verhaal nog niet op dit device, wil je het nu downloaden?
-                                </h3>                               
-                            </div>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img  src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>35:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>71
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
+                    <div>
+                        <h3>Je hebt dit verhaal nog niet op dit device, wil je het nu downloaden?
                         </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article></li>
-               <li><article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img  src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>25:00
-                        </li>
+                    </div>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/vergezocht.png" alt="vergezocht">
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p>11:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">71
 
-                        <li>
-                            <button class="button inactive">
-                                Gedownload
-                            </button>
-                        </li>
-                        <li>60
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Droom
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article></li>
-               <li><article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img  src="css/img/verhalen/Western.jpeg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>20:00
-                        </li>
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Droom
+                            </h3>
+                            <p>17:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button inactive">
+                                    Gedownload
+                                </button>
+                            </li>
+                            <li><button class="button like active">60
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Western.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Western
+                            </h3>
+                            <p>17:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button inactive">
+                                    Gedownload
+                                </button>
+                            </li>
+                            <li><button class="button like active">63
 
-                        <li>
-                            <button class="button inactive">
-                                Gedownload
-                            </button>
-                        </li>
-                        <li>50
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Western
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article></li>
-           </ul>
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+        </ul>
         <h2 id="leuke">
-        Verhalen die ik leuk vind    
+            Verhalen die ik leuk vind
         </h2>
         <ul>
-               <li><article>
-                <h3>Je hebt nog geen verhalen leuk gevonden.</h3>
-                <p>Hier zijn wat suggesties uit je bewaarde verhalen</p>
-            </article>
-            <li><article>
+            <li>
+                <article>
+                    <h3>Je hebt nog geen verhalen leuk gevonden.</h3>
+                    <p>Hier zijn wat suggesties uit je bewaarde verhalen</p>
+                </article>
+            <li>
+                <article>
                     <button class="bewaard">Bewaar</button>
-                    <a href="verhaal.html"><img  src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
+                    <a href="verhaal.html"><img src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
                             <li>35:00
                             </li>
-    
+
                             <li>
                                 <button class="button active">
                                     Download
@@ -278,15 +294,17 @@
                             <p></p>
                         </header>
                     </a>
-                </article></li>
-                   <li><article>
+                </article>
+            </li>
+            <li>
+                <article>
                     <button class="bewaard">Bewaar</button>
-                    <a href="verhaal.html"><img  src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
                     <footer>
                         <ul>
                             <li>25:00
                             </li>
-    
+
                             <li>
                                 <button class="button active">
                                     Download
@@ -303,36 +321,39 @@
                             <p></p>
                         </header>
                     </a>
-                </article></li>
-                <li><article>
-                        <button class="bewaard">Bewaar</button>
-                        <a href="verhaal.html"><img  src="css/img/verhalen/Verliefd.jpeg" alt="vergezocht"></a>
-                        <footer>
-                            <ul>
-                                <li>15:00
-                                </li>
-        
-                                <li>
-                                    <button class="button active">
-                                        Download
-                                    </button>
-                                </li>
-                                <li>71
-                                </li>
-                            </ul>
-                        </footer>
-                        <a href="verhaal.html">
-                            <header>
-                                <h3>Verliefd
-                                </h3>
-                                <p></p>
-                            </header>
-                        </a>
-                    </article></li>
-           </ul>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button class="bewaard">Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Verliefd.jpeg" alt="vergezocht"></a>
+                    <footer>
+                        <ul>
+                            <li>15:00
+                            </li>
+
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li>71
+                            </li>
+                        </ul>
+                    </footer>
+                    <a href="verhaal.html">
+                        <header>
+                            <h3>Verliefd
+                            </h3>
+                            <p></p>
+                        </header>
+                    </a>
+                </article>
+            </li>
+        </ul>
     </main>
     <footer>
-            <div>
+        <div>
             <ul>
                 <li><a href="https://www.u-ov.info/">U-ov</a></li>
                 <li><a href="https://www.u-ov.info/reizen/reisplanner">Reisplanner</a></li>
@@ -359,23 +380,24 @@
                 <li><a href="https://www.qbuzz.nl/">Over Qbuzz</a></li>
             </ul>
         </div>
+        <div>
+            <img src="css/img/icon/U-ov/logo-uov.color.svg" alt="Utrecht (U-OV)">
             <div>
-                <img src="css/img/icon/U-ov/logo-uov.color.svg" alt="Utrecht (U-OV)">
-                <div>
-                    <ul>
-                        <li><a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a></li>
-                        <li><a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a></li>
-                        <li><a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
+                <ul>
+                    <li><a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a></li>
+                    <li><a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a></li>
+                    <li><a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
                     <li><a href="https://www.facebook.com/UOV.info">Facebook</a></li>
                     <li><a href="https://twitter.com/UOV_info">Twitter</a></li>
-                    </ul>
-                </div>
-            </div> 
-        </footer>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="java/script.js"></script>
 </body>
+
 </html>

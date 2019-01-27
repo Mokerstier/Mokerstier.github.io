@@ -12,7 +12,8 @@ function carousel(){
     var i;
     
     for (i=0; i < slides.length; i++){
-        slides[i].style.display = "none";
+        slides[i].classList.remove('slide-in');
+        slides[i].style.display = 'none';
         
     }
     
@@ -24,6 +25,7 @@ function carousel(){
       
     }
     slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].classList.add('slide-in');
     dots[slideIndex - 1].classList.add('active');
     dots[slideIndex - 1].classList.remove('inactive');
 }

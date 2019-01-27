@@ -18,7 +18,7 @@ var aantalBewaard = 0; //variabele voor aantal bewaarde verhalen
 var aantalDownload = 0;
 var duimErbij = [].slice.call(document.querySelectorAll('article li:last-of-type button'));
 var header = document.querySelector('body>header');
-var aBaDTotaal = document.querySelector('header>nav>div'); // bollletje voor de downloads en bewaar
+var aBaDTotaal = logIn.value; // bollletje voor de downloads en bewaar
 //var vorigeScrollpos = window.pageYOffset;
 var c = 0; //nummertje voor de checkboxes[Array]
 var displayTime;
@@ -48,7 +48,7 @@ function showForm(){
     sectionArticle.classList.add('hide');
     terugButton.classList.add('showterug');
     terugButton.classList.remove('hide');
-    zoekForm.parentElement.parentElement.children[2,3,4,5,6].classList.toggle('hide');
+    zoekForm.parentElement.parentElement.children[2,3,4,5].classList.toggle('hide');
 }
 // Zoekveld verbergen
 function hideForm(){
@@ -57,7 +57,7 @@ function hideForm(){
     sectionDirect.classList.remove('hide');
     sectionArticle.classList.remove('hide');
     terugButton.classList.remove('showterug');
-    zoekForm.parentElement.parentElement.children[2,3,4,5,6].classList.toggle('hide');
+    zoekForm.parentElement.parentElement.children[2,3,4,5].classList.toggle('hide');
 }
 
 // Styling checkboxes en activeren zoekbutton
@@ -88,12 +88,13 @@ for (c = 0; c < checkBoxes.length; c++) {
 
 function bolletje(){
     var aBaD = (aantalBewaard + aantalDownload);
-    aBaDTotaal.innerHTML = aBaD;
+    aBaDTotaal = aBaD;
+    logIn.styles +=('::after', 'content: "'+aBaDTotaal+'";');
     console.log(aBaDTotaal);
     if (aBaD < 1){
-        aBaDTotaal.classList.remove('added');
+        logIn.classList.remove('added');
     } else {
-        aBaDTotaal.classList.add('added');
+        logIn.classList.add('added');
     }
 }
 

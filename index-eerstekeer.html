@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/icon/favi/favicon.ico">
+    <link rel="icon" href="css/img/icon/favi/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/rSlider.css">
@@ -15,217 +15,219 @@
         <nav>
             <a href="index.html" id="logo"><img src="css/img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
             <button class="login">login</button>
-            <div>0</div>
+            
             <ul>
                 <li><a href="inloggen.html">Inloggen</a></li>
-                <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
-                <li><a href="mijnverhalen.html#downloads">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
-                <li><a href="mijnverhalen.html#leuke">Verhalen die ik leuk vind</a></li>
+                <li><p>(<p id="bewaarCount">0</p>) Favoriete verhalen</p></li>
+                <li><p>(<p id="downloadCount">0</p>) Gedownloade verhalen</p></li>
+                <li><p> Verhalen die ik leuk vind</p></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1>
-            U-ov heeft in samenwerking met de HVA een verhalen website gerealiseerd om onze reizigers tijdens hun reis
-            te vermaken.
-        </h1>
-    </section>
-
-
-    <section>
-        <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
-        <h2>Zoek een passend verhaal</h2>
-        <button>klik hier om je zoekopdracht te verfijnen</button>
-
-        <button class="terug">terug</button>
-        <form class="index" action="resultaten.html#sort">
-            <fieldset class="sfeer">
-                <legend>Zoek op sfeer</legend>
-                <div class="flex-container">
-                    <div class="sfeer-1">
-                        <input class="check" type="checkbox" id="duister"><label class="checkbox" for="duister">Duister</label>
-                        <input class="check" type="checkbox" id="druk"><label class="checkbox" for="druk">Druk</label>
-                        <input class="check" type="checkbox" id="rustig"><label class="checkbox" for="rustig">Rustig</label>
+    <section class="intro">
+            <h1>
+                U-ov heeft in samenwerking met de HVA een verhalen website gerealiseerd om onze reizigers tijdens hun reis te vermaken. Zodat jij op elk moment van de reis kunt genieten van een goed verhaal!
+            </h1>
+        </section>
+    
+    
+        <section >
+            <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
+            <h2>Zoek een passend verhaal</h2>
+            <button>klik hier om je zoekopdracht te verfijnen</button>
+            <button class="terug">terug</button>
+            <form class="index" action="resultaten.html#sort">
+                <fieldset class="sfeer">
+                    <legend>Zoek op sfeer</legend>
+                    <div class="flex-container">
+                        <div class="sfeer-1">
+                            <input class="check" type="checkbox" id="duister"><label class="checkbox" for="duister">Duister</label>
+                            <input class="check" type="checkbox" id="druk"><label class="checkbox" for="druk">Druk</label>
+                            <input class="check" type="checkbox" id="rustig"><label class="checkbox" for="rustig">Rustig</label>
+                        </div>
+                        <div class="sfeer-2">
+                            <input class="check" type="checkbox" id="simpel"><label class="checkbox" for="simpel">Simpel</label>
+                            <input class="check" type="checkbox" id="verdrietig"><label class="checkbox" for="verdrietig">Verdrietig</label>
+                            <input class="check" type="checkbox" id="vrolijk"><label class="checkbox" for="vrolijk">Vrolijk</label>
+                        </div>
                     </div>
-                    <div class="sfeer-2">
-                        <input class="check" type="checkbox" id="simpel"><label class="checkbox" for="simpel">Simpel</label>
-                        <input class="check" type="checkbox" id="verdrietig"><label class="checkbox" for="verdrietig">Verdrietig</label>
-                        <input class="check" type="checkbox" id="vrolijk"><label class="checkbox" for="vrolijk">Vrolijk</label>
-                    </div>
+    
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Leestijd</legend>
+                    <label for="sampleSlider">Leestijd</label>
+                    <div id="leestijd"><input id="sampleSlider" type="range"></div>
+                </fieldset>
+    
+                <fieldset class="reistijd">
+                    <legend>Aansluitend aan reistijd</legend>
+                    <input class="check" id="reischeck" type="checkbox"><label for="reischeck" class="checkbox">Laat verhalen zien die passen bij mijn rit</label>
+    
+                </fieldset>
+                <fieldset>
+                        <legend>
+                        Ik doe een gok!
+                    </legend>
+                            <div class="random">
+                                    <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
+                    </fieldset>
+                <footer>
+                    <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
+                </footer>
+            </form>
+        </section>
+    
+        <section class="relative">
+            <h2>Top 5 best gewaardeerde verhalen</h2>
+    
+            <div class="carous">
+    
+                <div class="dot-container">
+                    <span class="dot inactive"></span>
+                    <span class="dot inactive"></span>
+                    <span class="dot inactive"></span>
+                    <span class="dot inactive"></span>
+                    <span class="dot inactive"></span>
                 </div>
-
-            </fieldset>
-
-            <fieldset>
-                <legend>Leestijd</legend>
-                <label for="sampleSlider">Leestijd</label>
-                <div id="leestijd"><input id="sampleSlider" type="range"></div>
-            </fieldset>
-
-            <fieldset class="reistijd">
-                <legend>Aansluitend aan reistijd</legend>
-                <input class="check" id="reischeck" type="checkbox"><label for="reischeck" class="checkbox">Laat
-                    verhalen zien die passen bij mijn rit</label>
-
-            </fieldset>
-            <footer>
-                <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
-            </footer>
-        </form>
-    </section>
-    <div class="random">
-        <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
-
-    <section class="relative">
-        <h2>Top 5 best gewaardeerde verhalen</h2>
-
-        <div class="carous">
-
-            <div class="dot-container">
-                <span class="dot inactive"></span>
-                <span class="dot inactive"></span>
-                <span class="dot inactive"></span>
-                <span class="dot inactive"></span>
-                <span class="dot inactive"></span>
+    
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/vergezocht.png" alt="vergezocht">
+                        <header>
+                            <h3>Vergezocht
+                            </h3>
+                            <p>11:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                           <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">71
+                                
+                            </button>
+                            <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                            <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Droom
+                            </h3>
+                            <p>10:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                           <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">68
+                                
+                            </button>
+                            <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                            <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Western.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Western
+                            </h3>
+                            <p>17:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                           <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">63
+                                
+                            </button>
+                            <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                            <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/enigszins.svg" alt="vergezocht">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p>15:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                           <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">60
+                                
+                            </button>
+                            <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                            <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/vergezocht.png" alt="vergezocht">
+                        <header>
+                            <h3>Beroemd
+                            </h3>
+                            <p>35:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                           <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">55
+                                
+                            </button>
+                            <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                            <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+                
             </div>
-
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>35:00
-
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>71
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Vergezocht
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>25:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>60
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Droom
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Western.jpeg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>20:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>50
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Western
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/enigszins.svg" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>35:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>71
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Enigszins aan de omslachtige kant
-                        </h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <article>
-                <button>Bewaar</button>
-                <a href="verhaal.html"><img class="banner" src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
-                <footer>
-                    <ul>
-                        <li>35:00
-                        </li>
-
-                        <li>
-                            <button class="button active">
-                                Download
-                            </button>
-                        </li>
-                        <li>71
-                        </li>
-                    </ul>
-                </footer>
-                <a href="verhaal.html">
-                    <header>
-                        <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
-                        <p></p>
-                    </header>
-                </a>
-            </article>
-            <div><a href="resultaten.html" class="">Bekijk alle verhalen</a></div>
-        </div>
-
-    </section>
-
-    <section>
-        <div>
+            <div><a href="resultaten.alle.html" class="">Bekijk alle verhalen</a></div>
+        </section>
+    
+        <section>
             <div>
-                <h2>Direct naar</h2>
-                <ul>
-                    <li><a href="resultaten.html">
+                <div>
+                    <h2>Direct naar</h2>
+                    <ul>
+                    <li><a href="resultaten.alle.html">
                             Alle verhalen
                         </a></li>
                     <li><a href="resultaten.html">
@@ -238,38 +240,38 @@
                             Mijn downloads
                         </a></li>
                 </ul>
-            </div>
-            <div>
-                <h2>Recent toegevoegd</h2>
-                <article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li>25:00
-                            </li>
-
-                            <li>
-                                <button class="button active">
-                                    Download
+                </div>
+                <div>
+                    <h2>Recent toegevoegd</h2>
+                    <article>
+                        <button>Bewaar</button>
+                        <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                            <header>
+                                <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'
+                                </h3>
+                                <p>25:00</p>
+                            </header>
+                        </a>
+                        <footer>
+                            <ul>
+                               <li>
+                                    <button class="button active">
+                                        Download
+                                    </button>
+                                </li>
+                                <li><button class="button like active">20
+                                    
                                 </button>
-                            </li>
-                            <li>20
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
-                        <header>
-                            <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'
-                            </h3>
-                            <p></p>
-                        </header>
-                    </a>
-                </article>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                </div>
             </div>
-        </div>
-        <div class="flip-section"></div>
-    </section>
+            <div class="flip-section"></div>
+        </section>
 
     <footer>
         <div>

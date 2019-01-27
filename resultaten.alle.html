@@ -16,10 +16,10 @@
         <nav>
             <a href="index.html" id="logo"><img src="css/img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
             <button class="login">login</button>
-            <div>0</div>
+            
             <ul>
                 <li><a href="inloggen.html">Inloggen</a></li>
-                <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
+                <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Favoriete verhalen</a></li>
                 <li><a href="mijnverhalen.html#downloads">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
                 <li><a href="mijnverhalen.html#leuke">Verhalen die ik leuk vind</a></li>
             </ul>
@@ -53,245 +53,312 @@
         </fieldset>
         <fieldset class="reistijd">
             <legend>Aansluitend aan reistijd</legend>
-            <input class="check" id="reischeck" type="checkbox"><label for="reischeck">Laat verhalen zien die passen bij mijn rit</label>
+            <input class="check" id="reischeck" type="checkbox"><label for="reischeck">Laat verhalen zien die passen
+                bij mijn rit</label>
 
         </fieldset>
+        <fieldset>
+                <legend>
+                Ik doe een gok!
+            </legend>
+                    <div class="random">
+                            <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
+            </fieldset>
         <footer>
             <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
         </footer>
     </form>
-    <div class="random">
-        <div>
-        <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
-    </div>
-        <form id="sort" action="#">
-                <fieldset>
-                    <div>
-                        <input type="radio" name="sorteer" id="sfeer">
-                        <label for="sfeer">Sfeer</label>
-        
-                        <input type="radio" name="sorteer" id="duimpjes" checked>
-                        <label for="duimpjes"><img src="css/img/icon/thumbs-up.svg" alt="meeste stemmen"></label>
-        
-                        <input type="radio" name="sorteer" id="leesduur">
-                        <label for="leesduur"><img src="css/img/icon/klok.svg" alt="leesduur"></label>
-                    </div>
-                    </fieldset>
-                </form>
+    <form id="sort" action="#">
+        <fieldset>
+            <div>
+                <input type="radio" name="sorteer" id="sfeer">
+                <label for="sfeer">Sfeer</label>
+
+                <input type="radio" name="sorteer" id="duimpjes" checked>
+                <label for="duimpjes"><img src="css/img/icon/thumbs-up.svg" alt="meeste stemmen"></label>
+
+                <input type="radio" name="sorteer" id="leesduur">
+                <label for="leesduur"><img src="css/img/icon/klok.svg" alt="leesduur"></label>
+            </div>
+        </fieldset>
+    </form>
     <main>
         <h2>Alle verhalen</h2>
         <ul>
             <li>
                 <article>
                     <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li class="tijd">15:00
-                            </li>
-
-                            <li>
-                                <button class="button active">
-                                    Download
-                                </button>
-                            </li>
-                            <li class="likes">70
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
-                        <header>
-                            <h3 class="sfeer">Vergezocht
-                            </h3>
-                            <p></p>
-                        </header>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Verliefd.jpeg" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li class="tijd">20:00
-                            </li>
-
-                            <li>
-                                <button class="button active">
-                                    Download
-                                </button>
-                            </li>
-                            <li class="likes">60
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
-                        <header>
-                            <h3 class="sfeer">Verliefd
-                            </h3>
-                            <p></p>
-                        </header>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/enigszins.png" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li class="tijd">25:00
-                            </li>
-
-                            <li>
-                                <button class="button active">
-                                    Download
-                                </button>
-                            </li>
-                            <li class="likes">55
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
-                        <header>
-                            <h3>Enigzins aan de omslachtige kant
-                            </h3>
-                            <p></p>
-                        </header>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Gefrustreerd.jpeg" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li class="tijd">10:00
-                            </li>
-
-                            <li>
-                                <button class="button active">
-                                    Download
-                                </button>
-                            </li>
-                            <li class="likes">30
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
-                        <header>
-                            <h3>Gefrustreerd
-                            </h3>
-                            <p></p>
-                        </header>
-                    </a>
-                </article>
-            </li>
-            <li><article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Droom.jpeg" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li>25:00
-                            </li>
-    
-                            <li>
-                                <button class="button active">
-                                    Download
-                                </button>
-                            </li>
-                            <li>60
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
                         <header>
                             <h3>Droom
                             </h3>
-                            <p></p>
+                            <p>10:00</p>
                         </header>
                     </a>
-                </article></li>
-                <li><article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/Western.jpeg" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>20:00
-                            </li>
-    
                             <li>
                                 <button class="button active">
                                     Download
                                 </button>
                             </li>
-                            <li>50
-                            </li>
-                        </ul>
-                    </footer>
-                    <a href="verhaal.html">
-                        <header>
-                            <h3>Western
-                            </h3>
-                            <p></p>
-                        </header>
-                    </a>
-                </article></li>
-                <li> <article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/enigszins.svg" alt="vergezocht"></a>
-                    <footer>
-                        <ul>
-                            <li>35:00
-                            </li>
-    
-                            <li>
-                                <button class="button active">
-                                    Download
+                            <li><button class="button like active">68
+
                                 </button>
-                            </li>
-                            <li>71
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
                             </li>
                         </ul>
                     </footer>
-                    <a href="verhaal.html">
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/enigszins.svg" alt="vergezocht">
                         <header>
                             <h3>Enigszins aan de omslachtige kant
                             </h3>
-                            <p></p>
+                            <p>15:00</p>
                         </header>
                     </a>
-                </article></li>
-                <li><article>
-                    <button>Bewaar</button>
-                    <a href="verhaal.html"><img class="banner" src="css/img/verhalen/vergezocht.png" alt="vergezocht"></a>
                     <footer>
                         <ul>
-                            <li>35:00
-                            </li>
-    
                             <li>
                                 <button class="button active">
                                     Download
                                 </button>
                             </li>
-                            <li>71
+                            <li><button class="button like active">60
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
                             </li>
                         </ul>
                     </footer>
-                    <a href="verhaal.html">
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
                         <header>
-                            <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
-                            <p></p>
+                            <h3>Droom
+                            </h3>
+                            <p>10:00</p>
                         </header>
                     </a>
-                </article></li>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">68
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/enigszins.svg" alt="vergezocht">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p>15:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">60
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Droom
+                            </h3>
+                            <p>10:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">68
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/enigszins.svg" alt="vergezocht">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p>15:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">60
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Droom
+                            </h3>
+                            <p>10:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">68
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/enigszins.svg" alt="vergezocht">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p>15:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">60
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/Droom.jpeg" alt="vergezocht">
+                        <header>
+                            <h3>Droom
+                            </h3>
+                            <p>10:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">68
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <button>Bewaar</button>
+                    <a href="verhaal.html"><img src="css/img/verhalen/enigszins.svg" alt="vergezocht">
+                        <header>
+                            <h3>Enigszins aan de omslachtige kant
+                            </h3>
+                            <p>15:00</p>
+                        </header>
+                    </a>
+                    <footer>
+                        <ul>
+                            <li>
+                                <button class="button active">
+                                    Download
+                                </button>
+                            </li>
+                            <li><button class="button like active">60
+
+                                </button>
+                                <span class="tooltiptext1">Vind dit verhaal leuk!</span>
+                                <span class="tooltiptext2">Vind dit verhaal niet meer leuk!</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </li>
         </ul>
     </main>
     <footer>
-            <div>
+        <div>
             <ul>
                 <li><a href="https://www.u-ov.info/">U-ov</a></li>
                 <li><a href="https://www.u-ov.info/reizen/reisplanner">Reisplanner</a></li>
@@ -318,23 +385,23 @@
                 <li><a href="https://www.qbuzz.nl/">Over Qbuzz</a></li>
             </ul>
         </div>
+        <div>
+            <img src="css/img/icon/U-ov/logo-uov.color.svg" alt="Utrecht (U-OV)">
             <div>
-                <img src="css/img/icon/U-ov/logo-uov.color.svg" alt="Utrecht (U-OV)">
-                <div>
-                    <ul>
-                        <li><a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a></li>
-                        <li><a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a></li>
-                        <li><a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
+                <ul>
+                    <li><a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a></li>
+                    <li><a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a></li>
+                    <li><a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
                     <li><a href="https://www.facebook.com/UOV.info">Facebook</a></li>
                     <li><a href="https://twitter.com/UOV_info">Twitter</a></li>
-                    </ul>
-                </div>
-            </div> 
-        </footer>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="./sortscript.js"></script>
     <script src="java/script.js"></script>
     <script src="js/rSlider.js"></script>

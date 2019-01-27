@@ -15,18 +15,17 @@
         <nav>
         <a href="index.html" id="logo"><img src="css/img/icon/U-ov/Logo.svg" alt="u-ov logo"></a>
         <button class="login">login</button>
-        <div>0</div>
         <ul>
             <li><a href="inloggen.html">Inloggen</a></li>
-            <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Bewaarde verhalen</a></li>
+            <li><a href="mijnverhalen.html#bewaarde">(<p id="bewaarCount">0</p>) Favoriete verhalen</a></li>
             <li><a href="mijnverhalen.html#downloads">(<p id="downloadCount">0</p>) Gedownloade verhalen</a></li>
             <li><a href="mijnverhalen.html#leuke">Verhalen die ik leuk vind</a></li>
         </ul>
     </nav>
     </header>
-    <section>
+    <section class="intro">
         <h1>
-            U-ov heeft in samenwerking met de HVA een verhalen website gerealiseerd om onze reizigers tijdens hun reis te vermaken.
+            U-ov heeft in samenwerking met de HVA een verhalen website gerealiseerd om onze reizigers tijdens hun reis te vermaken. Zodat jij op elk moment van de reis kunt genieten van een goed verhaal!
         </h1>
     </section>
 
@@ -35,9 +34,6 @@
         <h1 id="zoektitel">Jouw verhalen van deur tot deur</h1>
         <h2>Zoek een passend verhaal</h2>
         <button>klik hier om je zoekopdracht te verfijnen</button>
-        <div class="random">
-        <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a>
-        </div>
         <button class="terug">terug</button>
         <form class="index" action="resultaten.html#sort">
             <fieldset class="sfeer">
@@ -68,6 +64,13 @@
                 <input class="check" id="reischeck" type="checkbox"><label for="reischeck" class="checkbox">Laat verhalen zien die passen bij mijn rit</label>
 
             </fieldset>
+            <fieldset>
+                    <legend>
+                    Ik doe een gok!
+                </legend>
+                        <div class="random">
+                                <a href="resultaten.html#sort">Geef me een willekeurig verhaal</a> </div>
+                </fieldset>
             <footer>
                 <input id="zoek" type="submit" class="button inactive" value="Zoek verhalen" disabled="disabled">
             </footer>
@@ -212,9 +215,9 @@
                     </ul>
                 </footer>
             </article>
-            <div><a href="resultaten.alle.html" class="">Bekijk alle verhalen</a></div>
+            
         </div>
-
+        <div><a href="resultaten.alle.html" class="">Bekijk alle verhalen</a></div>
     </section>
 
     <section>
@@ -222,7 +225,7 @@
             <div>
                 <h2>Direct naar</h2>
                 <ul>
-                <li><a href="resultaten.html">
+                <li><a href="resultaten.alle.html">
                         Alle verhalen
                     </a></li>
                 <li><a href="resultaten.html">
