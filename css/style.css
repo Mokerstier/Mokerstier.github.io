@@ -110,10 +110,12 @@ h1:nth-child(1) {
     
 }
 @media (min-width: 48rem) {
-    h1{
+    h1:nth-child(1){
         padding-left: 0;
-        font-size: 4rem;
+        font-size: 3.5rem;
         line-height: 1;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
 h2 {
