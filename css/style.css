@@ -454,7 +454,7 @@ a > p {
 
 /*======Willekeurig verhaal===== */
 
- div > a {
+ form  a {
     line-height: 1.15;
     display: flex;
     margin-left: 1.5rem;
@@ -467,30 +467,15 @@ a > p {
 }
 
 @media (min-width: 62rem) {
-    div > a {
+    form a {
         font-size: 1.792rem
     }
 }
-div.random {
-    width: 100%;
-    
-}
-@media (min-width: 48em){
-    div.random{
-        max-width: 75rem;
-    
-    }
-}
-@media (min-width: 62em){
-    div.random{
-        max-width: 97rem;
-    }
-}
-div.random a {
+
+form  a {
     padding-bottom: 1rem;
     margin: auto;
     margin-left: 1.5rem;
-    margin-bottom: 5rem;
     border-bottom-right-radius: 10px;
     background-image: url(img/icon/arrow/right.svg);
     background-position: 18em;
@@ -1439,13 +1424,17 @@ div.dot-container {
     padding-bottom: .9rem;
     width: 100%;
     max-width: 56rem;
-    
+    font-size: 1.792rem;
+    color: #675c53;
+    font-weight: 500;
+    max-width: 35rem;
 }
-@media (min-width: 62rem){
+@media (min-width: 48rem){
     .relative  > div > a{
         max-width: 56rem;
         margin: auto;
         margin-top: 3rem;
+        
     }
 }
 @media (min-width: 48rem){
@@ -1631,14 +1620,14 @@ article > footer > ul > li:last-of-type>button{
     min-width: 8rem;
     position: relative;
 }
-article > footer > ul > li:last-of-type> .active:hover + .tooltiptext1{
+article > footer > ul > li > .active:hover + .tooltiptext1{
     visibility: visible;
 }
-article > footer > ul > li:last-of-type> .inactive:hover ~ .tooltiptext2{
+article > footer > ul > li > .inactive:hover ~ .tooltiptext2{
     visibility: visible;
 }
-article > footer > ul > li:last-of-type .tooltiptext1,
-article > footer > ul > li:last-of-type .tooltiptext2 {
+article > footer > ul > li .tooltiptext1,
+article > footer > ul > li .tooltiptext2 {
     position: absolute;
     top: -4.5rem;
     left: 50%;
